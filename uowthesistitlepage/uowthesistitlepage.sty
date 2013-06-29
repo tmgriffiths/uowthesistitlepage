@@ -1,0 +1,230 @@
+%%
+%% This is file `uowthesistitlepage.sty',
+%% Version 1.0
+%%
+%% Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths
+%% under the creative commons licence, attribution, non-comercial, share alike
+%% http://creativecommons.org/licenses/by-nc-sa/3.0/au/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License version 1.3c
+%% http://www.latex-project.org/lppl/lppl-1-3c.txt
+%%
+%%--------------------------------------------------------------------------------
+%% This Package redefines the \maketitle command for LaTeX documents and generates
+%% a title page as close as possible to the current UOW HDR word thesis-template,        
+%% use this package with the book class to typeset your thesis. 
+%% The UOW default dimensions can be implimented with:
+%% \usepackage{geometry}
+%%     \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
+%%                    
+%% Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17             
+%%--------------------------------------------------------------------------------
+
+%% Basic usage overview
+%
+% \usepackage{uowthesistitlepage}
+%
+% \begin{document}
+%
+% Title page info and usage
+%
+% Standard fields of \maketitle
+% \title{A Pretty Swish Title} 
+% \author{Average J. Blow}
+%   % If you use the hyperref package you can add a mailto link, so that clicking on your name opens an email to you.
+% 	
+% The new fields from the \maketitle renewal (see code below).
+% \degree{That Degree You've Been Studying} 
+%   % Write it in full: e.g. Bachelor of Science Medicinal Chemistry Advanced Honours
+% \school{Your School} 
+%   % e.g Chemistry
+% \supervisor{supervisor 1, supervisor 2 \& supervisor 3}
+%   % A list of your supervisors, can be turned off with the nosupervisor package option in the preamble 
+%   % or switched to multiple (more thn one) with the package option multiplesupervisors
+
+
+%%---------------------------------------------------------------------%%
+% Package code   														%
+%%---------------------------------------------------------------------%%
+
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{uowthesistitlepage}[2013/06/22 (cc) tmgriffiths]
+
+\RequirePackage{lmodern} 
+\RequirePackage{setspace} %for the doublespacing
+\RequirePackage{graphicx} 
+    \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+% Defining the defualt values of the macros within \maketitle
+
+\makeatletter % his \makeatother friend is at the end of the document, using multiple sets I got all sorts of errors
+% Fields already in the \maketitle command
+\def\@title{\textless{}Title of Your Thesis\textgreater}
+\def\@author{\textless{}Student's Full Name\textgreater}
+\def\@date{\textless{}Month Year\textgreater}
+
+% These are the new fields not currently in the standard \maketitle macro.
+\def\@supervisor{\textless{}Your Supervisor(s)\textgreater} 
+    \newcommand{\supervisor}[1]{\gdef\@supervisor{#1}}
+\def\@degree{\textless{}Your Degree\textgreater} 
+    \newcommand{\degree}[1]{\gdef\@degree{#1}} 
+\def\@school{\textless{}Your School\textgreater} 
+    \newcommand{\school}[1]{\gdef\@school{#1}}     
+\def\@graphic{\includegraphics[height=2.1cm]{uow_logo}} 
+% Image must be in the working directory for the package to work
+    \newcommand{\graphic}[1]{\gdef\@graphic{#1}} 
+\def\@requirement{This thesis is presented as part of the requirement for the} 
+\def\@schooltitle{School of}
+% The default value is the same as the honours option. This can be changed for degrees where the thesis is not only a part of the requirement of the degree
+
+%\def\@university{No university} 
+%    \newcommand{\university}[1]{\gdef\@university{#1}} % inactive with the new thesis theme (tmgriffiths 2013-05-29)
+
+% Calculate the size of the gaps between fields relative to the paper height, incase A4 is not used.
+% The title page should cope with up to A5, but document fontsize  does need to be taken down to 10 pt.
+% In the future I hope to implement something that changes the font size according to paper size. 
+\newlength{\biggap}
+    \setlength{\biggap}{0.1178\paperheight} %for A4 paper this is approximately 35 mm
+\newlength{\midgap}
+    \setlength{\midgap}{0.0505\paperheight} %for A4 paper this is approximately 15 mm
+\newlength{\smallgap}
+    \setlength{\smallgap}{0.0269\paperheight} %for A4 paper this is approximately 8 mm
+    
+% Declareing the package options    
+% The default wording for the thesis requirements for an honours thesis.
+\DeclareOption{honours} 
+{
+\def\@requirement{This thesis is presented as part of the requirement for the}
+}
+
+\DeclareOption{honors} % for those less honourable of you who've shunned the u.
+{
+\def\@requirement{This thesis is presented as part of the requirement for the}
+}
+% The default wording for the thesis requirements for a masters by research thesis.
+\DeclareOption{masters-by-research} 
+{
+\def\@requirement{This thesis is presented as required for the}
+}
+% The default wording for the thesis requirements for a PhD thesis.
+\DeclareOption{phd}
+{
+\def\@requirement{This thesis is presented as required for the}
+}
+\DeclareOption{noschool} 
+{
+\def\@schooltitle{}
+\def\@school{}
+}
+
+% Here we declare both the supervisors options and we actually set up the title page.
+% The title page without the supervisor fields.
+\DeclareOption{nosupervisor}{
+% Set-up/layout of the title page itself.
+\renewcommand{\maketitle}
+{
+\begin{doublespace}
+\begin{center}
+    \thispagestyle{empty}
+    \vspace{-\smallgap}
+    {\@graphic}\vspace{\smallgap}\\ 
+    \textbf{
+    \@schooltitle {\@school}\\
+    \vspace{\biggap}
+    {\large{\@title}}\\
+    \vspace{\biggap}
+    {\@author}\\
+    \vspace{\midgap}
+    \@requirement\\
+    Award of the Degree of\\
+    \@degree\\
+    of the\\
+    University of Wollongong\\
+    \vspace*{\fill}
+    \@date\vspace{\smallgap}
+    }
+\end{center}
+\end{doublespace}
+\clearpage{\pagestyle{empty}\cleardoublepage} 
+}
+}
+
+% The supervior field typeset in the title page, with the word "Supervisor" for one supervisor.
+\DeclareOption{onesupervisor}{
+% Set-up/layout of the title page itself.
+\renewcommand{\maketitle}
+{
+\begin{doublespace}
+\begin{center}
+    \vspace{-\smallgap}
+    \thispagestyle{empty}
+    {\@graphic}\\
+    \vspace{\smallgap} 
+    \textbf{
+    \@schooltitle {\@school}\\
+    \vspace{\biggap}
+    {\large{\@title}}\\
+    \vspace{\biggap}
+    {\@author}\\
+    \vspace{\smallgap}
+    Supervisor\\
+    \@supervisor\\
+    \vspace{\smallgap}
+    \@requirement\\
+    Award of the Degree of\\
+    \@degree\\
+    of the\\
+    University of Wollongong\\
+    \vspace*{\fill}
+    \@date\vspace{\smallgap}
+    }
+\end{center}
+\end{doublespace}
+\clearpage{\pagestyle{empty}\cleardoublepage} 
+}
+}
+
+% The supervior field typeset in the title page, with the word "Supervisors", for multiple supervisors.
+\DeclareOption{multiplesupervisors}{
+% Set-up/layout of the title page itself.
+\renewcommand{\maketitle}
+{
+\begin{doublespace}
+\begin{center}
+    \thispagestyle{empty}
+    \vspace{-\smallgap}
+    {\@graphic}\vspace{\smallgap}\\ 
+    \textbf{
+    \@schooltitle {\@school}\\
+    \vspace{\biggap}
+    {\large{\@title}}\\
+    \vspace{\biggap}
+    {\@author}\\
+    \vspace{\smallgap}
+    Supervisors\\
+    \@supervisor\\
+    \vspace{\smallgap}
+    \@requirement\\ 
+    Award of the Degree of\\
+    \@degree\\
+    of the\\
+    University of Wollongong\\
+    \vspace*{\fill}
+    \@date\vspace{\smallgap}
+    }
+\end{center}
+\end{doublespace}
+\clearpage{\pagestyle{empty}\cleardoublepage} 
+}
+}
+
+% Execute the default options, print supervisor field and requirements for an honours thesis.
+\ExecuteOptions{onesupervisor,honours}
+\ProcessOptions\relax
+\makeatother
+
+\endinput
+
+% Quidquid latine dictum sit altum videtur.
