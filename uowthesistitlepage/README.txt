@@ -5,6 +5,21 @@ This work may be distributed and/or modified under the conditions of the LaTeX P
 This Package redefines the \maketitle command for LaTeX documents and generates
 a title page for a UOW thesis. Use this package with the book class to typeset your thesis. 
 
+Implimented in version 1.1 is the \declaration command. 
+This typesets the declaration (below) that this thesis is your own work, required in the front of each PhD Thesis.
+
+%--------------%
+Declaration
+
+I, <Student’s Full Name>, declare that this thesis, submitted in partial fulfilment of the requirements for the award of 
+<Your Degree>, of the School of <Your School>, University of Wollongong, is wholly my own work unless otherwise referenced
+or acknowledged. The document has not been submitted for qualifications at any other academic institution.
+
+------------------------------------
+
+<Student’s Full Name>, July 1, 2013
+%--------------%
+
 The UOW default dimensions can be implimented with:
 \usepackage{geometry}
     \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
@@ -27,7 +42,9 @@ Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17
     %Write it in full: e.g. Bachelor of Science Medicinal Chemistry Advanced Honours
 \school{Your School} 
     %e.g Chemistry
-\supervisor{supervisor 1, supervisor 2 \& supervisor 3}
+\supervisor[number of supervisors (integer)]{supervisor 1, supervisor 2 \& supervisor 3}
     %A list of your supervisors, can be turned off with the nosupervisor package option in the preamble or switched to multiple (more thn one) with the package option multiplesupervisors
     
 \maketitle
+
+\declaration
