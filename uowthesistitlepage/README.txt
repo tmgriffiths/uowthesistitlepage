@@ -1,33 +1,23 @@
-Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths under the creative commons licence(attribution, non-comercial, share alike): http://creativecommons.org/licenses/by-nc-sa/3.0/au/ 
+This is the README for uowthesistitlepage.sty Version 1.1, 2013-07-01
 
-This work may be distributed and/or modified under the conditions of the LaTeX Project Public License version 1.3c: http://www.latex-project.org/lppl/lppl-1-3c.txt
+ABOUT
 
-This Package redefines the \maketitle command for LaTeX documents and generates
-a title page for a UOW thesis. Use this package with the book class to typeset your thesis. 
-
-Implimented in version 1.1 is the \declaration command. 
-This typesets the declaration (below) that this thesis is your own work, required in the front of each PhD Thesis.
-
-%--------------%
-Declaration
-
-I, <Student’s Full Name>, declare that this thesis, submitted in partial fulfilment of the requirements for the award of 
-<Your Degree>, of the School of <Your School>, University of Wollongong, is wholly my own work unless otherwise referenced
-or acknowledged. The document has not been submitted for qualifications at any other academic institution.
-
-------------------------------------
-
-<Student’s Full Name>, July 1, 2013
-%--------------%
-
-The UOW default dimensions can be implimented with:
-\usepackage{geometry}
-    \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
-                   
-Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17             
+This Package redefines the \maketitle command for LaTeX documents and generates a title page for a UOW thesis in accordance with the uow branding guidelines. Use this package with the book class to typeset your thesis. Implimented in version 1.1 is the \declaration command. This typesets the declaration (below) that this thesis is your own work, required in the front of each PhD Thesis.
 
 
-------------Basic Usage------------
+LEGAL
+
+Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths under the creative commons licence(attribution, non-comercial, share alike): http://creativecommons.org/licenses/by-nc-sa/3.0/au/. This work may be distributed and/or modified under the conditions of the LaTeX Project Public License version 1.3c: http://www.latex-project.org/lppl/lppl-1-3c.txt
+
+REQUIREMENTS
+
+- lmodern 
+- setspace
+- etoolbox
+- graphicx 
+
+
+BASIC USAGE
 
 \usepackage[]{uowthesistitlepage}
 
@@ -48,3 +38,24 @@ Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17
 \maketitle
 
 \declaration
+
+%--------------%
+Declaration
+
+I, <Student’s Full Name>, declare that this thesis, submitted in partial fulfilment of the requirements for the award of 
+<Your Degree>, of the School of <Your School>, University of Wollongong, is wholly my own work unless otherwise referenced
+or acknowledged. The document has not been submitted for qualifications at any other academic institution.
+
+
+
+<Student’s Full Name>, July 1, 2013
+
+%--------------%
+
+The UOW default dimensions can be implimented with:
+\usepackage{geometry}
+    \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
+                   
+Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17             
+
+
