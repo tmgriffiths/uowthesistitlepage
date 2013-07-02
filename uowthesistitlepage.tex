@@ -121,20 +121,23 @@ Using the \oporcom{\textbackslash{}declaration} command is simple just place it 
     \item[\oporcom{phd}]
     One of the degree options. This option modifies the wording of the thesis requirement so that it is reflective of a Doctoral degree: `This thesis is presented as required for the'.
     
-    \item[\oporcom{masters}]
+    \item[\oporcom{mastersbyresearch}]
     One of the degree options, the same as \oporcom{phd}. This option modifies the wording of the thesis requirement so that it is reflective of a Masters by Research: `This thesis is presented as required for the'.
     
+    \item[\oporcom{mastersbycoursework}]
+    One of the degree options, the same as \oporcom{mastersbyresearch} except that the thesis is only a partial requirement for the award of the degree. This option modifies the wording of the thesis requirement so that it is reflective of a Masters by Coursework: `This thesis is presented as part of the requirement for the'.
+    
     \item[\oporcom{multiplesupervisors}]
-    Makes the supervisor field plural, printing `Supervisors'
+    Makes the supervisor field plural, printing `Supervisors'. Still implemented but unnecessary, use the optional argument to the \oporcom{\textbackslash{}supervisor} command.
     
     \item[\oporcom{noschool}]
     Removes the text underneath the UOW stating your school affiliation. While it removes the `School of' text it doesn't deactivate the \oporcom{\textbackslash{}school} command completely it prints an empty space instead. The \oporcom{\textbackslash{}school} command will still works with the \oporcom{noschool} option, so that you can specify another affiliation.
     
     \item[\oporcom{nosupervisor}]
-    Removes the supervisor field from the title page completely. Incorporated mainly to match the Word template, which, oddly is missing a supervisor field.
+    Removes the supervisor field from the title page completely. Incorporated mainly to match the Word template, which, oddly is missing a supervisor field. Still implemented but unnecessary, use the optional argument to the \oporcom{\textbackslash{}supervisor} command
     
     \item[\oporcom{onesupervisor}]
-    Makes the supervisor field singular, printing `Supervisor' This option is the default.
+    Makes the supervisor field singular, printing `Supervisor' This option is the default. Still implemented but unnecessary, use the optional argument to the \oporcom{\textbackslash{}supervisor} command
 \end{description}
 
 \section{Change Log}
