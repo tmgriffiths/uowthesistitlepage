@@ -1,16 +1,12 @@
-This is the README for uowthesistitlepage.sty Version 1.1, 2013-07-01
+This is the README for uowthesistitlepage.sty Version 1.2, 2013-07-12
 
 ABOUT
-
-This Package redefines the \maketitle command for LaTeX documents and generates a title page for a UOW thesis in accordance with the uow branding guidelines. Use this package with the book class to typeset your thesis. Implimented in version 1.1 is the \declaration command. This typesets the declaration (below) that this thesis is your own work, required in the front of each PhD Thesis.
-
+This Package redefines the \maketitle command for LaTeX documents and generates a title page for a UOW thesis in accordance with the uow branding guidelines. Use this package with the book class to typeset your thesis (it will work with report though if you do so desire). The package also provides the \declaration command. This typesets the declaration (below) that this thesis is your own work, required in the front of each PhD Thesis.
 
 LEGAL
-
 Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths under the creative commons licence(attribution, non-comercial, share alike): http://creativecommons.org/licenses/by-nc-sa/3.0/au/. This work may be distributed and/or modified under the conditions of the LaTeX Project Public License version 1.3c: http://www.latex-project.org/lppl/lppl-1-3c.txt
 
 REQUIREMENTS
-
 - lmodern 
 - setspace
 - etoolbox
@@ -18,7 +14,6 @@ REQUIREMENTS
 
 
 BASIC USAGE
-
 \usepackage[]{uowthesistitlepage}
 
 \begin{document}
@@ -52,7 +47,7 @@ or acknowledged. The document has not been submitted for qualifications at any o
 
 %--------------%
 
-The UOW default dimensions can be implimented with:
+The UOW default dimensions can be implemented with:
 \usepackage{geometry}
     \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
                    

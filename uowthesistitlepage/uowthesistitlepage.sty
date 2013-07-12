@@ -1,5 +1,5 @@
 %% This is file `uowthesistitlepage.sty',
-%% Version 1.1 2007-07-01
+%% Version 1.2 2007-07-12
 %%
 %% Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths
 %% under the creative commons licence, attribution, non-comercial, share alike
@@ -11,14 +11,14 @@
 %%
 %%--------------------------------------------------------------------------------
 %% This Package redefines the \maketitle command for LaTeX documents and generates
-%% a title page as close as possible to the current UOW HDR word thesis-template,        
-%% use this package with the book class to typeset your thesis. 
+%% a title page as close as possible to the current UOW HDR word thesis-template.        
+%% Use this package with the book class to typeset your thesis. 
 %% The UOW default dimensions can be implimented with:
 %% \usepackage{geometry}
 %%     \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
 %%                    
 %% Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17 
-%% Version 1.1 2007-07-01 tmgriffiths       
+%% Version 1.2 2007-07-12 tmgriffiths       
 %%--------------------------------------------------------------------------------
 
 %% Basic usage overview
@@ -71,6 +71,57 @@
 \RequirePackage{graphicx} 
     \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
+%% If statements
+\newif\ifphd
+\newif\ifpartial
+\newif\ifnosupervisor
+\newif\ifmultiplesupervisors
+\newif\ifsubject
+    
+%% Declareing the package options    
+% The default wording for the thesis requirements for an honours thesis.
+\DeclareOption{honours} 
+{\phdfalse \partialtrue \subjectfalse}
+
+\DeclareOption{honors} % for those less honourable of you who've shunned the 'u.
+{\phdfalse \partialtrue \subjectfalse }
+
+% The default wording for the thesis requirements for a masters by coursework thesis.
+\DeclareOption{mastersbycoursework} 
+{\phdfalse \partialtrue \subjectfalse}
+
+% The default wording for the thesis requirements for a masters by research dissertaion.
+\DeclareOption{mastersbyresearch} 
+{\phdfalse \partialfalse \subjectfalse}
+
+% The default wording for the thesis requirements for a PhD thesis.
+\DeclareOption{phd}
+{\phdtrue \partialfalse \subjectfalse}
+
+% For all other thesis types, 
+\DeclareOption{other} 
+{\phdfalse \partialtrue \subjectfalse}
+
+%for theses or reports that are for an individual subject, not for the award of a degree
+\DeclareOption{partialsubject}
+{\phdfalse \partialtrue \subjecttrue \nosupervisortrue}
+
+\DeclareOption{fullsubject}
+{\phdfalse \subjecttrue \partialfalse \nosupervisortrue}
+
+% In case you belong to an institute such as AIIM instead of a school
+\DeclareOption{noschool} 
+{\def\@schooltitle{} \def\@school{}}
+
+% Determining the pluralisation (or absence) of 'supervisor' acording to the number of supervisors
+\DeclareOption{nosupervisor} % also achievable by using \supervisor[0]{}
+{\nosupervisortrue \multiplesupervisorsfalse}
+
+% These two options have been left in for legacy purposes, but are no longer needed as the \supervisor command has been modifed to have an optional field that specifies the number of supervisors
+\DeclareOption{onesupervisor}
+{\nosupervisorfalse \multiplesupervisorsfalse}
+\DeclareOption{multiplesupervisors}
+{\nosupervisorfalse \multiplesupervisorstrue}
 
 %% Defining the defualt values of the macros within \maketitle
 \makeatletter % his \makeatother friend is at the end of the document, using multiple sets I got all sorts of errors
@@ -91,13 +142,15 @@
         \ifnumgreater{#1}{1}{\nosupervisorfalse \multiplesupervisorstrue}{}
     }
 \def\@degree{\textless{}Your Degree\textgreater} 
-    \newcommand{\degree}[1]{\gdef\@degree{#1}} 
+    \newcommand{\degree}[1]{\gdef\@degree{#1}}
+\def\@class{\textless{}Your Class\textgreater} 
+    \newcommand{\class}[1]{\gdef\@class{#1}} 
 \def\@school{\textless{}Your School\textgreater} 
     \newcommand{\school}[1]{\gdef\@school{#1}}     
 \def\@graphic{\includegraphics[height=2.1cm]{uow_logo}} 
 % Image must be in the working directory for this command to work
     \newcommand{\graphic}[1]{\gdef\@graphic{#1}} 
-\def\@requirement{This thesis is presented as \ifpartial part of the requirements \else required \fi for the} 
+\def\@requirement{This \ifsubject dissertation \else thesis \fi is presented as \ifpartial part of the requirements \else required \fi \ifsubject for completion of \else for the \fi}
 \def\@schooltitle{School of}
 % The default value is the same as the honours option. This can be changed for degrees where the thesis is not only a part of the requirement of the degree
 
@@ -115,50 +168,6 @@
 \newlength{\smallgap}
     \setlength{\smallgap}{0.0269\paperheight} %for A4 paper this is approximately 8 mm
 
-%% If statements
-\newif\ifphd
-\newif\ifpartial
-\newif\ifnosupervisor
-\newif\ifmultiplesupervisors
-    
-%% Declareing the package options    
-% The default wording for the thesis requirements for an honours thesis.
-\DeclareOption{honours} 
-{\phdfalse \partialtrue }
-
-\DeclareOption{honors} % for those less honourable of you who've shunned the 'u.
-{\phdfalse \partialtrue }
-
-% The default wording for the thesis requirements for a masters by coursework thesis.
-\DeclareOption{mastersbycoursework} 
-{\phdfalse \partialtrue }
-
-% The default wording for the thesis requirements for a masters by research dissertaion.
-\DeclareOption{mastersbyresearch} 
-{\phdfalse \partialfalse }
-
-% The default wording for the thesis requirements for a PhD thesis.
-\DeclareOption{phd}
-{\phdtrue \partialfalse }
-
-% For all other thesis types, 
-\DeclareOption{other} 
-{\phdfalse \partialtrue }
-
-% In case you belong to an institute such as AIIM instead of a school
-\DeclareOption{noschool} 
-{\def\@schooltitle{} \def\@school{}}
-
-% Determining the pluralisation (or absence) of 'supervisor' acording to the number of supervisors
-\DeclareOption{nosupervisor} % also achievable by using \supervisor[0]{}
-{\nosupervisortrue \multiplesupervisorsfalse}
-
-% These two options have been left in for legacy purposes, but are no longer needed as the \supervisor command has been modifed to have an optional field that specifies the number of supervisors
-\DeclareOption{onesupervisor}
-{\nosupervisorfalse \multiplesupervisorsfalse}
-\DeclareOption{multiplesupervisors}
-{\nosupervisorfalse \multiplesupervisorstrue}
-
 %%
 %% Title page
 %%
@@ -169,10 +178,10 @@
     \begin{center}
         \vspace{-\smallgap}
         \thispagestyle{empty}
-        {\@graphic}\\
+        \ifsubject{\ }\\ \else{\@graphic}\\\fi
         \vspace{\smallgap} 
         \textbf{
-            \@schooltitle {\@school}\\
+            \@schooltitle{} \@school\\
             \vspace{\biggap}
             {\large{\@title}}\\
             \vspace{\biggap}
@@ -187,9 +196,9 @@
             \fi
             \vspace{\smallgap}
             \@requirement\\
-            Award of the Degree of\\
-            \@degree\\
-            of the\\
+            \ifsubject \@class\\ \else{Award of the Degree of}\\ \fi
+            \ifsubject {\ }\\ \else{\@degree}\\ \fi
+            \ifsubject {\ }\\ \else{of the}\\ \fi
             University of Wollongong\\
             \vspace*{\fill}
             \@date\vspace{\smallgap}
