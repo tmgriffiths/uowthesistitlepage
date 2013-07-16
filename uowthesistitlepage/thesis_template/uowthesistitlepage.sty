@@ -1,0 +1,235 @@
+%% This is file `uowthesistitlepage.sty',
+%% Version 1.2 2007-07-12
+%%
+%% Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths
+%% under the creative commons licence, attribution, non-comercial, share alike
+%% http://creativecommons.org/licenses/by-nc-sa/3.0/au/ 
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License version 1.3c
+%% http://www.latex-project.org/lppl/lppl-1-3c.txt
+%%
+%%--------------------------------------------------------------------------------
+%% This Package redefines the \maketitle command for LaTeX documents and generates
+%% a title page as close as possible to the current UOW HDR word thesis-template.        
+%% Use this package with the book class to typeset your thesis. 
+%% The UOW default dimensions can be implimented with:
+%% \usepackage{geometry}
+%%     \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
+%%                    
+%% Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17 
+%% Version 1.2 2007-07-12 tmgriffiths       
+%%--------------------------------------------------------------------------------
+
+%% Basic usage overview
+%
+% \usepackage{uowthesistitlepage}
+%
+% \begin{document}
+%
+% Title page info and usage
+%
+% Standard fields of \maketitle
+% \title{A Pretty Swish Title} 
+% \author{Average J. Blow}
+%   % If you use the hyperref package you can add a mailto link, so that clicking on your name opens an email to you.
+% 	
+% The new fields from the \maketitle renewal (see code below).
+% \degree{That Degree You've Been Studying} 
+%   % Write it in full: e.g. Bachelor of Science Medicinal Chemistry Advanced Honours
+% \school{Your School} 
+%   % e.g Chemistry
+% \supervisor{supervisor 1, supervisor 2 \& supervisor 3}
+%   % A list of your supervisors, can be turned off with the nosupervisor package option in the preamble 
+%   % or switched to multiple (more thn one) with the package option multiplesupervisors
+%
+% Implimented in version 1.1 is the \declaration command. 
+% This typesets the declaration (below) that this thesis is your own work, required in the front of each PhD Thesis.
+%
+% Declaration
+%
+% I, <Student’s Full Name>, declare that this thesis, submitted in partial fulfilment of the requirements for the award of 
+% <Your Degree>, of the School of <Your School>, University of Wollongong, is wholly my own work unless otherwise referenced
+% or acknowledged. The document has not been submitted for qualifications at any other academic institution.
+%
+%
+% ------------------------------------
+%
+% <Student’s Full Name>, July 1, 2013
+%
+
+%%---------------------------------------------------------------------%%
+% Package code   														%
+%%---------------------------------------------------------------------%%
+
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{uowthesistitlepage}[2007/07/01 (cc) tmgriffiths]
+
+\RequirePackage{lmodern} 
+\RequirePackage{setspace} % for the doublespacing
+\RequirePackage{etoolbox} % for the supervisor counting trickery
+\RequirePackage{graphicx} 
+    \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%% If statements
+\newif\ifphd
+\newif\ifpartial
+\newif\ifnosupervisor
+\newif\ifmultiplesupervisors
+\newif\ifsubject
+    
+%% Declareing the package options    
+% The default wording for the thesis requirements for an honours thesis.
+\DeclareOption{honours} 
+{\phdfalse \partialtrue \subjectfalse}
+
+\DeclareOption{honors} % for those less honourable of you who've shunned the 'u.
+{\phdfalse \partialtrue \subjectfalse }
+
+% The default wording for the thesis requirements for a masters by coursework thesis.
+\DeclareOption{mastersbycoursework} 
+{\phdfalse \partialtrue \subjectfalse}
+
+% The default wording for the thesis requirements for a masters by research dissertaion.
+\DeclareOption{mastersbyresearch} 
+{\phdfalse \partialfalse \subjectfalse}
+
+% The default wording for the thesis requirements for a PhD thesis.
+\DeclareOption{phd}
+{\phdtrue \partialfalse \subjectfalse}
+
+% For all other thesis types, 
+\DeclareOption{other} 
+{\phdfalse \partialtrue \subjectfalse}
+
+%for theses or reports that are for an individual subject, not for the award of a degree
+\DeclareOption{partialsubject}
+{\phdfalse \partialtrue \subjecttrue \nosupervisortrue}
+
+\DeclareOption{fullsubject}
+{\phdfalse \subjecttrue \partialfalse \nosupervisortrue}
+
+% In case you belong to an institute such as AIIM instead of a school
+\DeclareOption{noschool} 
+{\def\@schooltitle{} \def\@school{}}
+
+% Determining the pluralisation (or absence) of 'supervisor' acording to the number of supervisors
+\DeclareOption{nosupervisor} % also achievable by using \supervisor[0]{}
+{\nosupervisortrue \multiplesupervisorsfalse}
+
+% These two options have been left in for legacy purposes, but are no longer needed as the \supervisor command has been modifed to have an optional field that specifies the number of supervisors
+\DeclareOption{onesupervisor}
+{\nosupervisorfalse \multiplesupervisorsfalse}
+\DeclareOption{multiplesupervisors}
+{\nosupervisorfalse \multiplesupervisorstrue}
+
+%% Defining the defualt values of the macros within \maketitle
+\makeatletter % his \makeatother friend is at the end of the document, using multiple sets I got all sorts of errors
+% Fields already in the \maketitle command
+\def\@title{\textless{}Title of Your Thesis\textgreater}
+\def\@author{\textless{}Student's Full Name\textgreater}
+\def\@date{\textless{}Month Year\textgreater}
+
+%\def\@supervisor{\textless{}Your Supervisor(s)\textgreater} 
+%    \newcommand{\supervisor}[2][1]{\gdef\@supervisor{#2}}
+    
+%These are the new fields not currently in the standard \maketitle macro.
+\def\@supervisor{\textless{}Your Supervisor(s)\textgreater}
+    \newcommand{\supervisor}[2][1]{
+        \gdef\@supervisor{#2}
+        \ifnumless{#1}{1}{\nosupervisortrue \multiplesupervisorsfalse}{}
+        \ifnumequal{#1}{1}{\nosupervisorfalse \multiplesupervisorsfalse}{}
+        \ifnumgreater{#1}{1}{\nosupervisorfalse \multiplesupervisorstrue}{}
+    }
+\def\@degree{\textless{}Your Degree\textgreater} 
+    \newcommand{\degree}[1]{\gdef\@degree{#1}}
+\def\@class{\textless{}Your Class\textgreater} 
+    \newcommand{\class}[1]{\gdef\@class{#1}} 
+\def\@school{\textless{}Your School\textgreater} 
+    \newcommand{\school}[1]{\gdef\@school{#1}}     
+\def\@graphic{\includegraphics[height=2.1cm]{uow_logo}} 
+% Image must be in the working directory for this command to work
+    \newcommand{\graphic}[1]{\gdef\@graphic{#1}} 
+\def\@requirement{This \ifsubject dissertation \else thesis \fi is presented as \ifpartial part of the requirements \else required \fi \ifsubject for completion of \else for the \fi}
+\def\@schooltitle{School of}
+% The default value is the same as the honours option. This can be changed for degrees where the thesis is not only a part of the requirement of the degree
+
+%\def\@university{No university} 
+%    \newcommand{\university}[1]{\gdef\@university{#1}} % inactive with the new thesis theme (tmgriffiths 2013-05-29)
+
+%% Lengths
+% Calculate the size of the gaps between fields relative to the paper height, incase A4 is not used.
+% The title page should cope with up to A5, but document fontsize  does need to be taken down to 10 pt.
+% In the future I hope to implement something that changes the font size according to paper size. 
+\newlength{\biggap}
+    \setlength{\biggap}{0.1178\paperheight} %for A4 paper this is approximately 35 mm
+\newlength{\midgap}
+    \setlength{\midgap}{0.0505\paperheight} %for A4 paper this is approximately 15 mm
+\newlength{\smallgap}
+    \setlength{\smallgap}{0.0269\paperheight} %for A4 paper this is approximately 8 mm
+
+%%
+%% Title page
+%%
+%% Here we actually set up the title page.
+\renewcommand{\maketitle}
+{
+\begin{doublespace}
+    \begin{center}
+        \vspace{-\smallgap}
+        \thispagestyle{empty}
+        \ifsubject{\ }\\ \else{\@graphic}\\\fi
+        \vspace{\smallgap} 
+        \textbf{
+            \@schooltitle{} \@school\\
+            \vspace{\biggap}
+            {\large{\@title}}\\
+            \vspace{\biggap}
+            {\@author}\\
+            \vspace{\smallgap}
+            \ifnosupervisor {\ }\\ 
+                \else{
+                    \ifmultiplesupervisors Supervisors\\\@supervisor\\ 
+                    \else Supervisor\\\@supervisor\\ 
+                    \fi
+                } 
+            \fi
+            \vspace{\smallgap}
+            \@requirement\\
+            \ifsubject \@class\\ \else{Award of the Degree of}\\ \fi
+            \ifsubject {\ }\\ \else{\@degree}\\ \fi
+            \ifsubject {\ }\\ \else{of the}\\ \fi
+            University of Wollongong\\
+            \vspace*{\fill}
+            \@date\vspace{\smallgap}
+        }
+    \end{center}
+\end{doublespace}
+\clearpage{\pagestyle{empty}\cleardoublepage} 
+}
+
+%% Execute the default options, print supervisor field and requirements for an honours thesis.
+\ExecuteOptions{onesupervisor,honours}
+\ProcessOptions\relax
+
+
+%%
+%% Declaration page
+%%
+%% This is a new command (\declaration) that if you desire you can use to print the standard thesis submission declaration.
+
+\newcommand{\declaration}{
+\thispagestyle{empty}
+\noindent {\large \textbf{Declaration}}\\
+
+\noindent I, \@author, declare that this thesis, submitted in \ifpartial partial \fi fulfilment of the requirements for the award of \@degree, of the \@schooltitle{} \@school, University of Wollongong, is wholly my own work unless otherwise referenced or acknowledged. The document has not been submitted for qualifications at any other academic institution.\\
+\vspace{\midgap}\\
+\noindent\rule{0.4\textwidth}{1.pt}\\
+\vspace{\smallgap}\\
+\textbf{\@author}, \today
+}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\makeatother
+
+\endinput
+% Quidquid latine dictum sit altum videtur.
