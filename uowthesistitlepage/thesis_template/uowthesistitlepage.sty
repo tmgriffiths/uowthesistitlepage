@@ -1,5 +1,5 @@
 %% This is file `uowthesistitlepage.sty',
-%% Version 1.2 2007-07-12
+%% Version 1.3 2007-07-12
 %%
 %% Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths
 %% under the creative commons licence, attribution, non-comercial, share alike
@@ -162,11 +162,13 @@
 % The title page should cope with up to A5, but document fontsize  does need to be taken down to 10 pt.
 % In the future I hope to implement something that changes the font size according to paper size. 
 \newlength{\biggap}
-    \setlength{\biggap}{0.1178\paperheight} %for A4 paper this is approximately 35 mm
+    \setlength{\biggap}{0.10\paperheight} %for A4 paper this is approximately 29 mm
 \newlength{\midgap}
-    \setlength{\midgap}{0.0505\paperheight} %for A4 paper this is approximately 15 mm
+    \setlength{\midgap}{0.045\paperheight} %for A4 paper this is approximately 13 mm
 \newlength{\smallgap}
-    \setlength{\smallgap}{0.0269\paperheight} %for A4 paper this is approximately 8 mm
+    \setlength{\smallgap}{0.025\paperheight} %for A4 paper this is approximately 7 mm
+\newlength{\vsmallgap}
+    \setlength{\vsmallgap}{0.012\paperheight} %for A4 paper this is approximately 3.5 mm
 
 %%
 %% Title page
@@ -179,7 +181,7 @@
         \vspace{-\smallgap}
         \thispagestyle{empty}
         \ifsubject{\ }\\ \else{\@graphic}\\\fi
-        \vspace{\smallgap} 
+        \vspace{\vsmallgap} 
         \textbf{
             \@schooltitle{} \@school\\
             \vspace{\biggap}
