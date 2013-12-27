@@ -72,8 +72,6 @@
 
 %% If statements
 \newif\ifphd
-\newif\ifhonours
-\newif\ifmasters
 \newif\ifpartial
 \newif\ifnosupervisor
 \newif\ifmultiplesupervisors
@@ -83,162 +81,69 @@
 %% Declareing the package options    
 % The default wording for the thesis requirements for an honours thesis.
 \DeclareOption{honours} 
-{
-\phdfalse
-\mastersfalse
-\honourstrue 
-\partialtrue 
-\subjectfalse
-}
+{\phdfalse \partialtrue \subjectfalse}
 
 \DeclareOption{honors} % for those less honourable of you who've shunned the 'u.
-{
-\phdfalse 
-\mastersfalse
-\honourstrue
-\partialtrue 
-\subjectfalse
-}
+{\phdfalse \partialtrue \subjectfalse }
 
 % The default wording for the thesis requirements for a masters by coursework thesis.
 \DeclareOption{mastersbycoursework} 
-{
-\phdfalse
-\masterstrue
-\honoursfalse 
-\partialtrue 
-\subjectfalse
-}
+{\phdfalse \partialtrue \subjectfalse}
 
 % The default wording for the thesis requirements for a masters by research dissertaion.
 \DeclareOption{mastersbyresearch} 
-{
-\phdfalse 
-\masterstrue
-\honoursfalse
-\partialfalse 
-\subjectfalse
-}
+{\phdfalse \partialfalse \subjectfalse}
 
 % The default wording for the thesis requirements for a PhD thesis.
 \DeclareOption{phd}
 {
 \phdtrue
-\mastersfalse
-\honoursfalse
 \partialfalse
 \subjectfalse
-\def\@degree{Doctor of Philosophy}
+\def\@degree{\textless{}Doctor of Philosophy\textgreater}
 }
 
-% The default wording for the thesis requirements for a PhD thesis, with capitalisation.
-\DeclareOption{PhD}
-{
-\phdtrue
-\mastersfalse
-\honoursfalse
-\partialfalse
-\subjectfalse
-\def\@degree{Doctor of Philosophy}
-}
-
-% For all other thesis types. 
+% For all other thesis types, 
 \DeclareOption{other} 
-{
-\phdfalse
-\mastersfalse
-\honoursfalse 
-\partialtrue 
-\subjectfalse
-}
+{\phdfalse \partialtrue \subjectfalse}
 
 %for theses or reports that are for an individual subject, not for the award of a degree
 \DeclareOption{partialsubject}
-{
-\phdfalse
-\mastersfalse
-\honoursfalse 
-\partialtrue 
-\subjecttrue 
-\nosupervisortrue
-}
+{\phdfalse \partialtrue \subjecttrue \nosupervisortrue}
 
 \DeclareOption{fullsubject}
-{
-\phdfalse
-\mastersfalse
-\honoursfalse 
-\subjecttrue 
-\partialfalse 
-\nosupervisortrue
-}
+{\phdfalse \subjecttrue \partialfalse \nosupervisortrue}
 
-% In case you belong to an institute or some other affiliation (such as AIIM) instead of a school
+% In case you belong to an institute such as AIIM instead of a school
 \DeclareOption{noschool} 
-{
-\def\@schooltitle{} 
-\def\@school{}
-}
+{\def\@schooltitle{} \def\@school{}}
 
 % Determining the pluralisation (or absence) of 'supervisor' acording to the number of supervisors
 \DeclareOption{nosupervisor} % also achievable by using \supervisor[0]{}
-{
-\nosupervisortrue 
-\multiplesupervisorsfalse
-}
+{\nosupervisortrue \multiplesupervisorsfalse}
 
 % These two options have been left in for legacy purposes, but are no longer needed as the \supervisor command has been modifed to have an optional field that specifies the number of supervisors
 \DeclareOption{onesupervisor}
-{
-\nosupervisorfalse 
-\multiplesupervisorsfalse
-}
+{\nosupervisorfalse \multiplesupervisorsfalse}
 
 \DeclareOption{multiplesupervisors}
-{
-\nosupervisorfalse 
-\multiplesupervisorstrue
-}
+{\nosupervisorfalse \multiplesupervisorstrue}
 
 %% Defining the defualt values of the macros within \maketitle
-\makeatletter 
-% his \makeatother friend is at the end of the document, using multiple "make-ats" I got all sorts of errors
-
+\makeatletter % his \makeatother friend is at the end of the document, using multiple sets I got all sorts of errors
 % Fields already in the \maketitle command
-\def\@title
-{
-\textless{}Title of Your Thesis\textgreater
-}
-
-\def\@author
-{
-\textless{}Student's Full Name\textgreater
-}
-
-\def\@date
-{
-\textless{}Month Year\textgreater
-}
+\def\@title{\textless{}Title of Your Thesis\textgreater}
+\def\@author{\textless{}Student's Full Name\textgreater}
+\def\@date{\textless{}Month Year\textgreater}
     
 %These are the new fields not currently in the standard \maketitle macro.
-\def\@supervisor
-{
-\textless{}Your Supervisor(s)\textgreater
-}
-
-\newcommand{\supervisor}[2][1]
-{
-\gdef\@supervisor{#2}
-\ifnumless{#1}{1}
-    {
-    \nosupervisortrue
-    \multiplesupervisorsfalse
+\def\@supervisor{\textless{}Your Supervisor(s)\textgreater}
+    \newcommand{\supervisor}[2][1]{
+        \gdef\@supervisor{#2}
+        \ifnumless{#1}{1}{\nosupervisortrue \multiplesupervisorsfalse}{}
+        \ifnumequal{#1}{1}{\nosupervisorfalse \multiplesupervisorsfalse}{}
+        \ifnumgreater{#1}{1}{\nosupervisorfalse \multiplesupervisorstrue}{}
     }
-    {
-    }
-    \ifnumequal{#1}{1}{\nosupervisorfalse \multiplesupervisorsfalse}{}
-    \ifnumgreater{#1}{1}{\nosupervisorfalse \multiplesupervisorstrue}{}
-}
 \def\@degree{\textless{}Your Degree\textgreater} 
     \newcommand{\degree}[1]{\gdef\@degree{#1}}
     
