@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.14)  27 DEC 2013 22:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.14)  30 DEC 2013 16:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -60,7 +60,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks15
 )
 (./uowthesistitlepage.sty
-Package: uowthesistitlepage 2013/12/27 V 2.0 (cc) tmgriffiths
+Package: uowthesistitlepage 2013/12/30 V 2.0 (cc) tmgriffiths
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
@@ -106,22 +106,27 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \midgap=\skip44
 \smallgap=\skip45
 \vsmallgap=\skip46
+\crestheight=\skip47
+\innersidemargin=\skip48
+\outersidemargin=\skip49
+\topsidemargin=\skip50
+\bottomsidemargin=\skip51
 )
 (./examples.aux)
 \openout1 = `examples.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -214,79 +219,90 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(114.07668pt, 425.9738pt, 57.4574pt)
+* v-part:(T,H,B)=(84.50984pt, 703.0796pt, 57.4574pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=425.9738pt
+* \textheight=703.0796pt
+* \oddsidemargin=41.80669pt
+* \evensidemargin=41.80669pt
+* \topmargin=-24.76015pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-./examples.tex:12: LaTeX Error: File `uow_logo' not found.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \maketitle
-               
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<uow_logo.png, id=1, 223.0734pt x 63.1158pt>
+File: uow_logo.png Graphic file (type png)
+ <use uow_logo.png>
+Package pdftex.def Info: uow_logo.png used on input line 15.
+(pdftex.def)             Requested size: 203.0822pt x 57.4574pt.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 15.
 
-
-./examples.tex:12: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 \maketitle
-               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 12.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <17.28> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 12.
-LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 12.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 15.
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 15.
  [1
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
+
+{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uow_l
+ogo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 
  []
 
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 13.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 16.
 LaTeX Font Info:    Font shape `OML/cmr/bx/it' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 13.
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-
- []
-
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 16.
 [2
+
 
 
 ] (./examples.aux) ) 
 Here is how much of TeX's memory you used:
- 2606 strings out of 493308
- 36374 string characters out of 6137815
- 191600 words of memory out of 5000000
- 6036 multiletter control sequences out of 15000+600000
+ 2614 strings out of 493308
+ 36568 string characters out of 6137815
+ 191895 words of memory out of 5000000
+ 6056 multiletter control sequences out of 15000+600000
  6937 words of font info for 24 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 37i,4n,23p,799b,184s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,4n,23p,799b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbxti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmmib10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti12.pfb>
-Output written on examples.pdf (2 pages, 56374 bytes).
+nts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmti12.pfb>
+Output written on examples.pdf (2 pages, 81770 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 38 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
