@@ -1,5 +1,5 @@
 %% This is file `uowthesistitlepage.sty',
-%% 2013-12-30 (cc) tmgriffiths Version 2.0
+%% 2014-01-02 (cc) tmgriffiths Version 2.0
 %%
 %% Copyright (CC BY-NC-SA 3.0 AU) 2013 by T. M. Griffiths
 %% under the creative commons licence, attribution, non-comercial, share alike
@@ -18,7 +18,7 @@
 %%     \geometry{a4paper,inner=4.0cm, outer=2cm, top=3cm, bottom=2cm}               
 %%                    
 %% Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2013-06-17 
-%% Version 2.0 2013-12-30 tmgriffiths       
+%% Version 2.0 2014-01-02 tmgriffiths       
 %%--------------------------------------------------------------------------------
 
 %% Basic usage overview
@@ -63,7 +63,7 @@
 %%---------------------------------------------------------------------%%
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{uowthesistitlepage}[2013/12/30 V 2.0 (cc) tmgriffiths]
+\ProvidesPackage{uowthesistitlepage}[2014/01/02 V 2.0 (cc) tmgriffiths]
  
 \RequirePackage{setspace} % for the doublespacing
 \RequirePackage{etoolbox} % for the supervisor counting trickery
@@ -77,9 +77,13 @@
 \newif\ifpartial
 \newif\ifnosupervisor
 \newif\ifmultiplesupervisors
+\newif\ifcosupervisor
+\newif\ifnocosupervisor
+\newif\ifmultiplecosupervisors
 \newif\ifsubject
 \newif\ifschool
 \newif\ifreport
+\newif\ifhorizontal
     
 %% Declareing the package options    
 % The default wording for the thesis requirements for an honours thesis.
@@ -198,8 +202,20 @@
 % Determining the pluralisation (or absence) of 'supervisor' acording to the number of supervisors
 \DeclareOption{nosupervisor} % also achievable by using \supervisor[0]{}
 {
-\nosupervisortrue 
+\nosupervisortrue
+\cosupervisorfalse 
 \multiplesupervisorsfalse
+}
+
+\DeclareOption{cosupervisor}
+{
+\nocosupervisorfalse
+\cosupervisortrue
+}
+
+\DeclareOption{horizontal}
+{
+\horizontaltrue
 }
 
 % These two options have been left in for legacy purposes, but are no longer needed as the \supervisor Command has been modifed to have an optional field that specifies the number of supervisors
@@ -264,6 +280,42 @@
     {% true
     \nosupervisorfalse 
     \multiplesupervisorstrue
+    }
+    {% false
+    }
+}
+
+% \cosupervisor[]{}
+% Dummy text
+\def\@cosupervisor
+{
+\textless{}Your Co-supervisor(s)\textgreater
+}
+% Command
+\newcommand{\cosupervisor}[2][1]
+{
+\gdef\@cosupervisor{#2}
+\ifnumless{#1}{1}
+    {% true
+    \cosupervisorfalse
+    \nocosupervisortrue
+    \multiplecosupervisorsfalse
+    }
+    {% false
+    }
+\ifnumequal{#1}{1}
+    {% true
+    \cosupervisortrue
+    \nocosupervisorfalse 
+    \multiplecosupervisorsfalse
+    }
+    {% false
+    }
+\ifnumgreater{#1}{1}
+    {% true
+    \cosupervisortrue
+    \nocosupervisorfalse 
+    \multiplecosupervisorstrue
     }
     {% false
     }
@@ -370,58 +422,135 @@ School of
 {\centering
 {\onehalfspacing
 \newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
-    \ifsubject
-        {\ }\\ 
-        \else
+\ifsubject
+    {
+    }\\ 
+\else
+    {
+    \@graphic\\
+    } 
+\fi
+\textbf
+    {
+    \vspace{\biggap}\\
+    {\Large\@title}\\
+    \vspace{\biggap}
+    }
+\@author\\
+\vspace{\smallgap}
+\ifhorizontal
+    {
+    \ifcosupervisor
         {
-        \@graphic\\
-        } 
+        \begin{tabular}{cc}
+        \ifmultiplesupervisors 
+            {
+            Supervisors:
+            } 
+        \else 
+            {
+            Supervisor: 
+            }
         \fi
-    \textbf
+        &
+        \ifmultiplecosupervisors 
+            {
+            Co-supervisors:
+            } 
+        \else 
+            {
+            Co-supervisor: 
+            }\\
+        \fi
+        \@supervisor
+        &
+        \@cosupervisor
+        \end{tabular}
+        }\\
+    \else 
         {
-        \vspace{\biggap}\\
-        {\Large\@title}\\
-        \vspace{\biggap}
-        }
-    \@author\\
-    \vspace{\smallgap}
-    \ifnosupervisor
-        {\ }\\ 
+        \ifnosupervisor
+            { 
+            } 
         \else
+            {
+            \ifmultiplesupervisors 
+                {
+                Supervisors:\\ \@supervisor
+                }\\ 
+            \else
+                {
+                Supervisor:\\ \@supervisor
+                }\\ 
+            \fi
+            } 
+        \fi
+        }
+    \fi
+    }
+\else
+    {
+    \ifnosupervisor
+        { 
+        } 
+    \else
         {
         \ifmultiplesupervisors 
-        {Supervisors:\\ \@supervisor}\\ 
-            \else 
             {
-            {Supervisor:\\ \@supervisor}\\ 
-            }
-            \fi
-        } 
-        \fi
-    \vspace{\biggap}
-    \textit{
-    \@requirement\\
-    }
-    \ifsubject
-        {
-        \vspace{\smallgap}
-        \@class}\\
-        \vspace*{\fill}
+            Supervisors:\\ \@supervisor\\
+            } 
         \else
-        {
-        \vspace{\smallgap}
-        \@degree\\
-        \vspace*{\fill}
-        }
+            {
+            Supervisor:\\ \@supervisor\\
+            } 
         \fi
-    The University of Wollongong\par
-    \ifschool
+        } 
+    \fi
+    \ifcosupervisor
+        {
+        \ifmultiplecosupervisors 
+            {
+            Co-supervisors:\\ \@cosupervisor\\
+            }
+        \else
+            {
+            Co-supervisor:\\ \@cosupervisor\\
+            }
+        \fi
+        }
+    \else
+        {
+        } 
+    \fi
+    }
+\fi
+\vspace{\biggap}
+\textit{
+\@requirement
+}\\
+\ifsubject
+    {
+    \vspace{\smallgap}
+    \@class}\\
+    \vspace*{\fill}
+\else
+    {
+    \vspace{\smallgap}
+    \@degree\\
+    \vspace*{\fill}
+    }
+\fi
+The University of Wollongong\par
+\ifschool
     {
     \noindent\@schooltitle{}\@school\\
     }
-    \fi
-    \vspace{\smallgap}
-    \@date\vspace{\smallgap} 
+\else
+    {
+    }
+\fi
+\vspace{\smallgap}
+\@date\vspace{\smallgap} 
 \restoregeometry       
 \clearpage{\pagestyle{empty}\cleardoublepage}
 }
@@ -459,6 +588,5 @@ School of
 % Quidquid latine dictum sit altum videtur.
 
 % Depreciated/old snippets that I might need someday
-% \ifschool \@schooltitle{} \@school,\fi
 %\def\@university{No university} 
 %    \newcommand{\university}[1]{\gdef\@university{#1}} % inactive with the new thesis theme (tmgriffiths 2013-05-29)

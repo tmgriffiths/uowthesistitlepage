@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.14)  30 DEC 2013 16:22
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.7.16)  2 JAN 2014 02:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,27 +6,27 @@ entering extended mode
 **examples.tex
 (./examples.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count87
+\c@lips@count=\count88
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -37,7 +37,7 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package ifpdf Info: pdfTeX in PDF mode is not detected.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
@@ -46,9 +46,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count88
-\Gm@cntv=\count89
-\c@Gm@tempcnt=\count90
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
 \Gm@bindingoffset=\dimen103
 \Gm@wd@mp=\dimen104
 \Gm@odd@mp=\dimen105
@@ -59,21 +59,234 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 )
-(./uowthesistitlepage.sty
-Package: uowthesistitlepage 2013/12/30 V 2.0 (cc) tmgriffiths
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fontspec/fontspec.sty
+Package: fontspec 2013/05/20 v2.3c Font selection for XeLaTeX and LuaLaTeX
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/expl3.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3names.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
+Package: l3bootstrap 2013/07/28 v4581 L3 Experimental bootstrap code
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-
+Package: l3names 2012/12/07 v4346 L3 Namespace for primitives
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
-\et@xins=\count91
+\et@xins=\count92
 )
-\etb@tempcnta=\count92
+Package: expl3 2013/11/19 v4610 L3 Experimental code bundle wrapper
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3basics.sty
+Package: l3basics 2013/07/28 v4581 L3 Basic definitions
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3expan.sty
+Package: l3expan 2013/08/17 v4584 L3 Argument expansion
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3tl.sty
+Package: l3tl 2013/09/16 v4592 L3 Token lists
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3seq.sty
+Package: l3seq 2013/07/28 v4581 L3 Sequences and stacks
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3int.sty
+Package: l3int 2013/08/02 v4583 L3 Integers
+\c_max_int=\count93
+\l_tmpa_int=\count94
+\l_tmpb_int=\count95
+\g_tmpa_int=\count96
+\g_tmpb_int=\count97
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3quark.sty
+Package: l3quark 2013/07/21 v4564 L3 Quarks
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3prg.sty
+Package: l3prg 2013/08/25 v4587 L3 Control structures
+\g__prg_map_int=\count98
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3clist.sty
+Package: l3clist 2013/07/28 v4581 L3 Comma separated lists
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3token.sty
+Package: l3token 2013/08/25 v4587 L3 Experimental token manipulation
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3prop.sty
+Package: l3prop 2013/07/28 v4581 L3 Property lists
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3msg.sty
+Package: l3msg 2013/07/28 v4581 L3 Messages
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3file.sty
+Package: l3file 2013/10/13 v4596 L3 File and I/O operations
+\l_iow_line_count_int=\count99
+\l__iow_target_count_int=\count100
+\l__iow_current_line_int=\count101
+\l__iow_current_word_int=\count102
+\l__iow_current_indentation_int=\count103
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3skip.sty
+Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
+\c_zero_dim=\dimen111
+\c_max_dim=\dimen112
+\l_tmpa_dim=\dimen113
+\l_tmpb_dim=\dimen114
+\g_tmpa_dim=\dimen115
+\g_tmpb_dim=\dimen116
+\c_zero_skip=\skip43
+\c_max_skip=\skip44
+\l_tmpa_skip=\skip45
+\l_tmpb_skip=\skip46
+\g_tmpa_skip=\skip47
+\g_tmpb_skip=\skip48
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3keys.sty
+Package: l3keys 2013/07/28 v4581 L3 Experimental key-value interfaces
+\g__keyval_level_int=\count104
+\l_keys_choice_int=\count105
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3fp.sty
+Package: l3fp 2013/11/18 v4601 L3 Floating points
+\c__fp_leading_shift_int=\count106
+\c__fp_middle_shift_int=\count107
+\c__fp_trailing_shift_int=\count108
+\c__fp_big_leading_shift_int=\count109
+\c__fp_big_middle_shift_int=\count110
+\c__fp_big_trailing_shift_int=\count111
+\c__fp_Bigg_leading_shift_int=\count112
+\c__fp_Bigg_middle_shift_int=\count113
+\c__fp_Bigg_trailing_shift_int=\count114
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3box.sty
+Package: l3box 2013/07/28 v4581 L3 Experimental boxes
+\c_empty_box=\box26
+\l_tmpa_box=\box27
+\l_tmpb_box=\box28
+\g_tmpa_box=\box29
+\g_tmpb_box=\box30
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3coffins.sty
+Package: l3coffins 2012/09/09 v4212 L3 Coffin code layer
+\l__coffin_internal_box=\box31
+\l__coffin_internal_dim=\dimen117
+\l__coffin_offset_x_dim=\dimen118
+\l__coffin_offset_y_dim=\dimen119
+\l__coffin_x_dim=\dimen120
+\l__coffin_y_dim=\dimen121
+\l__coffin_x_prime_dim=\dimen122
+\l__coffin_y_prime_dim=\dimen123
+\c_empty_coffin=\box32
+\l__coffin_aligned_coffin=\box33
+\l__coffin_aligned_internal_coffin=\box34
+\l_tmpa_coffin=\box35
+\l_tmpb_coffin=\box36
+\l__coffin_display_coffin=\box37
+\l__coffin_display_coord_coffin=\box38
+\l__coffin_display_pole_coffin=\box39
+\l__coffin_display_offset_dim=\dimen124
+\l__coffin_display_x_dim=\dimen125
+\l__coffin_display_y_dim=\dimen126
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3color.sty
+Package: l3color 2012/08/29 v4156 L3 Experimental color support
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3luatex.sty
+Package: l3luatex 2013/07/28 v4581 L3 Experimental LuaTeX-specific functions
+\g__cctab_allocate_int=\count115
+\g__cctab_stack_int=\count116
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3candidates.sty
+Package: l3candidates 2013/11/18 v4602 L3 Experimental additions to l3kernel
+\l__box_top_dim=\dimen127
+\l__box_bottom_dim=\dimen128
+\l__box_left_dim=\dimen129
+\l__box_right_dim=\dimen130
+\l__box_top_new_dim=\dimen131
+\l__box_bottom_new_dim=\dimen132
+\l__box_left_new_dim=\dimen133
+\l__box_right_new_dim=\dimen134
+\l__box_internal_box=\box40
+\l__coffin_bounding_shift_dim=\dimen135
+\l__coffin_left_corner_dim=\dimen136
+\l__coffin_right_corner_dim=\dimen137
+\l__coffin_bottom_corner_dim=\dimen138
+\l__coffin_top_corner_dim=\dimen139
+\l__coffin_scaled_total_height_dim=\dimen140
+\l__coffin_scaled_width_dim=\dimen141
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2013/11/19 v4609 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count117
+\l__xparse_m_args_int=\count118
+\l__xparse_mandatory_args_int=\count119
+\l__xparse_processor_int=\count120
+\l__xparse_v_nesting_int=\count121
+)
+\l_fontspec_script_int=\count122
+\l_fontspec_language_int=\count123
+\l_fontspec_strnum_int=\count124
+\l_fontspec_tmpa_dim=\dimen142
+\l_fontspec_tmpb_dim=\dimen143
+\l_fontspec_tmpc_dim=\dimen144
+Variant \tl_gset:cV already defined; not changing it on line 69
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
+Package: fontspec-patches 2013/05/20 v2.3c Font selection for XeLaTeX and LuaLa
+TeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2006/09/13 v1.1m fixes to LaTeX
+LaTeX Info: Redefining \em on input line 420.
+)
+LaTeX Info: Redefining \em on input line 22.
+LaTeX Info: Redefining \emph on input line 30.
+LaTeX Info: Redefining \- on input line 33.
+
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \oldstylenums with arg. spec. 'm' on line 128.
+*************************************************
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \liningnums with arg. spec. 'm' on line 132.
+.................................................
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2013/05/20 v2.3c Font selection for XeLaTeX and LuaLaTe
+X
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/euenc/eu1enc.def
+File: eu1enc.def 2010/05/27 v0.1h Experimental Unicode font encodings
+)
+LaTeX Font Info:    Try loading font information for EU1+lmr on input line 100.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/euenc/eu1lmr.fd
+File: eu1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+(/usr/local/texlive/2013/texmf-dist/tex/xelatex/xunicode/xunicode.sty
+File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
+other characters in Unicode lower plane
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tipa/t3enc.def
+File: t3enc.def 2001/12/31 T3 encoding
+LaTeX Font Info:    Try loading font information for EU1+lmss on input line 357
+.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/euenc/eu1lmss.fd
+File: eu1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+\tipaTiiicode=\count125
+\tipasavetokens=\toks16
+\tipachecktokens=\toks17
+
 (/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
@@ -86,62 +299,294 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: xetex.def on input line 91.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/local/texlive/2013/texmf-dist/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2013/04/29 v0.96 LaTeX color/graphics driver for XeTeX (RRM/JK)
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count93
 ))
-\Gin@req@height=\dimen111
-\Gin@req@width=\dimen112
+\Gin@req@height=\dimen145
+\Gin@req@width=\dimen146
+))
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fontspec with arg. spec. 'O{}m' on line 41.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmainfont with arg. spec. 'O{}m' on line 46.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setsansfont with arg. spec. 'O{}m' on line 51.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmonofont with arg. spec. 'O{}m' on line 56.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathrm with arg. spec. 'O{}m' on line 65.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setboldmathrm with arg. spec. 'O{}m' on line 69.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathsf with arg. spec. 'O{}m' on line 73.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \setmathtt with arg. spec. 'O{}m' on line 77.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontfamily with arg. spec. 'mO{}m' on line 96.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontface with arg. spec. 'mO{}m' on line 100.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \defaultfontfeatures with arg. spec. 'om' on line
+. 108.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \addfontfeatures with arg. spec. 'm' on line 144.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontfeature with arg. spec. 'mm' on line 156.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newAATfeature with arg. spec. 'mmmm' on line 164.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newICUfeature with arg. spec. 'mmm' on line 172.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \aliasfontfeature with arg. spec. 'mm' on line
+. 201.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \aliasfontfeatureoption with arg. spec. 'mmm' on
+. line 203.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontscript with arg. spec. 'mm' on line 208.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \newfontlanguage with arg. spec. 'mm' on line 235.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \DeclareFontsExtensions with arg. spec. 'm' on
+. line 256.
+.................................................
+Variant \prop_gput:cnV already defined; not changing it on line 582
+Variant \prop_gput:cnx already defined; not changing it on line 583
+\l_fontspec_tmp_int=\count126
+LaTeX Info: Redefining \itshape on input line 2087.
+LaTeX Info: Redefining \slshape on input line 2092.
+LaTeX Info: Redefining \scshape on input line 2097.
+LaTeX Info: Redefining \upshape on input line 2102.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xltxtra/xltxtra.sty
+Package: xltxtra 2010/09/20 v0.5e Improvements for the "XeLaTeX" format
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
 )
-\biggap=\skip43
-\midgap=\skip44
-\smallgap=\skip45
-\vsmallgap=\skip46
-\crestheight=\skip47
-\innersidemargin=\skip48
-\outersidemargin=\skip49
-\topsidemargin=\skip50
-\bottomsidemargin=\skip51
+(/usr/local/texlive/2013/texmf-dist/tex/latex/realscripts/realscripts.sty
+Package: realscripts 2013/03/18 v0.3c Access OpenType subscripts and superscrip
+ts
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fakesubscript with arg. spec. 'm' on line 19.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \fakesuperscript with arg. spec. 'm' on line 22.
+.................................................
+
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \textsubscript with arg. spec. 's' on line 25.
+*************************************************
+*************************************************
+* LaTeX warning: "xparse/redefine-command"
+* 
+* Redefining document command \textsuperscript with arg. spec. 's' on line 28.
+*************************************************
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \realsubscript with arg. spec. 'm' on line 45.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \realsuperscript with arg. spec. 'm' on line 60.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \textsubsuperscript with arg. spec. 'sO{l}mm' on
+. line 138.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining document command \textsupersubscript with arg. spec. 'sO{l}mm' on
+. line 143.
+.................................................
+\subsupersep=\dimen147
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/metalogo/metalogo.sty
+Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
+\xl@everylogo=\toks18
+\xl@@everylogo=\toks19
+LaTeX Info: Redefining \TeX on input line 193.
+LaTeX Info: Redefining \LaTeX on input line 202.
+LaTeX Info: Redefining \LaTeXe on input line 219.
+)
+\xxt@tempbox=\box41
+)
+\g__file_internal_ior=\read1
+\g_fontspec_family_EB Garamond_int=\count127
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font EB Garamond/B (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'EBGaramond(0)' created for font 'EB Garamond' with options
+. [Mapping=tex-text,Mapping=tex-text].
+. 
+. This font family consists of the following shapes:
+. 
+. * 'normal' with NFSS spec.:
+. <->"EB
+. Garamond/ICU:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;"
+. 
+. * 'small caps' with NFSS spec.:
+. <->"EB
+. Garamond/ICU:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;+smc
+p;"
+. 
+. * 'italic' with NFSS spec.:
+. <->"EB
+. Garamond/I/ICU:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;"
+. 
+. * 'italic small caps' with NFSS spec.:
+. <->"EB
+. Garamond/I/ICU:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;+s
+mcp;"
+. 
+. * 'bold italic' with NFSS spec.:
+. <->"EB
+. Garamond/BI/ICU:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;"
+
+. 
+. * 'bold italic small caps' with NFSS spec.:
+. <->"EB
+. Garamond/BI/ICU:script=latn;language=DFLT;mapping=tex-text;mapping=tex-text;+
+smcp;"
+.................................................
+
+(./uowthesistitlepage.sty
+Package: uowthesistitlepage 2014/01/02 V 2.0 (cc) tmgriffiths
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
+\etb@tempcnta=\count128
+)
+\biggap=\skip49
+\midgap=\skip50
+\smallgap=\skip51
+\vsmallgap=\skip52
+\crestheight=\skip53
+\innersidemargin=\skip54
+\outersidemargin=\skip55
+\topsidemargin=\skip56
+\bottomsidemargin=\skip57
 )
 (./examples.aux)
 \openout1 = `examples.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 19.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 19.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/tipa/t3cmr.fd
+File: t3cmr.fd 2001/12/31 TIPA font definitions
+)
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
+* driver: xetex
+* paper: a5paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(113.81102pt, 426.79135pt, 56.9055pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=426.79135pt
-* \textheight=702.78308pt
+* h-part:(L,W,R)=(113.81102pt, 250.38426pt, 56.9055pt)
+* v-part:(T,H,B)=(85.35826pt, 455.24411pt, 56.9055pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=250.38426pt
+* \textheight=455.24411pt
 * \oddsidemargin=41.54103pt
 * \evensidemargin=41.54103pt
 * \topmargin=-23.91173pt
@@ -162,78 +607,92 @@ LaTeX Font Info:    ... okay on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count94
-\scratchdimen=\dimen113
-\scratchbox=\box26
-\nofMPsegments=\count95
-\nofMParguments=\count96
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count97
-\MPscratchDim=\dimen114
-\MPnumerator=\count98
-\makeMPintoPDFobject=\count99
-\everyMPtoPDFconversion=\toks17
-) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
+.................................................
+. fontspec info: "setup-math"
+. 
+. Adjusting the maths setup (use [no-math] to avoid this).
+.................................................
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 19.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 19.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 19.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 19.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 19.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 19.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 19.
+LaTeX Font Info:    Redeclaring math accent \check on input line 19.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 19.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 19.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 19.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 19.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 19.
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> EU1/EBGaramond(0)/m/n on input line 19.
 
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+LaTeX Font Info:    Encoding `OT1' has changed to `EU1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> EU1/EBGaramond(0)/m/n on input line 19
+.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  EU1/EBGaramond(0)/m/n --> EU1/EBGaramond(0)/m/n on inpu
+t line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  EU1/EBGaramond(0)/m/n --> EU1/EBGaramond(0)/m/n on inpu
+t line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> EU1/EBGaramond(0)/m/it on input line 1
+9.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> EU1/EBGaramond(0)/bx/n on input line 1
+9.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> EU1/lmss/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  EU1/EBGaramond(0)/m/n --> EU1/EBGaramond(0)/bx/n on inp
+ut line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  EU1/EBGaramond(0)/m/n --> EU1/EBGaramond(0)/bx/n on inp
+ut line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> EU1/EBGaramond(0)/bx/it on input line
+ 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> EU1/lmss/bx/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> EU1/lmtt/bx/n on input line 19.
 *geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
+* driver: xetex
+* paper: a5paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(114.07668pt, 425.9738pt, 57.4574pt)
-* v-part:(T,H,B)=(84.50984pt, 703.0796pt, 57.4574pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=425.9738pt
-* \textheight=703.0796pt
-* \oddsidemargin=41.80669pt
-* \evensidemargin=41.80669pt
-* \topmargin=-24.76015pt
+* h-part:(L,W,R)=(80.66028pt, 299.81406pt, 40.62645pt)
+* v-part:(T,H,B)=(59.75443pt, 497.127pt, 40.62645pt)
+* \paperwidth=421.10078pt
+* \paperheight=597.50787pt
+* \textwidth=299.81406pt
+* \textheight=497.127pt
+* \oddsidemargin=8.39029pt
+* \evensidemargin=8.39029pt
+* \topmargin=-49.51556pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -251,58 +710,42 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+File: uow_logo.png Graphic file (type QTm)
+<use  "uow_logo.png" >
 
-<uow_logo.png, id=1, 223.0734pt x 63.1158pt>
-File: uow_logo.png Graphic file (type png)
- <use uow_logo.png>
-Package pdftex.def Info: uow_logo.png used on input line 15.
-(pdftex.def)             Requested size: 203.0822pt x 57.4574pt.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 15.
+LaTeX Font Warning: Font shape `EU1/EBGaramond(0)/bx/n' undefined
+(Font)              using `EU1/EBGaramond(0)/m/n' instead on input line 21.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <17.28> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 15.
- [1
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 21.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 21.
+[1
 
 
-{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./uow_l
-ogo.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 16--16
+]
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
  []
 
-LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 16.
-LaTeX Font Info:    Font shape `OML/cmr/bx/it' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 16.
 [2
 
 
 
-] (./examples.aux) ) 
-Here is how much of TeX's memory you used:
- 2614 strings out of 493308
- 36568 string characters out of 6137815
- 191895 words of memory out of 5000000
- 6056 multiletter control sequences out of 15000+600000
- 6937 words of font info for 24 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 37i,4n,23p,799b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbxti10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmib10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmti12.pfb>
-Output written on examples.pdf (2 pages, 81770 bytes).
-PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+] (./examples.aux)
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 13972 strings out of 493934
+ 286441 string characters out of 6148803
+ 415874 words of memory out of 5000000
+ 17142 multiletter control sequences out of 15000+600000
+ 6496 words of font info for 38 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 46i,6n,45p,10422b,244s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on examples.pdf (2 pages).
