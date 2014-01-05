@@ -1,33 +1,35 @@
 \documentclass[12pt,oneside]{article}
 \usepackage{geometry}
-	\geometry{a4paper,inner=2cm, outer=3cm, top=3cm, bottom=3cm}
+	\geometry{a4paper}
 
-\usepackage[bitstream-charter]{mathdesign}
-\usepackage[T1]{fontenc}
-
-\usepackage[usenames, dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+    \definecolor{Blue}{HTML}{6A9FB5}
+    \definecolor{Red}{HTML}{AC4142}    
+    \definecolor{Green}{HTML}{90A959}
 \usepackage{titlesec}
     \titleformat{\section}
-        {\color{RoyalBlue}\normalfont\Large\sffamily}
-        {\color{RoyalBlue}\thesection}{1em}{}
+        {\color{Blue}\normalfont\Large\sffamily}
+        {\color{Blue}\thesection}{1em}{}
     \titleformat{\subsection}
         {\normalfont\large\sffamily}
         {\thesection}{1em}{}
 
 \usepackage{fontspec,xltxtra,xunicode} 
 \defaultfontfeatures{Mapping=tex-text}
-%\setromanfont[Mapping=tex-text]{EB Garamond}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Roboto}
-%\setmonofont[Scale=MatchLowercase]{Menlo}
+\setromanfont[Mapping=tex-text]{Adobe Garamond Pro}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans}
+\setmonofont[Scale=MatchLowercase]{Menlo}
 
 \usepackage{pdfpages}
 \usepackage{hyperref}
+
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}} % dots in the table of contents
 \makeatother
 
-\newcommand{\oporcom}[1]{\texttt{\color{RoyalBlue}#1}} % simplified the highlighting of options and commands in text
-\newcommand{\comoptions}[1]{\texttt{\color{Gray}#1}} % simplified the highlighting of options and commands in text
+\newcommand{\oporcom}[1]{\texttt{\color{Red}#1}} % simplified the highlighting of options and commands in text
+\newcommand{\command}[1]{\texttt{\color{Blue}#1}} % simplified the highlighting of options and commands in text
+\newcommand{\comoptions}[1]{\texttt{\color{Green}#1}} % simplified the highlighting of options and commands in text
 
 \setcounter{secnumdepth}{0}
 
@@ -87,17 +89,17 @@ Using the \oporcom{\textbackslash{}declaration} command is simple just place it 
     
     \item[\oporcom{\textbackslash{}date}\comoptions{\{Month Year\}}] The date of your submission, usually `Month Year'. Alternatively, you can use the \oporcom{\textbackslash{}today} macro, and it will print the date in the format month dd, yyyy.
     
-    \item[\oporcom{\textbackslash{}declaration}] This typesets the declaration that is required in the frontmatter of a PhD thesis. It's used in the exact same way as \oporcom{\textbackslash{}maketitle}, place it in the document where you want it typeset, and it will typeset the following:
-\begin{quote}
-    \noindent {\large \textbf{Declaration}}\\
-
-    \noindent I, \textless{}Student's Full Name\textgreater, declare that this thesis, submitted in fulfilment of the requirements for the award of \textless{}Your Degree\textgreater, of the School of \textless{}Your School\textgreater, University of Wollongong, is wholly my own work unless otherwise referenced or acknowledged. The document has not been submitted for qualifications at any other academic institution.\\
-    \vspace{16mm}\\
-    \noindent\rule{0.4\textwidth}{1pt}\\
-    \vspace{8mm}\\
-    \textbf{\textless{}Student's Full Name\textgreater}, \today\\
-\end{quote}
+    \item[\oporcom{\textbackslash{}declaration}] This typesets the declaration that is required in the frontmatter of a PhD thesis. It's used in the exact same way as \oporcom{\textbackslash{}maketitle}, place it in the document where you want it typeset and it will, for example, typeset the following for a PhD:\\
     
+\noindent{\large \textbf{Declaration}}\\
+
+{\itshape\noindent I, \textless{}Student's Full Name\textgreater, declare that this thesis submitted in fulfilment of the requirements for the conferral of the degree Doctor of Philosophy, from the University of Wollongong, is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
+\vspace{2.9cm}
+\noindent\rule{0.4\textwidth}{0.5pt}
+\vspace{1ex}\\
+\textbf{\textless{}Student's Full Name\textgreater}\\
+\today}\\
+
     \item[\oporcom{\textbackslash{}degree}\comoptions{\{Your Degree\}}] The degree for which you are submitting this work. Write the degree out in full; Doctor of Philosophy, Master of Science, Bachelor of Arts Honours etc.
     
     \item[\oporcom{\textbackslash{}graphic}] This macro is used internally to load the UOW Graphic. It has no immediate use in the body of your document and can be ignored unless you feel like cracking open the style file and tinkering. For the graphic to load properly in the title page there must be an image file in the working directory named \texttt{uow\textunderscore{}logo}. It can be used in the body of the document to load an alternative graphic if that is desired, be warned that determining the size in this case is up to you.
@@ -177,20 +179,51 @@ If you spot any errors or bugs, or alternately you have any requests for an addi
     \item Wrote documentation.
 \end{enumerate}
 
+\clearpage
 \section{Example Title Pages}
-In order on the following pages they are:
+On the following pages there are example title pages generated by the various package options. After the title pages are four example declaration pages generated for a: report, full subject, honours project and for a PhD. The declaration page is intended for PhD's but can also be used for all the other document types. The package will adjust the wording accordingly each document type; `report' for reports, `dissertation' for subject based documents (the declaration for these documents will also mention that they were submitted for a class, not the conferral of a degree) and `thesis' for all postgraduate work.
+
+The examples on the following pages in order are:
 \begin{enumerate}
-    \item \oporcom{onesupervisor,honours} \emph{default}
-    \item \oporcom{multiplesupervisors,phd}
-    \item \oporcom{nosupervisor,phd}
-    \item \oporcom{noschool,honours}
-    \item Microsoft Word 2010 template for comparison.
-    \item \oporcom{\textbackslash{}declaration} declaration page (mainly for PhD theses).
+    \item \opporcom{report}
+    \item \opporcom{partialsubject}
+    \item \opporcom{fullsubject}
+    \item \opporcom{honours} \emph{Default}
+    \item \opporcom{mastersbycoursework}
+    \item \opporcom{mastersbyresearch}
+    \item \opporcom{phd}
+    \item \opporcom{phd}
+    \item \opporcom{phd,cosupervisor}
+    \item \opporcom{phd,cosupervisor,horizontal}
+    \item \opporcom{phd,noschool}
+    \item \opporcom{phd,nosupervisor}
+    \item \opporcom{phd,nosupervisor,noschool}
+    \item \opporcom{other}
+    \item Microsoft Word 2010 template for comparison
+    \item \opporcom{\textbackslash{}declaration} \opporcom{report}
+    \item \opporcom{\textbackslash{}declaration} \opporcom{fullsubject}
+    \item \opporcom{\textbackslash{}declaration} \opporcom{honours}
+    \item \opporcom{\textbackslash{}declaration} \opporcom{phd}
 \end{enumerate}
-\includepdf{onesupervisor.pdf}
-\includepdf{multiplesupervisors-phd.pdf}
-\includepdf{nosupervisor-phd.pdf}
-\includepdf{noschool.pdf}
-\includepdf{word.pdf}
-\includepdf{declaration.pdf}
+
+\includepdf{Examples/report.pdf}
+\includepdf{Examples/partialsubject.pdf}
+\includepdf{Examples/fullsubject.pdf}
+\includepdf{Examples/honours.pdf}
+\includepdf{Examples/mastersbycoursework.pdf}
+\includepdf{Examples/mastersbyresearch.pdf}
+\includepdf{Examples/phd.pdf}
+\includepdf{Examples/phd_a5.pdf}
+\includepdf{Examples/phd_cosupervisor.pdf}
+\includepdf{Examples/phd_cosupervisor_horizontal.pdf}
+\includepdf{Examples/phd_noschool.pdf}
+\includepdf{Examples/phd_nosupervisor.pdf}
+\includepdf{Examples/phd_nosupervisor_noschool.pdf}
+\includepdf{Examples/other.pdf}
+\includepdf{Examples/word.pdf}
+\includepdf{Examples/declaration_report.pdf}
+\includepdf{Examples/declaration_fullsubject.pdf}
+\includepdf{Examples/declaration_honours.pdf}
+\includepdf{Examples/declaration_phd.pdf}
+
 \end{document}
