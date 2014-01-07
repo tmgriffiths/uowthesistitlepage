@@ -21,122 +21,81 @@
 	\pdfpageheight=\paperheight
 	% This acts as a failsafe to ensure things aren't stretched or moved when it's finally printed as a PDF.
 
-%\usepackage[british,australian]{babel} % sets the language localisation. There's no real point as the default is english
+\usepackage{uowthesistitlepage}
+% Creates the title page in accordance with UOW guidelines, includes the definition of the extra fields in \maketitle
 
 %\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty (return) line 
     \setlength{\parindent}{4ex}	% Sets the length of the paragraph indent. Current setup has a an indent. Disable this if you activate return line above.
 	
-\usepackage{setspace}
-	\doublespace
-% Double spacing.
+%\usepackage{setspace}
+% Double or one and a half spacing.
 	
-\usepackage{graphicx}
-	\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-% Graphics. Remove me and you won't have any figures, and that would be very boring.
-
-\usepackage{epstopdf} 
-% Converts eps to pdf files. Use if you have EPS graphics and you are compiling with PDFTeX. (Fine to leave if you use TeX + DVI then DIV to PDf converter.)
-
-\usepackage{color}
-\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
-% Adds the ability to make coloured text and lines throughout the document. See documentation for xcolor.
-
-
-%--------------------Tables, figures and captions
-\usepackage[font={small},labelfont={bf},margin=4ex]{caption}
-% Makes bold labeled and smaller font captions. Must be loaded before the longtable package to avoid conflicts! 
-
-\usepackage{longtable} 
-% Long tables (more than one page). Different headers and footers for beginning and end pages, etc.
-
-\usepackage{booktabs} 
-% Nice looking tables and lines in tables
-
-\usepackage{afterpage} 
-% Make a longtable start on the next clear page, but fills the previous one with text first (no random gaps in the text-from long tables anymore! Man, the day I discovered this...)
-
-\usepackage{multirow} 
-% Entries in tables over multiple rows
-
-\usepackage{lscape} 
-% Pages in landscape
-
-\usepackage{pdflscape} 
-% Landscape pages also rotated in the pdf
-
-\usepackage{wrapfig} 
-% Allows figures that don't take up the entire width of the page, wrapping the text around the figure
-
-\usepackage[position=top,singlelinecheck=false,captionskip=4pt]{subfig} 
-% Multiple figures in an individual figure. Fig. 1 a, b, c, etc. each with, or without, it's own individual caption, and with a global caption for all sub figures.
-
-\usepackage{rotating} 
-% Allows you to rotate an object by an arbitrary amount
-
-%--------------------Special symbols and fonts
-\usepackage{lmodern}
-% Sets the font to latin modern rather than computer modern. Required for the lettrine package.
-
-\usepackage{amssymb} 
-% Maths symbols
-
-%--------------------Chemistry and Science
-\usepackage[version=3]{mhchem} 									
-% Chemistry typing. Ridiculous time savings when typing out chemical formulae or equations. Whole equations can be written with this package, for example \ce{CaCO3 + 2HCl -> CaCl2 + H20 + CO2}. You can also add reagents above and below the arrows. READ the documentation, it's awesome.
-
-\usepackage{psfrag} 											
-% Replace text in eps files. Ensures identical font formatting for axes and other text things in your figures. You need to be using eps figures for this to work. While it's awesome it can be a lot of work it's used in conjunction with chemstyle below.
-
-\usepackage[bpchem]{chemstyle} 									
-% Chemistry formatting and auto numbering of compounds in schemes and figures, you need to use TeX + DVI with eps graphics for this to work. No JPG or PNG here. If you use PDFTex nothing will happen, it'll probably get stuck on a command, but it won't do anything brash. You won't get any sweet auto numbering goodness though.
-
-\usepackage{chemfig}											
-% Writing complex chemical structures in text e.g. equation arrays.
-
-\usepackage{siunitx}
-	\DeclareSIUnit{\molecule}{molecule}
-	\DeclareSIUnit{\day}{day}
-	\DeclareSIUnit{\atmosphere}{atm}
-	\DeclareSIUnit{\calorie}{cal}
-	\DeclareSIUnit{\dalton}{Da}
-	%\DeclareSIUnit{\Calorie}{Cal}
-% SI units, latin phrases etc. Ensures consitent typesetting of units and numbers etc, but only if you use it. E.g.\SI{256}{}\nano\metre} gives 256 nm, with an unbreaking space so that you dont get a value on one line with the units on the next line.
-
-%--------------------Document sections, headers, footers, and bibliography
-\usepackage[header,toc,page]{appendix}								
-% Adds the word appendix to the header in the appendix section, adds an appendices entry (like a part) to the toc before listing the appendices.
-
-\usepackage{fancyhdr}											
-% for creating different headers and footers
-
-\usepackage{extramarks} 										
-% for extrmarks in the longtable page style header and footer. In case you want to have text in the header and footer saying, hey you're on a longtable page in the chapter etc.
-
-%--------------------Bibliography
-\usepackage[backend=biber,articletitle=true,style=chem-rsc,doi=false]{biblatex}
-% This is the package that lets you create a bibliography. I recommend reading the biblatex documentation to understand all the options i've specified here. BibLaTeX was created to replace BibTeX. It has lots of extra fields and options. I'm also using the biber backend here rather than the default, it copes with unicode and so can deal with accented characters easily.
-
-% Currently this is set up to use RSC style references with article titles displayed.
-
-% Traditionally you would use BibTeX, a special build of TeX, the newer biblatex package is a more powerful bibliograpy management tool for LaTeX. You can make multiple chapter based bibliographies, footnote bibliographes, sort your references by date, author, order cited, essentially by any bit of citation data you happen to have. You can also have a seperate library with a differnet format for say books and articles. Or if you're a PhD student, the thesis references and your publications.
-
-%\usepackage[numbers,super,comma,sort&compress]{natbib}				
-	%\setcitestyle{square}										
-	% places citations in square brackets to helps to distinguish between powers and citations
-%This is the old natbib package that meshes with bibtex (rather than using the newer biblatex). It's here mainly for legacy purposes. Try to shift to biblatex if you can, it is cleaner in it's implementation and creating a custom citation style is easier then with bibtex.
-
-\usepackage[unicode=true,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,breaklinks=true]{hyperref}
-% The hyperref package allows you to have clickable links in your pdf. It also allows you to have the mailto link associated with your name. It can be  a bit finicky, so load it last.
-
-\usepackage{uowthesistitlepage}
-% Creates the title page in accordance with UOW guidelines, includes the definition of the extra fields in \maketitle
-
-%--------------------Command renewals, New commands etc.
-\renewcommand{\thefootnote}{\alph{footnote}}							
-%letters for footnotes instead of numbers to avoid confusion with references.
-
-%\setcounter{tocdepth}{2}
-% Sets the depth of the Table of contents. Currently 2, i.e. subsections.
-
-
-
+%\usepackage{graphicx}
+%	\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%% Graphics. Remove me and you won't have any figures, and that would be very boring.
+%
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+%% Adds the ability to make coloured text and lines throughout the document. See documentation for xcolor.
+%
+%%--------------------Tables, figures and captions
+%\usepackage[font={small},labelfont={bf},margin=4ex]{caption}
+%% Makes bold labeled and smaller font captions. Must be loaded before the longtable package to avoid conflicts! 
+%
+%\usepackage{longtable} 
+%% Long tables (more than one page). Different headers and footers for beginning and end pages, etc.
+%
+%\usepackage{afterpage} 
+%% Make a longtable start on the next clear page, but fills the previous one with text first (no random gaps in the text-from long tables anymore! Man, the day I discovered this...)
+%
+%\usepackage{booktabs} 
+%% Nice looking tables and lines in tables
+%
+%\usepackage{multirow} 
+%% Entries in tables over multiple rows
+%
+%\usepackage{lscape} 
+%% Pages in landscape
+%
+%\usepackage{pdflscape} 
+%% Landscape pages also rotated in the pdf
+%
+%\usepackage{wrapfig} 
+%% Allows figures that don't take up the entire width of the page, wrapping the text around the figure
+%
+%\usepackage[position=top,singlelinecheck=false,captionskip=4pt]{subfig} 
+%% Multiple figures in an individual figure. Fig. 1 a, b, c, etc. each with, or without, it's own individual caption, and with a global caption for all sub figures.
+%
+%%--------------------Special symbols and fonts
+%\usepackage{amssymb} 
+%% Maths symbols
+%
+%%--------------------Document sections, headers, footers, and bibliography
+%\usepackage[header,toc,page]{appendix}								
+%% Adds the word appendix to the header in the appendix section, adds an appendices entry (like a part) to the toc before listing the appendices.
+%
+%\usepackage{fancyhdr}											
+%% for creating different headers and footers
+%
+%\usepackage{extramarks} 										
+%% for extrmarks in the longtable page style header and footer. In case you want to have text in the header and footer saying, hey you're on a longtable page in the chapter etc.
+%
+%%--------------------Bibliography
+%\usepackage[backend=biber,articletitle=true,style=chem-rsc,doi=false]{biblatex}
+%% This is the package that lets you create a bibliography. I recommend reading the biblatex documentation to understand all the options i've specified here. BibLaTeX was created to replace BibTeX. It has lots of extra fields and options. I'm also using the biber backend here rather than the default, it copes with unicode and so can deal with accented characters easily.
+%
+%% Currently this is set up to use RSC style references with article titles displayed.
+%
+%% Traditionally you would use BibTeX, a special build of TeX, the newer biblatex package is a more powerful bibliograpy management tool for LaTeX. You can make multiple chapter based bibliographies, footnote bibliographes, sort your references by date, author, order cited, essentially by any bit of citation data you happen to have. You can also have a seperate library with a differnet format for say books and articles. Or if you're a PhD student, the thesis references and your publications.
+%
+%%\usepackage[numbers,super,comma,sort&compress]{natbib}				
+%	%\setcitestyle{square}										
+%	% places citations in square brackets to helps to distinguish between powers and citations
+%%This is the old natbib package that meshes with bibtex (rather than using the newer biblatex). It's here mainly for legacy purposes. Try to shift to biblatex if you can, it is cleaner in it's implementation and creating a custom citation style is easier then with bibtex.
+%
+%\usepackage[unicode=true,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,breaklinks=true]{hyperref}
+%% The hyperref package allows you to have clickable links in your pdf. It also allows you to have the mailto link associated with your name. It can be  a bit finicky, so load it last.
+%
+%%--------------------Command renewals, New commands etc.
+%\renewcommand{\thefootnote}{\alph{footnote}}							
+%%letters for footnotes instead of numbers to avoid confusion with references.
+%

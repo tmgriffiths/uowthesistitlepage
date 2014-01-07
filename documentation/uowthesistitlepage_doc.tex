@@ -1,6 +1,6 @@
 \documentclass[12pt,oneside]{article}
 \usepackage{geometry}
-	\geometry{a4paper}
+	\geometry{a4paper,bottom=4.5cm}
 
 \usepackage[usenames,dvipsnames]{xcolor}
     % "Base16" color palette definitions 
@@ -100,7 +100,9 @@ The declaration page is intended for PhD theses, but will work fine for each doc
     
     \item[\command{\textbackslash{}class}\comoptions{\{Your Class\}}] If this is a dissertation submitted for an individual subject instead of a whole degree this is where you tell the package what it is. You can write the subject code, e.g. CHEM364, or the full subject name: `CHEM364, Molecular Structure and Spectroscopy'. If you're using this command you need to have the \option{report}, \option{fullsubject} or \option{partialsubject} option loaded in the preamble. If you don't load one of these three options this macro will do a disappointing nothing.
     
-    \item[\command{\textbackslash{}cosupervisor}\option{[number of co-supervisors]}\comoptions{\{Your Co-supervisors\}}] This is an optional field for your title page. It prints your co-super\-visor(s) to the title page. List all your co-supervisors and their titles in the one set of enclosing braces (\comoptions{\{ \}}), separated by commas and `and' or an ampersand (\textbackslash{}\&) before the final co-supervisor if you have multiple supervisors. Use the optional argument `\option{[x]}' to specify how many co-supervisors you have. The default number of co-supervisors is zero, and this field \emph{will not} be typeset if the \option{cosupervisor} option is not given in the preamble. This field can be modified to either display adjacent to the supervisor field or below it. Making the fields adjacent is done with the \option{horizontal} option in the preamble. The default is below the supervisor field. If you have a large number of supervisors, or supervisors with long names I recommend you use the default one above the other placing of the supervisor and co-supervisor fields.
+    \item[\command{\textbackslash{}cosupervisor}\option{[number of co-supervisors]}\comoptions{\{Your Co-supervisors\}}] This field is optional for your title page. It prints your co-super\-visor(s) to the title page. List all your co-supervisors and their titles in the one set of enclosing braces (\comoptions{\{~\}}), separated by commas and `and' or an ampersand (\textbackslash{}\&) before the final co-supervisor if you have multiple supervisors. Use the optional argument `\option{[x]}' to specify how many co-supervisors you have. The default number of co-supervisors is zero, and this field \emph{will not} be typeset if the \option{cosupervisor} option is not given in the preamble. 
+    
+    This field can be modified to either display adjacent to the supervisor field or below it. Making the fields adjacent is done with the \option{horizontal} option in the preamble. The default is below the supervisor field. If you have a large number of supervisors, or supervisors with long names I recommend you use the default one above the other placing of the supervisor and co-supervisor fields.
     
     \item[\command{\textbackslash{}date}\comoptions{\{Month Year\}}] The date of your submission, usually `Month Year'. Alternatively, you can use the \command{\textbackslash{}today} macro, and it will print the date in the format month dd, yyyy.
     
@@ -126,7 +128,7 @@ The declaration page is intended for PhD theses, but will work fine for each doc
     
     \item[\command{\textbackslash{}school}\comoptions{\{Your School\}}] The school within the university with which you are associated. If you are not associated with a school you can use the \option{noschool} option in the preamble to disable the school at the bottom of the title page. The \option{\textbackslash{}school} command will still work with the \option{noschool} option, so you can specify another affiliation, for example: The Australian Institute for Innovative Materials (AIIM).
     
-    \item[\command{\textbackslash{}supervisor}\option{[number of supervisors]}\comoptions{\{Your Supervisors\}}] Prints your supervisor(s) to the title page. List all your supervisors and their titles in the one set of enclosing braces (\comoptions{\{ \}}), separated by commas and `and' or an ampersand (\textbackslash{}\&) before the final supervisor if you have multiple supervisors. Use the optional argument `\option{[x]}' to specify how many supervisors you have. The default number of supervisors is one. If you have no supervisors or you don't want to typeset them on the title page set the optional argument to zero, or use the \option{nosupervisor} option in the preamble.
+    \item[\command{\textbackslash{}supervisor}\option{[number of supervisors]}\comoptions{\{Your Supervisors\}}] Prints your supervisor(s) to the title page. List all your supervisors and their titles in the one set of enclosing braces (\comoptions{\{~\}}), separated by commas and `and' or an ampersand (\textbackslash{}\&) before the final supervisor if you have multiple supervisors. Use the optional argument `\option{[x]}' to specify how many supervisors you have. The default number of supervisors is one. If you have no supervisors or you don't want to typeset them on the title page set the optional argument to zero, or use the \option{nosupervisor} option in the preamble.
     
     \item[\command{\textbackslash{}title}\comoptions{\{Your Thesis Title\}}] Self explanatory. It's the title of your thesis.
 \end{description}
@@ -191,6 +193,9 @@ The declaration page is intended for PhD theses, but will work fine for each doc
     \item[\option{onesupervisor}]
     Makes the supervisor field singular, printing `Supervisor' This option is the default. Still implemented but obsolete. Use the optional argument to the \command{\textbackslash{}supervisor}\option{[number of supervisors]}\comoptions{\{Your Supervisors\}} command.
     
+    \item[\option{report}]
+    Typesets a fairly minimal but nice looking title page for lab reports or other in class assessments. No logo is printed and the name of the subject is loaded with the \command{\textbackslash{}class} macro in the document body. The same as the \option{fullsubject} and \option{partialsubject} options.
+    
 \end{description}
 
 \section{Legal}
@@ -199,11 +204,11 @@ This work may be distributed and/or modified under the conditions of the LaTeX P
 The crest of the University of Wollongong is copyright and the property of the University of Wollongong. As the core identifier of the university its use is governed by the university's brand and visual identity guidelines 
 which can be found at: \url{http://www.uow.edu.au/about/brand/uowlogo/index.html}
 
-This work is copyright (CC BY-NC-SA 3.0 AU) 2014 by T. M. Griffiths under the creative commons licence (attribution, non-comercial, share alike). More information can be found here: \url{http://creativecommons.org/licenses/by-nc-sa/3.0/au/}.
+This work is copyright (CC BY-NC-SA 3.0 AU) 2014 by T. M. Griffiths under the creative commons licence (attribution, non-commercial, share alike). More information can be found here: \url{http://creativecommons.org/licenses/by-nc-sa/3.0/au/}.
 
 \section{Change Log}
 If you spot any errors or bugs, or alternately you have any requests for an addition let me know.
-\subsection*{Version 2.0, 2014–01–02, tmgriffiths}
+\subsection*{Version 2.0, 2014–01–07, tmgriffiths}
 \begin{itemize}
     \item Added \command{\textbackslash{}cosupervisor} field. The field works the same as supervisor field, but is off by default. The co-supervisor field is turned on by the \option{cosupervisor} option in the preamble. The field can either be below the supervisor field or next to it. When next to it the whole block of supervisors is centred as a single unit. The default position is below the supervisor field, but the adjacent style can be tuned on with the \option{horizontal} option in the preamble.
     \item Added the \option{horizontal} option. This uses a tabular environment to put two centred columns in a centred table to place the new \command{\textbackslash{}cosupervisor} adjacent to the supervisor field. It is off by default but if you want it on just give \option{horizontal} as a option to the package in the preamble.
@@ -239,19 +244,19 @@ PhD) is given to the package.
 \begin{itemize}
     \item Rewrote the \command{\textbackslash{}supervisor} command to have an optional argument giving the number of supervisors. I used the \texttt{etoolbox} package and its \texttt{\textbackslash{}ifnumcom} macros to do so. The old options \option{nosupervisor}, \option{onesupervisor} and \option{multiplesupervisors} still exist but mainly for legacy reasons. It is not necessary to specify them in the preamble anymore. The only thing of note is that \option{nosupervisor} is achieved by either \option{nosupervisor} in the preamble or \command{\textbackslash{}supervisor}\comoptions{\texttt{[0]\{\}}} in the document Simply leaving out supervisor will not remove the field.
     \item Rewrote the way each degree type specified partial or complete requirement in the \command{\textbackslash{}@requirement} macro. I'm now using \texttt{\textbackslash{}if} statements to set the field.
-    \item Implemented the \command{\textbackslash{}declaration} command (see examples). It typesets declaration page that PhD students are required to have in the frontmatter of their thesis.
+    \item Implemented the \command{\textbackslash{}declaration} command (see examples). It typesets declaration page that PhD students are required to have in the front matter of their thesis.
 \end{itemize}
 
 \subsection*{Version 1.0, 2013–23–06, tmgriffiths}
-\begin{enumerate}
-    \item Implimented \option{phd}, \option{mastersbyresearch}, the various \option{supervisor} based, and \option{noschool} options.
+\begin{itemize}
+    \item Implemented \option{phd}, \option{mastersbyresearch}, the various \option{supervisor} based, and \option{noschool} options.
     \item Annotated code in sty file.
     \item Wrote documentation.
-\end{enumerate}
+\end{itemize}
 
 \clearpage
 \section{Example Title Pages}
-On the following pages there are example title pages and four example declaration pages. The options and documents settings for the examples on the following pages (in order) are:
+On the following pages there are example title pages and four example declaration pages. The package options and document settings if anything non standard for the examples on the following pages (in order) are:
 \begin{enumerate}
     \item \option{report}
     \item \option{partialsubject}

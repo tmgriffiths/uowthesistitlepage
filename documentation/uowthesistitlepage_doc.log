@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.17)  6 JAN 2014 16:59
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.7.16)  7 JAN 2014 01:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -98,15 +98,15 @@ Package: fontspec 2013/05/20 v2.3c Font selection for XeLaTeX and LuaLaTeX
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/expl3.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3names.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3bootstrap.sty
-Package: l3bootstrap 2013/07/28 v4581 L3 Experimental bootstrap code
+Package: l3bootstrap 2013/12/29 v4629 L3 Experimental bootstrap code
 )
-Package: l3names 2012/12/07 v4346 L3 Namespace for primitives
+Package: l3names 2013/12/29 v4630 L3 Namespace for primitives
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count91
 )
-Package: expl3 2013/11/19 v4610 L3 Experimental code bundle wrapper
+Package: expl3 2013/12/31 v4634 L3 Experimental code bundle wrapper
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3basics.sty
 Package: l3basics 2013/07/28 v4581 L3 Basic definitions
@@ -115,10 +115,10 @@ Package: l3basics 2013/07/28 v4581 L3 Basic definitions
 Package: l3expan 2013/08/17 v4584 L3 Argument expansion
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3tl.sty
-Package: l3tl 2013/09/16 v4592 L3 Token lists
+Package: l3tl 2013/12/27 v4625 L3 Token lists
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3seq.sty
-Package: l3seq 2013/07/28 v4581 L3 Sequences and stacks
+Package: l3seq 2013/12/14 v4623 L3 Sequences and stacks
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3int.sty
 Package: l3int 2013/08/02 v4583 L3 Integers
@@ -129,7 +129,7 @@ Package: l3int 2013/08/02 v4583 L3 Integers
 \g_tmpb_int=\count96
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3quark.sty
-Package: l3quark 2013/07/21 v4564 L3 Quarks
+Package: l3quark 2013/12/14 v4623 L3 Quarks
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3prg.sty
 Package: l3prg 2013/08/25 v4587 L3 Control structures
@@ -142,7 +142,7 @@ Package: l3clist 2013/07/28 v4581 L3 Comma separated lists
 Package: l3token 2013/08/25 v4587 L3 Experimental token manipulation
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3prop.sty
-Package: l3prop 2013/07/28 v4581 L3 Property lists
+Package: l3prop 2013/12/14 v4623 L3 Property lists
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3msg.sty
 Package: l3msg 2013/07/28 v4581 L3 Messages
@@ -177,12 +177,12 @@ Package: l3skip 2013/07/28 v4581 L3 Dimensions and skips
 \g_tmpb_muskip=\muskip15
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3keys.sty
-Package: l3keys 2013/07/28 v4581 L3 Experimental key-value interfaces
+Package: l3keys 2013/12/08 v4614 L3 Experimental key-value interfaces
 \g__keyval_level_int=\count103
 \l_keys_choice_int=\count104
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3fp.sty
-Package: l3fp 2013/11/18 v4601 L3 Floating points
+Package: l3fp 2013/12/31 v4633 L3 Floating points
 \c__fp_leading_shift_int=\count105
 \c__fp_middle_shift_int=\count106
 \c__fp_trailing_shift_int=\count107
@@ -202,7 +202,7 @@ Package: l3box 2013/07/28 v4581 L3 Experimental boxes
 \g_tmpb_box=\box31
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3coffins.sty
-Package: l3coffins 2012/09/09 v4212 L3 Coffin code layer
+Package: l3coffins 2013/12/14 v4624 L3 Coffin code layer
 \l__coffin_internal_box=\box32
 \l__coffin_internal_dim=\dimen122
 \l__coffin_offset_x_dim=\dimen123
@@ -232,7 +232,7 @@ Package: l3luatex 2013/07/28 v4581 L3 Experimental LuaTeX-specific functions
 \g__cctab_stack_int=\count115
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3kernel/l3candidates.sty
-Package: l3candidates 2013/11/18 v4602 L3 Experimental additions to l3kernel
+Package: l3candidates 2013/12/31 v4633 L3 Experimental additions to l3kernel
 \l__box_top_dim=\dimen132
 \l__box_bottom_dim=\dimen133
 \l__box_left_dim=\dimen134
@@ -251,7 +251,7 @@ Package: l3candidates 2013/11/18 v4602 L3 Experimental additions to l3kernel
 \l__coffin_scaled_width_dim=\dimen146
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2013/11/19 v4609 L3 Experimental document command parser
+Package: xparse 2013/12/31 v4634 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count116
 \l__xparse_m_args_int=\count117
 \l__xparse_mandatory_args_int=\count118
@@ -761,7 +761,7 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen156
@@ -849,11 +849,11 @@ LaTeX Font Info:    ... okay on input line 54.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
-* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* v-part:(T,H,B)=(101.40665pt, 615.6028pt, 128.0374pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=418.25368pt
-* \textheight=591.5302pt
+* \textheight=615.6028pt
 * \oddsidemargin=17.3571pt
 * \evensidemargin=17.3571pt
 * \topmargin=-7.86334pt
@@ -1070,31 +1070,26 @@ LaTeX Font Info:    Font shape `EU1/Menlo(0)/m/n' will be
 LaTeX Font Info:    Font shape `EU1/Menlo(0)/bx/n' will be
 (Font)              scaled to size 8.67792pt on input line 98.
 [2]
-Overfull \hbox (5.65811pt too wide) in paragraph at lines 103--104
-[]\EU1/AdobeGaramondPro(0)/m/n/12 This is an optional field
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 109--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--117
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-[3] [4] [5] [6] [7] [8] [9]
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
+
+ []
+
+[3] [4] [5] [6] [7] [8]
 File: Examples/report.pdf Graphic file (type QTm)
  <use  "Examples/report.pdf" >
 File: Examples/report.pdf Graphic file (type QTm)
 
-<use  "Examples/report.pdf" > [10
+<use  "Examples/report.pdf" > [9
 
 ]
 File: Examples/report.pdf Graphic file (type QTm)
@@ -1109,7 +1104,7 @@ File: Examples/report.pdf Graphic file (type QTm)
 <use  "Examples/report.pdf"  page1>
 File: Examples/report.pdf Graphic file (type QTm)
  <use  "Examples/report.pdf"  page1>
-[11]
+[10]
 File: Examples/partialsubject.pdf Graphic file (type QTm)
  <use  "Examples/partialsubject.pdf" >
 File: Examples/partialsubject.pdf Graphic file (type QTm)
@@ -1129,7 +1124,7 @@ File: Examples/partialsubject.pdf Graphic file (type QTm)
 <use  "Examples/partialsubject.pdf"  page1>
 File: Examples/partialsubject.pdf Graphic file (type QTm)
 
-<use  "Examples/partialsubject.pdf"  page1> [12]
+<use  "Examples/partialsubject.pdf"  page1> [11]
 File: Examples/fullsubject.pdf Graphic file (type QTm)
 
 <use  "Examples/fullsubject.pdf" >
@@ -1149,7 +1144,7 @@ File: Examples/fullsubject.pdf Graphic file (type QTm)
 <use  "Examples/fullsubject.pdf"  page1>
 File: Examples/fullsubject.pdf Graphic file (type QTm)
 
-<use  "Examples/fullsubject.pdf"  page1> [13]
+<use  "Examples/fullsubject.pdf"  page1> [12]
 File: Examples/honours.pdf Graphic file (type QTm)
  <use  "Examples/honours.pdf" >
 File: Examples/honours.pdf Graphic file (type QTm)
@@ -1167,7 +1162,7 @@ File: Examples/honours.pdf Graphic file (type QTm)
 <use  "Examples/honours.pdf"  page1>
 File: Examples/honours.pdf Graphic file (type QTm)
  <use  "Examples/honours.pdf"  page1>
-[14]
+[13]
 File: Examples/mastersbycoursework.pdf Graphic file (type QTm)
  <use  "Examples/mastersbycoursework.pdf" >
 File: Examples/mastersbycoursework.pdf Graphic file (type QTm)
@@ -1187,7 +1182,7 @@ File: Examples/mastersbycoursework.pdf Graphic file (type QTm)
 <use  "Examples/mastersbycoursework.pdf"  page1>
 File: Examples/mastersbycoursework.pdf Graphic file (type QTm)
 
-<use  "Examples/mastersbycoursework.pdf"  page1> [15]
+<use  "Examples/mastersbycoursework.pdf"  page1> [14]
 File: Examples/mastersbyresearch.pdf Graphic file (type QTm)
 
 <use  "Examples/mastersbyresearch.pdf" >
@@ -1208,7 +1203,7 @@ File: Examples/mastersbyresearch.pdf Graphic file (type QTm)
 <use  "Examples/mastersbyresearch.pdf"  page1>
 File: Examples/mastersbyresearch.pdf Graphic file (type QTm)
 
-<use  "Examples/mastersbyresearch.pdf"  page1> [16]
+<use  "Examples/mastersbyresearch.pdf"  page1> [15]
 File: Examples/phd.pdf Graphic file (type QTm)
  <use  "Examples/phd.pdf" >
 File: Examples/phd.pdf Graphic file (type QTm)
@@ -1225,7 +1220,7 @@ File: Examples/phd.pdf Graphic file (type QTm)
 
 <use  "Examples/phd.pdf"  page1>
 File: Examples/phd.pdf Graphic file (type QTm)
- <use  "Examples/phd.pdf"  page1> [17]
+ <use  "Examples/phd.pdf"  page1> [16]
 File: Examples/phd_a5.pdf Graphic file (type QTm)
 
 <use  "Examples/phd_a5.pdf" >
@@ -1243,7 +1238,7 @@ File: Examples/phd_a5.pdf Graphic file (type QTm)
  <use  "Examples/phd_a5.pdf"  page1>
 File: Examples/phd_a5.pdf Graphic file (type QTm)
 
-<use  "Examples/phd_a5.pdf"  page1> [18]
+<use  "Examples/phd_a5.pdf"  page1> [17]
 File: Examples/phd_cosupervisor.pdf Graphic file (type QTm)
 
 <use  "Examples/phd_cosupervisor.pdf" >
@@ -1264,7 +1259,7 @@ File: Examples/phd_cosupervisor.pdf Graphic file (type QTm)
 <use  "Examples/phd_cosupervisor.pdf"  page1>
 File: Examples/phd_cosupervisor.pdf Graphic file (type QTm)
 
-<use  "Examples/phd_cosupervisor.pdf"  page1> [19]
+<use  "Examples/phd_cosupervisor.pdf"  page1> [18]
 File: Examples/phd_cosupervisor_horizontal.pdf Graphic file (type QTm)
 
 <use  "Examples/phd_cosupervisor_horizontal.pdf" >
@@ -1285,7 +1280,7 @@ File: Examples/phd_cosupervisor_horizontal.pdf Graphic file (type QTm)
 <use  "Examples/phd_cosupervisor_horizontal.pdf"  page1>
 File: Examples/phd_cosupervisor_horizontal.pdf Graphic file (type QTm)
 
-<use  "Examples/phd_cosupervisor_horizontal.pdf"  page1> [20]
+<use  "Examples/phd_cosupervisor_horizontal.pdf"  page1> [19]
 File: Examples/phd_noschool.pdf Graphic file (type QTm)
 
 <use  "Examples/phd_noschool.pdf" >
@@ -1305,7 +1300,7 @@ File: Examples/phd_noschool.pdf Graphic file (type QTm)
 <use  "Examples/phd_noschool.pdf"  page1>
 File: Examples/phd_noschool.pdf Graphic file (type QTm)
 
-<use  "Examples/phd_noschool.pdf"  page1> [21]
+<use  "Examples/phd_noschool.pdf"  page1> [20]
 File: Examples/phd_noschool_school-AIIM.pdf Graphic file (type QTm)
 
 <use  "Examples/phd_noschool_school-AIIM.pdf" >
@@ -1326,7 +1321,7 @@ File: Examples/phd_noschool_school-AIIM.pdf Graphic file (type QTm)
 <use  "Examples/phd_noschool_school-AIIM.pdf"  page1>
 File: Examples/phd_noschool_school-AIIM.pdf Graphic file (type QTm)
 
-<use  "Examples/phd_noschool_school-AIIM.pdf"  page1> [22]
+<use  "Examples/phd_noschool_school-AIIM.pdf"  page1> [21]
 File: Examples/phd_nosupervisor.pdf Graphic file (type QTm)
 
 <use  "Examples/phd_nosupervisor.pdf" >
@@ -1347,7 +1342,7 @@ File: Examples/phd_nosupervisor.pdf Graphic file (type QTm)
 <use  "Examples/phd_nosupervisor.pdf"  page1>
 File: Examples/phd_nosupervisor.pdf Graphic file (type QTm)
 
-<use  "Examples/phd_nosupervisor.pdf"  page1> [23]
+<use  "Examples/phd_nosupervisor.pdf"  page1> [22]
 File: Examples/phd_nosupervisor_noschool.pdf Graphic file (type QTm)
 
 <use  "Examples/phd_nosupervisor_noschool.pdf" >
@@ -1368,7 +1363,7 @@ File: Examples/phd_nosupervisor_noschool.pdf Graphic file (type QTm)
 <use  "Examples/phd_nosupervisor_noschool.pdf"  page1>
 File: Examples/phd_nosupervisor_noschool.pdf Graphic file (type QTm)
 
-<use  "Examples/phd_nosupervisor_noschool.pdf"  page1> [24]
+<use  "Examples/phd_nosupervisor_noschool.pdf"  page1> [23]
 File: Examples/other.pdf Graphic file (type QTm)
 
 <use  "Examples/other.pdf" >
@@ -1386,7 +1381,7 @@ File: Examples/other.pdf Graphic file (type QTm)
  <use  "Examples/other.pdf"  page1>
 File: Examples/other.pdf Graphic file (type QTm)
 
-<use  "Examples/other.pdf"  page1> [25]
+<use  "Examples/other.pdf"  page1> [24]
 File: Examples/word.pdf Graphic file (type QTm)
  <use  "Examples/word.pdf" >
 File: Examples/word.pdf Graphic file (type QTm)
@@ -1403,7 +1398,7 @@ File: Examples/word.pdf Graphic file (type QTm)
 
 <use  "Examples/word.pdf"  page1>
 File: Examples/word.pdf Graphic file (type QTm)
- <use  "Examples/word.pdf"  page1> [26]
+ <use  "Examples/word.pdf"  page1> [25]
 File: Examples/declaration_report.pdf Graphic file (type QTm)
 
 <use  "Examples/declaration_report.pdf" >
@@ -1424,7 +1419,7 @@ File: Examples/declaration_report.pdf Graphic file (type QTm)
 <use  "Examples/declaration_report.pdf"  page1>
 File: Examples/declaration_report.pdf Graphic file (type QTm)
 
-<use  "Examples/declaration_report.pdf"  page1> [27]
+<use  "Examples/declaration_report.pdf"  page1> [26]
 File: Examples/declaration_fullsubject.pdf Graphic file (type QTm)
 
 <use  "Examples/declaration_fullsubject.pdf" >
@@ -1445,7 +1440,7 @@ File: Examples/declaration_fullsubject.pdf Graphic file (type QTm)
 <use  "Examples/declaration_fullsubject.pdf"  page1>
 File: Examples/declaration_fullsubject.pdf Graphic file (type QTm)
 
-<use  "Examples/declaration_fullsubject.pdf"  page1> [28]
+<use  "Examples/declaration_fullsubject.pdf"  page1> [27]
 File: Examples/declaration_honours.pdf Graphic file (type QTm)
 
 <use  "Examples/declaration_honours.pdf" >
@@ -1466,7 +1461,7 @@ File: Examples/declaration_honours.pdf Graphic file (type QTm)
 <use  "Examples/declaration_honours.pdf"  page1>
 File: Examples/declaration_honours.pdf Graphic file (type QTm)
 
-<use  "Examples/declaration_honours.pdf"  page1> [29]
+<use  "Examples/declaration_honours.pdf"  page1> [28]
 File: Examples/declaration_phd.pdf Graphic file (type QTm)
 
 <use  "Examples/declaration_phd.pdf" >
@@ -1486,21 +1481,21 @@ File: Examples/declaration_phd.pdf Graphic file (type QTm)
 <use  "Examples/declaration_phd.pdf"  page1>
 File: Examples/declaration_phd.pdf Graphic file (type QTm)
 
-<use  "Examples/declaration_phd.pdf"  page1> [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+<use  "Examples/declaration_phd.pdf"  page1> [29]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 304.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 304.
  (./uowthesistitlepage_doc.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 299.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 304.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 304.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 304.
  ) 
 Here is how much of TeX's memory you used:
- 21974 strings out of 493934
- 406076 string characters out of 6148803
- 467143 words of memory out of 5000000
- 24972 multiletter control sequences out of 15000+600000
+ 21992 strings out of 493934
+ 406581 string characters out of 6148803
+ 466893 words of memory out of 5000000
+ 24990 multiletter control sequences out of 15000+600000
  8041 words of font info for 76 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  46i,18n,88p,10436b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on uowthesistitlepage_doc.pdf (30 pages).
+Output written on uowthesistitlepage_doc.pdf (29 pages).
