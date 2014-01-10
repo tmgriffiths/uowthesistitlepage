@@ -64,7 +64,8 @@
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{uowthesistitlepage}[2014/01/07 V 2.0 (cc) tmgriffiths]
- 
+
+\RequirePackage{geometry} 
 \RequirePackage{setspace} % for the doublespacing
 \RequirePackage{etoolbox} % for the supervisor counting trickery
 \RequirePackage{graphicx} 
@@ -567,12 +568,13 @@ The University of Wollongong\par
 \thispagestyle{empty}
 \noindent {\large \textbf{Declaration}}\\
 
-\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
+{\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
 \vspace{\biggap}
 \noindent\rule{0.4\textwidth}{0.5pt}
 \vspace{1ex}\\
 \textbf{\@author}\\
 \today
+}
 
 \clearpage{\pagestyle{empty}\cleardoublepage}
 \makeatother

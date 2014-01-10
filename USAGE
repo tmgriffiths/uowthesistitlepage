@@ -1,0 +1,4 @@
+ABOUT
+This these template has been made to make it easier for you to create your thesis with LaTeX, and at the same time adhere to the UOW thesis guidelines. We've made effort to keep this template up to date, but always consult your supervisor and the guidelines: http://www.uow.edu.au/research/rsc/student/thesis/index.html.
+
+This directory should contain a thesis template, a copy of the logo for the title page, and a copy of the uowthesistitlepage package (version 2.0). Any current TeXLive installation should also have the latest uowthesistitlepage package available, and it is available on the CTAN network as a standalone download.
