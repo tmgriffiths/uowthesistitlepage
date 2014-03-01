@@ -16,6 +16,10 @@
 % can recomend the siunitx and the chemmachro (or mhchem) package. They make %
 % it really easy to typeset chemical equations, any quantity with units and  %
 % scientific notation.                                                       %
+% Some online latex compiling tools do not support all packages, such as     %
+% biblatex, fontenc etc.  Be sure to check what packages are                 % 
+% supported by your system and always check back as things are always        %
+% updating.                                                                  %
 %                                                                            %
 %----------------------------------------------------------------------------%
 
@@ -88,7 +92,7 @@
 %\usepackage[numbers,super,comma,sort&compress]{natbib}				
 	%\setcitestyle{square}										
 	% places citations in square brackets to helps to distinguish between powers and citations
-%This is the old natbib package that meshes with bibtex (rather than using the newer biblatex). It's here mainly for legacy purposes. Try to shift to biblatex if you can, it is cleaner in it's implementation and creating a custom citation style is easier then with bibtex.
+%This is the old natbib package that meshes with bibtex (rather than using the newer biblatex). It's here mainly for legacy purposes. Try to shift to biblatex if you can, it is cleaner in it's implementation and creating a custom citation style is easier then with bibtex. Some online tools don't yet support biblatex, so you'll need to use this method.
 
 \usepackage[unicode=true,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,breaklinks=true]{hyperref}
 % The hyperref package allows you to have clickable links in your pdf. It also allows you to have the mailto link associated with your name. It can be  a bit finicky, so load it last.
