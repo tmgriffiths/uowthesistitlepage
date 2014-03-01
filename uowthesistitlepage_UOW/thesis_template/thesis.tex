@@ -12,6 +12,8 @@
 \input{thesispreamble} % this must be left as \input, \include is giving me a hard time here and only here.
 \usepackage[]{uowthesistitlepage}
 % Creates the title page in accordance with UOW guidelines, includes the definition of the extra fields in \maketitle
+
+% This is where you load your bibliography file. If you use change to BibTeX and natbib in the pramble comment it out.
 \addbibresource{your_bibliography.bib}
 
 %------------------------ Main Document --------------------------
@@ -66,7 +68,7 @@
     \phantomsection	\addcontentsline{toc}{chapter}{Bibliography}										
     \printbibliography
     
-    % Uncomment these two lines and remove the \printbibliography above if you're using the BibTeX and natbib method to include you bibliography, for example if you're using some online compiling systems which doesn't support biblatex. By default you shouldn't need to touch anything.
+    % Uncomment these two lines and remove the \printbibliography above and the \addbibresource{your_bibliography.bib} at the top of the document if you're using the BibTeX and natbib method to include you bibliography, for example if you're using some online compiling systems which doesn't support biblatex. By default you shouldn't need to touch anything.
     %\bibliographystyle{plain}
     %\bibliography{your_bibliography}
 
