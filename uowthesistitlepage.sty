@@ -440,12 +440,6 @@ School of
         {
         \onehalfspacing
         \newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
-        \textbf
-            {
-            \vspace{\midgap}\\
-            {\huge\MakeUppercase\@title}\\
-            \vspace{\midgap}
-            }
         \ifsubject
             {
             }\\ 
@@ -453,13 +447,46 @@ School of
             {
             \setlength{\crestheight}{0.07\paperheight} %for A4 paper this is approximately 30 mm.
             \@graphic\\
-            \vspace{\midgap}
+            \vspace{\smallgap}
             } 
-        \fi    
+        \fi
+        University of Wollongong\\
+        \ifschool
+            {
+            \textit{\noindent\@schooltitle{}\@school}\\
+            }
+        \else
+            {
+            }
+        \fi
+        \textbf
+            {
+            \vspace{\midgap}\\
+            \hrulefill\\[.5cm]
+            {\huge\MakeUppercase\@title}\\
+            \hrulefill\\[.5cm]
+            \vspace{\midgap}
+            }
         \textit{By}
-        \vspace{\smallgap}\\
+        \vspace{\midgap}\\
         \@author\\
-        \vspace{\smallgap}
+        \vspace{\midgap}
+        \textit{
+        \@requirement
+        }\\
+        \ifsubject
+            {
+            \vspace{\vsmallgap}
+            \@class\\
+            \vspace*{\fill}
+            }
+        \else
+            {
+            \vspace{\vsmallgap}
+            {\MakeUppercase\@degree}\\
+            \vspace*{\fill}
+            }
+        \fi
         \ifhorizontal
             {
             \ifcosupervisor
@@ -547,32 +574,6 @@ School of
             }
         \fi
         \vspace{\midgap}
-        \textit{
-        \@requirement
-        }\\
-        \ifsubject
-            {
-            \vspace{\vsmallgap}
-            \@class\\
-            \vspace*{\fill}
-            }
-        \else
-            {
-            \vspace{\vsmallgap}
-            {\MakeUppercase\@degree}\\
-            \vspace*{\fill}
-            }
-        \fi
-        University of Wollongong\\
-        \ifschool
-            {
-            \noindent\@schooltitle{}\@school\\
-            }
-        \else
-            {
-            }
-        \fi
-        \vspace{\smallgap}
         \@date\vspace{\midgap} 
         \restoregeometry       
         \clearpage{\pagestyle{empty}\cleardoublepage}
@@ -754,4 +755,3 @@ School of
 % Depreciated/old snippets that I might need someday
 %\def\@university{No university} 
 %    \newcommand{\university}[1]{\gdef\@university{#1}} % inactive with the new thesis theme (tmgriffiths 2013-05-29)
-% \regularlogofalse
