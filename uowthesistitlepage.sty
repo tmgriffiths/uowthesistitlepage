@@ -86,7 +86,8 @@
 \newif\ifreport
 \newif\ifhorizontal
 \newif\ifaltpage
-   
+    
+\schooltrue
 %\ifvar
 %  true
 %\else
@@ -357,7 +358,7 @@
 \gdef\@degree{#1}
 }
 
-% \class{}
+% \class{} 
 % Dummy text    
 \def\@class{\textless{}Your Class\textgreater}
 % Command 
@@ -366,6 +367,7 @@
 \gdef\@class{#1}
 } 
 
+% \school{} 
 % Dummy text     
 \def\@school
 {
@@ -382,6 +384,7 @@
 {
 \includegraphics[height=\crestheight]{uow_logo}
 } 
+
 % Command
 % Image must be in the working directory for this Command to work
 \newcommand{\graphic}[1]
@@ -438,7 +441,7 @@ School of
 %% Title page
 %%
 %% Here we actually set up the title page.
-\renewcommand{\maketitle}{%
+\renewcommand{\maketitle}{
     \ifaltpage
         {
         \thispagestyle{empty}
@@ -499,7 +502,7 @@ School of
             \else 
                 {
                 \ifnosupervisor
-                    { 
+                    {
                     } 
                 \else
                     {
@@ -520,7 +523,7 @@ School of
         \else
             {
             \ifnosupervisor
-                { 
+                {
                 } 
             \else
                 {
@@ -736,176 +739,28 @@ School of
 %% Declaration page
 %%
 %% This is a new Command (\declaration) that if you desire you can use to print the standard thesis submission declaration.
-
-\newcommand{\declaration}
-{
+\newcommand{\declaration}{
 \thispagestyle{empty}
-\noindent {\large \textbf{Declaration}}\\
-
-{\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
+\noindent {\large \textbf{Declaration}}\par
+{
+\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
 \vspace{\biggap}
 \noindent\rule{0.4\textwidth}{0.5pt}
 \vspace{1ex}\\
 \textbf{\@author}\\
 \today
 }
-
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\makeatother
 }
 
+\makeatother
 
 %% Execute the default options, print supervisor field and requirements for an honours thesis.
 \ExecuteOptions{honours}
-\schooltrue
 \ProcessOptions\relax
-
 \endinput
 % Quidquid latine dictum sit altum videtur.
 
 % Depreciated/old snippets that I might need someday
 %\def\@university{No university} 
 %    \newcommand{\university}[1]{\gdef\@university{#1}} % inactive with the new thesis theme (tmgriffiths 2013-05-29)
-
-%\else %% Lower Different Logo Positioning
-%    \thispagestyle{empty}
-%    {\centering
-%    {\onehalfspacing
-%    \newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
-%    \textbf
-%        {
-%        \vspace{\midgap}\\
-%        {\huge\MakeUppercase\@title}\\
-%        \vspace{\midgap}
-%        }
-%    \ifsubject
-%        {
-%        }\\ 
-%    \else
-%        {
-%        \setlength{\crestheight}{0.102\paperheight} %for A4 paper this is approximately 30 mm.
-%        \@graphic\\
-%        \vspace{\midgap}} 
-%    \fi    
-%    \textit{By}
-%    \vspace{\smallgap}\\
-%    \@author\\
-%    \vspace{\smallgap}
-%    \ifhorizontal
-%        {
-%        \ifcosupervisor
-%            {
-%            \begin{tabular}{cc}
-%            \ifmultiplesupervisors 
-%                {
-%                \textit{Supervisors}
-%                } 
-%            \else 
-%                {
-%                \textit{Supervisor} 
-%                }
-%            \fi
-%            &
-%            \ifmultiplecosupervisors 
-%                {
-%                \textit{Co-supervisors}
-%                } 
-%            \else 
-%                {
-%                \textit{Co-supervisor} 
-%                }\\
-%            \fi
-%            \@supervisor
-%            &
-%            \@cosupervisor
-%            \end{tabular}
-%            }\\
-%        \else 
-%            {
-%            \ifnosupervisor
-%                { 
-%                } 
-%            \else
-%                {
-%                \ifmultiplesupervisors 
-%                    {
-%                    \textit{Supervisors}\\ \@supervisor
-%                    }\\ 
-%                \else
-%                    {
-%                    \textit{Supervisor}\\ \@supervisor
-%                    }\\ 
-%                \fi
-%                } 
-%            \fi
-%            }
-%        \fi
-%        }
-%    \else
-%        {
-%        \ifnosupervisor
-%            { 
-%            } 
-%        \else
-%            {
-%            \ifmultiplesupervisors 
-%                {
-%                \textit{Supervisors}\\ \@supervisor\\
-%                } 
-%            \else
-%                {
-%                \textit{Supervisor}\\ \@supervisor\\
-%                } 
-%            \fi
-%            } 
-%        \fi
-%        \ifcosupervisor
-%            {
-%            \ifmultiplecosupervisors 
-%                {
-%                \textit{Co-supervisors}\\ \@cosupervisor\\
-%                }
-%            \else
-%                {
-%                \textit{Co-supervisor}\\ \@cosupervisor\\
-%                }
-%            \fi
-%            }
-%        \else
-%            {
-%            } 
-%        \fi
-%        }
-%    \fi
-%    \vspace{\midgap}
-%    \textit{
-%    \@requirement
-%    }\\
-%    \ifsubject
-%        {
-%        \vspace{\vsmallgap}
-%        \@class}\\
-%        \vspace*{\fill}
-%    \else
-%        {
-%        \vspace{\vsmallgap}
-%        {\MakeUppercase\@degree}\\
-%        \vspace*{\fill}
-%        }
-%    \fi
-%    University of Wollongong\\
-%    \ifschool
-%        {
-%        \noindent\@schooltitle{}\@school\\
-%        }
-%    \else
-%        {
-%        }
-%    \fi
-%    \vspace{\smallgap}
-%    \@date\vspace{\midgap} 
-%    \restoregeometry       
-%    \clearpage{\pagestyle{empty}\cleardoublepage}
-%    }
-%    }
-%\fi
