@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 2.3 $
+% $ biblatex bbl format version 2.4 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \sortlist{entry}{none}
+  \sortlist{none}{none}
     \entry{pericles}{book}{}
       \name{labelname}{1}{}{%
         {{hash=6e5f4d5a5bcdeb28f74af33ed2582869}{Shakespeare}{S\bibinitperiod}{W}{W\bibinitperiod}{}{}{}{}}%
@@ -29,6 +29,7 @@
       \strng{namehash}{6e5f4d5a5bcdeb28f74af33ed2582869}
       \strng{fullhash}{6e5f4d5a5bcdeb28f74af33ed2582869}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{labeltitle}{{Pericles, Prince of Tyre}}
       \field{title}{{Pericles, Prince of Tyre}}
     \endentry
@@ -44,6 +45,7 @@
       \strng{namehash}{423972df67c28d2dda8c2de4fa394fbf}
       \strng{fullhash}{423972df67c28d2dda8c2de4fa394fbf}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{labeltitle}{{The King's English}}
       \field{edition}{3rd}
       \field{title}{{The King's English}}
@@ -65,6 +67,7 @@
       \strng{namehash}{a226276b017b4fcb5c6f3a28430a62c7}
       \strng{fullhash}{a226276b017b4fcb5c6f3a28430a62c7}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{booksubtitle}{{Chemical Principles and Methods}}
       \field{booktitle}{{Bioluminescence}}
       \field{chapter}{1, Fireflies and Luminous Insects}
@@ -93,6 +96,7 @@
       \strng{namehash}{3ef9478b898dfd55a9801306905a2fd9}
       \strng{fullhash}{bd8b881ecc94b9ebca44bd0496dc27dc}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{labeltitle}{{Inorganic Chemistry}}
       \field{edition}{4th}
       \field{title}{{Inorganic Chemistry}}
@@ -113,6 +117,7 @@
       \strng{namehash}{c3c3b899fbc3da12abec3fa9c42c3ed0}
       \strng{fullhash}{c3c3b899fbc3da12abec3fa9c42c3ed0}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{labeltitle}{{Atkins' Physical Chemistry}}
       \field{edition}{8th}
       \field{title}{{Atkins' Physical Chemistry}}
@@ -134,6 +139,7 @@
       \strng{namehash}{a226276b017b4fcb5c6f3a28430a62c7}
       \strng{fullhash}{a226276b017b4fcb5c6f3a28430a62c7}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{booksubtitle}{{Chemical Principles and Methods}}
       \field{booktitle}{{Bioluminescence}}
       \field{chapter}{Taxonomic Classification of Selected Luminous Organisms}
@@ -158,6 +164,7 @@
       \strng{namehash}{0545e17b18d6946fbb6f745bbddf87c3}
       \strng{fullhash}{472e23690205a8ad30b122e868b8ca13}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{labeltitle}{{Chemiluminescence of Renilla (sea pansy) Luciferin and its Analogues}}
       \field{abstract}{(sea pansy) luciferin and certain of its synthetic analogues produce a brilliant blue chemiluminescence when dissolved in organic solvents such as dimethylformamide; we have examined the chemistry of this reaction and have identified the product excited state responsible for the luminescence.}
       \field{issue}{14}
@@ -185,6 +192,7 @@
       \strng{namehash}{a226276b017b4fcb5c6f3a28430a62c7}
       \strng{fullhash}{a226276b017b4fcb5c6f3a28430a62c7}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{labeltitle}{{Bioluminescence}}
       \field{subtitle}{{Chemical Principles and Methods}}
       \field{title}{{Bioluminescence}}
@@ -209,6 +217,7 @@
       \strng{namehash}{1ac918b570bfc56ff407c91131cea330}
       \strng{fullhash}{41b78ff2900476cd06e751dd5b453bab}
       \field{sortinit}{0}
+      \field{sortinithash}{a08a9549c5c2429f8cec5d1a581b26ca}
       \field{labeltitle}{{Organic Chemistry}}
       \field{title}{{Organic Chemistry}}
       \field{year}{2006}
