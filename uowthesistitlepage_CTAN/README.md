@@ -1,10 +1,6 @@
 ## This is the README for uowthesistitlepage.sty Version 2.0, 2014-01-07
 
 ### ABOUT
-This these template has been made to make it easier for you to create your thesis with LaTeX, and at the same time adhere to the UOW thesis guidelines. We've made effort to keep this template up to date, but always consult your supervisor and the guidelines: http://www.uow.edu.au/research/rsc/student/thesis/index.html.
-
-This directory should contain a thesis template, a copy of the logo for the title page, and a copy of the uowthesistitlepage package (version 2.0). Any current TeXLive installation should also have the latest uowthesistitlepage package available, and it is available on the CTAN network as a standalone download.
-
 This Package redefines the `\maketitle` command for LaTeX documents and generates a title page for a UOW thesis in accordance with the uow branding guidelines. Use this package with the book class to typeset your thesis (it will work with report though if you do so desire). The package also provides the `\declaration` command. This typesets the declaration (see below) that your thesis/dissertation/report is your own work, required in the front of each PhD Thesis.
 
 The `uowthesistitlepage.sty` style file **is not** a complete thesis template or document class, it only typesets the title page (honours thesis by default) and declaration. The directory `thesis_template` contains a template thesis document that can be used as a basis for your document.
