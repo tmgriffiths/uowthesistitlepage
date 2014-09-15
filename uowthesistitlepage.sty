@@ -85,7 +85,15 @@
 \newif\ifschool
 \newif\ifreport
 \newif\ifhorizontal
+\newif\ifaltpage
     
+\schooltrue
+%\ifvar
+%  true
+%\else
+%  false
+%\fi
+   
 %% Declareing the package options    
 % The default wording for the thesis requirements for an honours thesis.
 \DeclareOption{honours} 
@@ -157,7 +165,7 @@
 \honoursfalse
 \reportfalse  
 \partialtrue 
-\subjecttrue 
+\subjecttrue
 }
 
 \DeclareOption{fullsubject}
@@ -230,6 +238,12 @@
 {
 \nosupervisorfalse 
 \multiplesupervisorstrue
+}
+
+% Definitely not another page layout that is more aesthetically pleasing. No-sir-ee. Not here.
+\DeclareOption{altpage} 
+{
+\altpagetrue
 }
 
 %% Defining the defualt values of the macros within \maketitle
@@ -334,7 +348,7 @@
 \gdef\@degree{#1}
 }
 
-% \class{}
+% \class{} 
 % Dummy text    
 \def\@class{\textless{}Your Class\textgreater}
 % Command 
@@ -343,6 +357,7 @@
 \gdef\@class{#1}
 } 
 
+% \school{} 
 % Dummy text     
 \def\@school
 {
@@ -359,6 +374,7 @@
 {
 \includegraphics[height=\crestheight]{uow_logo}
 } 
+
 % Command
 % Image must be in the working directory for this Command to work
 \newcommand{\graphic}[1]
@@ -410,182 +426,329 @@ School of
     
 \newlength{\bottomsidemargin}
     \setlength{\bottomsidemargin}{\outersidemargin} %for A4 paper this is approximately 20 mm.
-    
-    
 
 %%
 %% Title page
 %%
 %% Here we actually set up the title page.
-\renewcommand{\maketitle}%
-{
-\thispagestyle{empty}
-{\centering
-{\onehalfspacing
-\newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
-\ifsubject
-    {
-    }\\ 
-\else
-    {
-    \@graphic\\
-    } 
-\fi
-\textbf
-    {
-    \vspace{\biggap}\\
-    {\Large\@title}\\
-    \vspace{\biggap}
-    }
-\@author\\
-\vspace{\smallgap}
-\ifhorizontal
-    {
-    \ifcosupervisor
+\renewcommand{\maketitle}{
+    \ifaltpage
         {
-        \begin{tabular}{cc}
-        \ifmultiplesupervisors 
+        \thispagestyle{empty}
+        {
+        \centering
+        {
+        \onehalfspacing
+        \newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
+        \ifsubject
             {
-            Supervisors:
+            }\\ 
+        \else
+            {
+            \setlength{\crestheight}{0.07\paperheight} %for A4 paper this is approximately 30 mm.
+            \@graphic\\
+            \vspace{\smallgap}
             } 
-        \else 
+        \fi
+        University of Wollongong\\
+        \ifschool
             {
-            Supervisor: 
+            \textit{\noindent\@schooltitle{}\@school}\\
+            }
+        \else
+            {
             }
         \fi
-        &
-        \ifmultiplecosupervisors 
+        \textbf
             {
-            Co-supervisors:
-            } 
+            \vspace{\midgap}\\
+            \hrulefill\\[.5cm]
+            {\huge\MakeUppercase\@title}\\
+            \hrulefill\\[.5cm]
+            \vspace{\midgap}
+            }
+        \textit{By}
+        \vspace{\midgap}\\
+        \@author\\
+        \vspace{\midgap}
+        \textit{
+        \@requirement
+        }\\
+        \ifsubject
+            {
+            \vspace{\vsmallgap}
+            \@class\\
+            \vspace*{\fill}
+            }
+        \else
+            {
+            \vspace{\vsmallgap}
+            {\MakeUppercase\@degree}\\
+            \vspace*{\fill}
+            }
+        \fi
+        \ifhorizontal
+            {
+            \ifcosupervisor
+                {
+                \begin{tabular}{cc}
+                \ifmultiplesupervisors 
+                    {
+                    \textit{Supervisors}
+                    } 
+                \else 
+                    {
+                    \textit{Supervisor} 
+                    }
+                \fi
+                &
+                \ifmultiplecosupervisors 
+                    {
+                    \textit{Co-supervisors}
+                    } 
+                \else 
+                    {
+                    \textit{Co-supervisor} 
+                    }\\
+                \fi
+                \@supervisor
+                &
+                \@cosupervisor
+                \end{tabular}
+                }\\
+            \else 
+                {
+                \ifnosupervisor
+                    {
+                    } 
+                \else
+                    {
+                    \ifmultiplesupervisors 
+                        {
+                        \textit{Supervisors}\\ \@supervisor
+                        }\\ 
+                    \else
+                        {
+                        \textit{Supervisor}\\ \@supervisor
+                        }\\ 
+                    \fi
+                    } 
+                \fi
+                }
+            \fi
+            }
+        \else
+            {
+            \ifnosupervisor
+                {
+                } 
+            \else
+                {
+                \ifmultiplesupervisors 
+                    {
+                    \textit{Supervisors}\\ \@supervisor\\
+                    } 
+                \else
+                    {
+                    \textit{Supervisor}\\ \@supervisor\\
+                    } 
+                \fi
+                } 
+            \fi
+            \ifcosupervisor
+                {
+                \ifmultiplecosupervisors 
+                    {
+                    \textit{Co-supervisors}\\ \@cosupervisor\\
+                    }
+                \else
+                    {
+                    \textit{Co-supervisor}\\ \@cosupervisor\\
+                    }
+                \fi
+                }
+            \else
+                {
+                } 
+            \fi
+            }
+        \fi
+        \vspace{\midgap}
+        \@date\vspace{\midgap} 
+        \restoregeometry       
+        \clearpage{\pagestyle{empty}\cleardoublepage}
+        }
+        }
+        }
+    \else
+        {
+    \thispagestyle{empty}
+    {
+    \centering
+    {
+    \onehalfspacing
+    \newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
+    \ifsubject
+        {
+        }\\ 
+    \else
+        {
+        \@graphic\\
+        } 
+    \fi
+    \textbf
+        {
+        \vspace{\biggap}\\
+        {\Large\@title}\\
+        \vspace{\biggap}
+        }
+    \@author\\
+    \vspace{\smallgap}
+    \ifhorizontal
+        {
+        \ifcosupervisor
+            {
+            \begin{tabular}{cc}
+            \ifmultiplesupervisors 
+                {
+                Supervisors:
+                } 
+            \else 
+                {
+                Supervisor: 
+                }
+            \fi
+            &
+            \ifmultiplecosupervisors 
+                {
+                Co-supervisors:
+                } 
+            \else 
+                {
+                Co-supervisor: 
+                }\\
+            \fi
+            \@supervisor
+            &
+            \@cosupervisor
+            \end{tabular}
+            }\\
         \else 
             {
-            Co-supervisor: 
-            }\\
+            \ifnosupervisor
+                {
+                } 
+            \else
+                {
+                \ifmultiplesupervisors 
+                    {
+                    Supervisors:\\ \@supervisor
+                    }\\ 
+                \else
+                    {
+                    Supervisor:\\ \@supervisor
+                    }\\ 
+                \fi
+                } 
+            \fi
+            }
         \fi
-        \@supervisor
-        &
-        \@cosupervisor
-        \end{tabular}
-        }\\
-    \else 
+        }
+    \else
         {
         \ifnosupervisor
-            { 
+            {
             } 
         \else
             {
             \ifmultiplesupervisors 
                 {
-                Supervisors:\\ \@supervisor
-                }\\ 
+                Supervisors:\\ \@supervisor\\
+                } 
             \else
                 {
-                Supervisor:\\ \@supervisor
-                }\\ 
+                Supervisor:\\ \@supervisor\\
+                } 
             \fi
             } 
         \fi
-        }
-    \fi
-    }
-\else
-    {
-    \ifnosupervisor
-        { 
-        } 
-    \else
-        {
-        \ifmultiplesupervisors 
+        \ifcosupervisor
             {
-            Supervisors:\\ \@supervisor\\
-            } 
-        \else
-            {
-            Supervisor:\\ \@supervisor\\
-            } 
-        \fi
-        } 
-    \fi
-    \ifcosupervisor
-        {
-        \ifmultiplecosupervisors 
-            {
-            Co-supervisors:\\ \@cosupervisor\\
+            \ifmultiplecosupervisors 
+                {
+                Co-supervisors:\\ \@cosupervisor\\
+                }
+            \else
+                {
+                Co-supervisor:\\ \@cosupervisor\\
+                }
+            \fi
             }
         \else
             {
-            Co-supervisor:\\ \@cosupervisor\\
-            }
+            } 
         \fi
+        }
+    \fi
+    \vspace{\biggap}
+    \textit{
+    \@requirement
+    }\\
+    \ifsubject
+        {
+        \vspace{\smallgap}
+        \@class\\
+        \vspace*{\fill}
         }
     \else
         {
-        } 
+        \vspace{\smallgap}
+        \@degree\\
+        \vspace*{\fill}
+        }
     \fi
-    }
-\fi
-\vspace{\biggap}
-\textit{
-\@requirement
-}\\
-\ifsubject
-    {
+    The University of Wollongong\par
+    \ifschool
+        {
+        \noindent\@schooltitle{}\@school\\
+        }
+    \else
+        {
+        }
+    \fi
     \vspace{\smallgap}
-    \@class}\\
-    \vspace*{\fill}
-\else
-    {
-    \vspace{\smallgap}
-    \@degree\\
-    \vspace*{\fill}
+    \@date\vspace{\smallgap} 
+    \restoregeometry       
+    \clearpage{\pagestyle{empty}\cleardoublepage}
     }
-\fi
-The University of Wollongong\par
-\ifschool
-    {
-    \noindent\@schooltitle{}\@school\\
     }
-\else
-    {
-    }
-\fi
-\vspace{\smallgap}
-\@date\vspace{\smallgap} 
-\restoregeometry       
-\clearpage{\pagestyle{empty}\cleardoublepage}
-}
-}
+        }
+    \fi
 }
 
 %%
 %% Declaration page
 %%
 %% This is a new Command (\declaration) that if you desire you can use to print the standard thesis submission declaration.
-
-\newcommand{\declaration}
-{
+\newcommand{\declaration}{
 \thispagestyle{empty}
-\noindent {\large \textbf{Declaration}}\\
-
-{\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
+\noindent {\large \textbf{Declaration}}\par
+{
+\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
 \vspace{\biggap}
 \noindent\rule{0.4\textwidth}{0.5pt}
 \vspace{1ex}\\
 \textbf{\@author}\\
 \today
 }
-
 \clearpage{\pagestyle{empty}\cleardoublepage}
-\makeatother
 }
 
+\makeatother
 
 %% Execute the default options, print supervisor field and requirements for an honours thesis.
 \ExecuteOptions{honours}
-\schooltrue
 \ProcessOptions\relax
-
 \endinput
 % Quidquid latine dictum sit altum videtur.
 

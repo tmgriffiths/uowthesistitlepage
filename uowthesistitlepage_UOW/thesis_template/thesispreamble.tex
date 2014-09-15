@@ -74,16 +74,29 @@
 % Multiple figures in an individual figure. Fig. 1 a, b, c, etc. each with, or without, it's own individual caption, and with a global caption for all sub figures.
 
 %-------------------- Special symbols and fonts
-\usepackage{amssymb} 
+\usepackage{amssymb}
+\usepackage{amsmath} 
 % Maths symbols
 
 %-------------------- Document sections, headers, footers, and bibliography
-\usepackage{fancyhdr}											
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+    \fancypagestyle{plain}{%
+    \fancyhf{} 
+    \rfoot{Page \thepage{} of \pageref{LastPage}}
+    %\fancyfoot[RO,LE]{Page \thepage{} of \pageref{LastPage}}
+    }
+    \pagestyle{fancy}{
+    \fancyhf{}
+    \rfoot{Page \thepage{} of \pageref{LastPage}}
+    %\fancyfoot[C]{Page \thepage{} of \pageref{LastPage}}
+    }
+   											
 % for creating different headers and footers
 
 %-------------------- Bibliography
 %\usepackage[backend=biber,articletitle=true,style=chem-rsc,doi=false]{biblatex}
-\usepackage[articletitle=true,style=chem-rsc,doi=false]{biblatex}
+\usepackage[backend=biber,articletitle=true,style=chem-rsc,doi=false]{biblatex}
 % This is the package that lets you create a bibliography. I recommend reading the biblatex documentation to understand all the options i've specified here. BibLaTeX was created to replace BibTeX. It has lots of extra fields and options. I'm also using the biber backend here rather than the default, it copes with unicode and so can deal with accented characters easily.
 
 % Currently this is set up to use RSC style references with article titles displayed.
@@ -94,6 +107,8 @@
 	%\setcitestyle{square}										
 	% places citations in square brackets to helps to distinguish between powers and citations
 %This is the old natbib package that meshes with bibtex (rather than using the newer biblatex). It's here mainly for legacy purposes. Try to shift to biblatex if you can, it is cleaner in it's implementation and creating a custom citation style is easier then with bibtex. Some online tools don't yet support biblatex, so you'll need to use this method.
+
+\usepackage[toc,eqno,enum,bib]{tabfigures}
 
 \usepackage[unicode=true,colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black,breaklinks=true]{hyperref}
 % The hyperref package allows you to have clickable links in your pdf. It also allows you to have the mailto link associated with your name. It can be  a bit finicky, so load it last.
