@@ -65,7 +65,8 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesPackage{uowthesistitlepage}[2014/01/07 V 2.0 (cc) tmgriffiths]
 
-\RequirePackage{geometry} 
+\RequirePackage{geometry}
+\RequirePackage{ragged2e} 
 \RequirePackage{setspace} % for the doublespacing
 \RequirePackage{etoolbox} % for the supervisor counting trickery
 \RequirePackage{graphicx} 
@@ -462,8 +463,8 @@ School of
         \textbf
             {
             \vspace{\midgap}\\
-            \hrulefill\\[.5cm]
-            {\huge\MakeUppercase\@title}\\
+            \hrulefill\\[.5cm]\vspace{1ex}
+            {\huge\MakeUppercase\@title}\\\vspace{1ex}
             \hrulefill\\[.5cm]
             \vspace{\midgap}
             }
@@ -599,7 +600,7 @@ School of
     \textbf
         {
         \vspace{\biggap}\\
-        {\Large\@title}\\
+        {\huge\@title}\\
         \vspace{\biggap}
         }
     \@author\\
@@ -663,11 +664,11 @@ School of
             {
             \ifmultiplesupervisors 
                 {
-                Supervisors:\\ \@supervisor\\
+                Supervisors:\\ \@supervisor\\ \vspace{1ex}
                 } 
             \else
                 {
-                Supervisor:\\ \@supervisor\\
+                Supervisor:\\ \@supervisor\\ \vspace{1ex}
                 } 
             \fi
             } 
@@ -730,17 +731,17 @@ School of
 %% Declaration page
 %%
 %% This is a new Command (\declaration) that if you desire you can use to print the standard thesis submission declaration.
-\newcommand{\declaration}{
-\thispagestyle{empty}
-\noindent {\large \textbf{Declaration}}\par
+\newcommand{\declaration}
 {
-\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.\par
+\thispagestyle{empty}
+{\centering\section*{Declaration}}
+{\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.}\par
 \vspace{\biggap}
-\noindent\rule{0.4\textwidth}{0.5pt}
-\vspace{1ex}\\
-\textbf{\@author}\\
+\RaggedLeft
+\rule{0.4\textwidth}{0.5pt}
+\vspace{1ex}\par
+\textbf{\@author}\par
 \today
-}
 \clearpage{\pagestyle{empty}\cleardoublepage}
 }
 
