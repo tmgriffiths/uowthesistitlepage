@@ -76,3 +76,6 @@ Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2014-09-15
 
 ## LEGAL
 Copyright (CC BY-NC-SA 3.0 AU) 2014 by T. M. Griffiths under the creative commons licence(attribution, non-comercial, share alike): http://creativecommons.org/licenses/by-nc-sa/3.0/au/. This work may be distributed and/or modified under the conditions of the LaTeX Project Public License version 1.3c: http://www.latex-project.org/lppl/lppl-1-3c.txt
+
+
+[![PDF Status](https://www.sharelatex.com/github/repos/tmgriffiths/uowthesistitlepage/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/tmgriffiths/uowthesistitlepage/builds/latest/output.pdf)
