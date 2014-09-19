@@ -84,11 +84,12 @@
 \newif\ifmultiplecosupervisors
 \newif\ifsubject
 \newif\ifschool
+    \schooltrue
 \newif\ifreport
 \newif\ifhorizontal
 \newif\ifaltpage
-    
-\schooltrue
+\newif\iflogo
+    \logotrue
 %\ifvar
 %  true
 %\else
@@ -226,6 +227,11 @@
 \DeclareOption{horizontal}
 {
 \horizontaltrue
+}
+
+\DeclareOption{nologo}
+{
+\logofalse
 }
 
 % These two options have been left in for legacy purposes, but are no longer needed as the \supervisor Command has been modifed to have an optional field that specifies the number of supervisors
@@ -446,9 +452,16 @@ School of
             }\\ 
         \else
             {
-            \setlength{\crestheight}{0.07\paperheight} %for A4 paper this is approximately 30 mm.
-            \@graphic\\
-            \vspace{\smallgap}
+            \iflogo
+                {
+                \setlength{\crestheight}{0.07\paperheight} %for A4 paper this is approximately 30 mm.
+                \@graphic \\
+                \vspace{\smallgap}
+                }
+            \else
+                {
+                }
+            \fi
             } 
         \fi
         University of Wollongong\\
@@ -583,58 +596,86 @@ School of
         }
     \else
         {
-    \thispagestyle{empty}
-    {
-    \centering
-    {
-    \onehalfspacing
-    \newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
-    \ifsubject
+        \thispagestyle{empty}
         {
-        }\\ 
-    \else
+        \centering
         {
-        \@graphic\\
-        } 
-    \fi
-    \textbf
-        {
-        \vspace{\biggap}\\
-        {\huge\@title}\\
-        \vspace{\biggap}
-        }
-    \@author\\
-    \vspace{\smallgap}
-    \ifhorizontal
-        {
-        \ifcosupervisor
+        \onehalfspacing
+        \newgeometry{inner=\innersidemargin,outer=\outersidemargin,top=\topsidemargin,bottom=\bottomsidemargin}
+        \ifsubject
             {
-            \begin{tabular}{cc}
-            \ifmultiplesupervisors 
+            }\\ 
+        \else
+            {
+            \iflogo
                 {
-                Supervisors:
-                } 
-            \else 
+                \@graphic\ \\
+                }
+            \else
                 {
-                Supervisor: 
                 }
             \fi
-            &
-            \ifmultiplecosupervisors 
+            } 
+        \fi
+        \textbf
+            {
+            \vspace{\biggap}\\
+            {\huge\@title}\\
+            \vspace{\biggap}
+            }
+        \@author\\
+        \vspace{\smallgap}
+        \ifhorizontal
+            {
+            \ifcosupervisor
                 {
-                Co-supervisors:
-                } 
+                \begin{tabular}{cc}
+                \ifmultiplesupervisors 
+                    {
+                    Supervisors:
+                    } 
+                \else 
+                    {
+                    Supervisor: 
+                    }
+                \fi
+                &
+                \ifmultiplecosupervisors 
+                    {
+                    Co-supervisors:
+                    } 
+                \else 
+                    {
+                    Co-supervisor: 
+                    }\\
+                \fi
+                \@supervisor
+                &
+                \@cosupervisor
+                \end{tabular}
+                }\\
             \else 
                 {
-                Co-supervisor: 
-                }\\
+                \ifnosupervisor
+                    {
+                    } 
+                \else
+                    {
+                    \ifmultiplesupervisors 
+                        {
+                        Supervisors:\\ \@supervisor
+                        }\\ 
+                    \else
+                        {
+                        Supervisor:\\ \@supervisor
+                        }\\ 
+                    \fi
+                    } 
+                \fi
+                }
             \fi
-            \@supervisor
-            &
-            \@cosupervisor
-            \end{tabular}
-            }\\
-        \else 
+            }
+        \else
             {
             \ifnosupervisor
                 {
@@ -643,86 +684,65 @@ School of
                 {
                 \ifmultiplesupervisors 
                     {
-                    Supervisors:\\ \@supervisor
-                    }\\ 
+                    Supervisors:\\ \@supervisor\\ \vspace{1ex}
+                    } 
                 \else
                     {
-                    Supervisor:\\ \@supervisor
-                    }\\ 
+                    Supervisor:\\ \@supervisor\\ \vspace{1ex}
+                    } 
                 \fi
                 } 
             \fi
-            }
-        \fi
-        }
-    \else
-        {
-        \ifnosupervisor
-            {
-            } 
-        \else
-            {
-            \ifmultiplesupervisors 
+            \ifcosupervisor
                 {
-                Supervisors:\\ \@supervisor\\ \vspace{1ex}
-                } 
-            \else
-                {
-                Supervisor:\\ \@supervisor\\ \vspace{1ex}
-                } 
-            \fi
-            } 
-        \fi
-        \ifcosupervisor
-            {
-            \ifmultiplecosupervisors 
-                {
-                Co-supervisors:\\ \@cosupervisor\\
+                \ifmultiplecosupervisors 
+                    {
+                    Co-supervisors:\\ \@cosupervisor\\
+                    }
+                \else
+                    {
+                    Co-supervisor:\\ \@cosupervisor\\
+                    }
+                \fi
                 }
             \else
                 {
-                Co-supervisor:\\ \@cosupervisor\\
-                }
+                } 
             \fi
+            }
+        \fi
+        \vspace{\biggap}
+        \textit{
+        \@requirement
+        }\\
+        \ifsubject
+            {
+            \vspace{\smallgap}
+            \@class\\
+            \vspace*{\fill}
             }
         \else
             {
-            } 
+            \vspace{\smallgap}
+            \@degree\\
+            \vspace*{\fill}
+            }
         \fi
-        }
-    \fi
-    \vspace{\biggap}
-    \textit{
-    \@requirement
-    }\\
-    \ifsubject
-        {
+        The University of Wollongong\par
+        \ifschool
+            {
+            \noindent\@schooltitle{}\@school\\
+            }
+        \else
+            {
+            }
+        \fi
         \vspace{\smallgap}
-        \@class\\
-        \vspace*{\fill}
+        \@date\vspace{\smallgap} 
+        \restoregeometry       
+        \clearpage{\pagestyle{empty}\cleardoublepage}
         }
-    \else
-        {
-        \vspace{\smallgap}
-        \@degree\\
-        \vspace*{\fill}
         }
-    \fi
-    The University of Wollongong\par
-    \ifschool
-        {
-        \noindent\@schooltitle{}\@school\\
-        }
-    \else
-        {
-        }
-    \fi
-    \vspace{\smallgap}
-    \@date\vspace{\smallgap} 
-    \restoregeometry       
-    \clearpage{\pagestyle{empty}\cleardoublepage}
-    }
-    }
         }
     \fi
 }
