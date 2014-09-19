@@ -57,8 +57,6 @@ The `uowthesistitlepage.sty` style file **is not** a complete thesis template or
 
 
 
-----------------------------
-
 <Student’s Full Name>
 January 9, 2014
 
