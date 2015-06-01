@@ -69,8 +69,7 @@
 \RequirePackage{ragged2e} 
 \RequirePackage{setspace} % for the doublespacing
 \RequirePackage{etoolbox} % for the supervisor counting trickery
-\RequirePackage{graphicx} 
-    \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+\RequirePackage{graphicx}
 
 %% If statements
 \newif\ifphd
@@ -254,7 +253,7 @@
 }
 
 %% Defining the defualt values of the macros within \maketitle
-\makeatletter 
+%\makeatletter 
 % His \makeatother friend is at the end of the document, using multiple "make-ats" I got all sorts of errors
 
 % Fields already in the \maketitle Command
@@ -379,7 +378,7 @@
 % Internal command for the wording of the title page.     
 \def\@graphic
 {
-\includegraphics[height=\crestheight]{uow_logo}
+\includegraphics[height=\crestheight]{./uow_logo.pdf}
 } 
 
 % Command
@@ -757,14 +756,14 @@ School of
 {\centering\section*{Declaration}}
 {\itshape\noindent I, \@author, declare that this \ifreport report \else \ifsubject dissertation \else thesis \fi \fi submitted in \ifpartial partial \fi fulfilment of the requirements for \ifsubject the completion of \@class{}, \else the conferral of the degree \@degree{}, from the University of Wollongong, \fi is wholly my own work unless otherwise referenced or acknowledged. This document has not been submitted for qualifications at any other academic institution.}\par
 \vspace{\biggap}
-\rule{0.4\textwidth}{0.5pt}
-\vspace{1ex}\par
-\textbf{\@author}\par
-\today
+\noindent\rule{0.4\textwidth}{0.5pt}
+\vspace{1em}\par
+\noindent\textbf{\@author}\vspace{1em}\par
+\noindent\today
 \clearpage{\pagestyle{empty}\cleardoublepage}
 }
 
-\makeatother
+%\makeatother
 
 %% Execute the default options, print supervisor field and requirements for an honours thesis.
 \ExecuteOptions{honours}
