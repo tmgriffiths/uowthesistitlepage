@@ -1,6 +1,6 @@
 \contentsline {section}{About}{1}{section*.1}
-\contentsline {section}{Usage}{1}{section*.2}
-\contentsline {section}{Package Options and Macros}{2}{section*.3}
-\contentsline {section}{Legal}{6}{section*.4}
-\contentsline {section}{Change Log}{7}{section*.5}
-\contentsline {section}{Example Title Pages}{9}{section*.6}
+\contentsline {section}{Usage}{2}{section*.2}
+\contentsline {section}{Package Options and Macros}{3}{section*.3}
+\contentsline {section}{Legal}{8}{section*.4}
+\contentsline {section}{Change Log}{9}{section*.5}
+\contentsline {section}{Example Title Pages}{12}{section*.6}
