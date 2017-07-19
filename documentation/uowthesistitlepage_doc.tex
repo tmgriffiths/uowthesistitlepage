@@ -11,18 +11,18 @@
    \definecolor{UOWblue}{RGB}{0, 51, 204}% {cmyk}{90, 68, 0, 0} % 
    \definecolor{UOWdarkblue}{RGB}{12, 35, 64}% {cmyk}{100, 76, 12, 70} % 
 
-\usepackage{titlesec}
+\usepackage[explicit]{titlesec}
     \titleformat{\section}
         {\color{Blue}\normalfont\Large\sffamily}
-        {\color{Blue}\thesection}{1em}{}
+        {\color{Blue}\thesection}{1em}{\allcaps{#1}}
     \titleformat{\subsection}
         {\normalfont\large\sffamily}
-        {\thesection}{1em}{}
+        {\thesection}{1em}{#1}
         
 \usepackage[scale=2]{ccicons}
 \usepackage{fontspec,xltxtra} 
 \defaultfontfeatures{Mapping=tex-text}
-  \setromanfont[Numbers=OldStyle]{Times New Roman}
+  \setromanfont[Numbers=OldStyle]{Times LT Std}
   \setsansfont[Scale=MatchLowercase]{Montserrat}
   \setmonofont[Scale=MatchLowercase]{Menlo}
   
@@ -35,8 +35,11 @@
      }
   \SetTracking{ encoding = *, size = -small }{ 20 }
   \SetTracking{ encoding = *, size = Large- }{ -20 }
-  \SetTracking[ no ligatures = {f,t} ]{ encoding = *, shape = {sc*},}{40}
+  \SetTracking[ no ligatures = {f,t} ]{ encoding = *, shape = {sc*},}{60}
+  \newcommand{\allcapsspacing}[1]{\textls*[40]{#1}}%
+  \newcommand{\allcaps}[1]{\allcapsspacing{\MakeTextUppercase{#1}}}%
 
+\usepackage{textcase}
 \usepackage{embrac}
 \usepackage{pdfpages}
 \usepackage{hyperref}
@@ -92,11 +95,11 @@
 \tableofcontents
 
 \section{About}
-This package redefines the \command{\textbackslash{}maketitle} command to generate a title page compliant with the UOW branding guidelines. A copyright declaration is printed on the page immediately following the title page, including the required acknowledgement of the Australian Government Research Training Program Scholarship. This package also defines a command, \command{\textbackslash{}declaration}, which typesets a declaration page, required in the front matter of each PhD thesis. 
+This package redefines the \command{\textbackslash{}maketitle} command to generate a title page compliant with the University of Wollongong (\textsc{uow}) branding guidelines. A copyright declaration is printed on the page immediately following the title page, including the required acknowledgement of the Australian Government Research Training Program Scholarship. This package also defines a command, \command{\textbackslash{}declaration}, which typesets a declaration page, required in the front matter of each PhD thesis. 
 
 The package has a number of options that change the wording of the title page according to whether your thesis is only one part of, or comprises the entire of assessable component for your degree and the number of supervisors you have (if any). The default when the package is loaded is an \option{honours} thesis.
 
-This package \emph{is not} a complete thesis template or document class, it \emph{only} typesets the title page and declaration. This package is designed to do as little to your document as possible. It won't set the margins, spacing, or typeface used in your document. There is a template document online that you can download. It follows the UOW thesis guidelines and is has a basic setup ready to get you started with your thesis. For those starting off on their own, the following code will give you a document that satisfies the UOW thesis guidelines.\\
+This package \emph{is not} a complete thesis template or document class, it \emph{only} typesets the title page and declaration. This package is designed to do as little to your document as possible. It won't set the margins, spacing, or typeface used in your document. There is a template document online that you can download. It follows the \textsc{uow} thesis guidelines and is has a basic setup ready to get you started with your thesis. For those starting off on their own, the following code will give you a document that satisfies the \textsc{uow} thesis guidelines.\\
 
 \command{\textbackslash{}documentclass}\option{[twoside,12pt,a4paper]}\comoptions{\{book\}}
 
@@ -139,7 +142,7 @@ The new fields from the uowthesistitlepage package are\command{\textbackslash{}d
 
 \command{\textbackslash{}supervisor}\option{[x]}\comoptions{\{Supervisor 1, Supervisor 2,\ldots{} \textbackslash{}\& Supervisor x\}}\\
 
-You need to ensure a copy of the logo named \texttt{uow\textunderscore{}logo} is in the working directory where you're compiling your thesis.\footnote{Unless you're using the \option{report}, \option{fullsubject} or \option{partialsubject} options. These title pages have have no logo.} If you downloaded this style from the UOW website there will be one in the zipped package. When you want to typeset the title page simply use \command{\textbackslash{}maketitle} after \command{\textbackslash{}begin}\comoptions{\{document\}} as you usually would.
+You need to ensure a copy of the logo named \texttt{uow\textunderscore{}logo} is in the working directory where you're compiling your thesis.\footnote{Unless you're using the \option{report}, \option{fullsubject} or \option{partialsubject} options. These title pages have have no logo.} If you downloaded this style from the \textsc{uow} website there will be one in the zipped package. When you want to typeset the title page simply use \command{\textbackslash{}maketitle} after \command{\textbackslash{}begin}\comoptions{\{document\}} as you usually would.
 
 \subsection*{\command{\textbackslash{}declaration}}
 The declaration page is intended for PhD theses, but will work fine for each document type. Using the \command{\textbackslash{}declaration} command is simple, just place it in your document where you want it typeset. 
@@ -174,7 +177,7 @@ As of 2017, the package also typesets the copyright declaration for your thesis 
 
     \item[\command{\textbackslash{}degree}\comoptions{\{Your Degree\}}] The degree for which you are submitting this work. Write the degree out in full; Doctor of Philosophy, Master of Science, Bachelor of Arts Honours etc.
     
-    \item[\command{\textbackslash{}graphic}] This macro is used internally to load the UOW Graphic. It has no immediate use in the body of your document and can be ignored unless you feel like cracking open the style file and tinkering. For the graphic to load properly in the title page there must be an image file in the working directory named \texttt{uow\textunderscore{}logo}. It can be used in the body of the document to load an alternative graphic if that is desired, be warned that determining the size in this case is up to you.
+    \item[\command{\textbackslash{}graphic}] This macro is used internally to load the \textsc{uow} Graphic. It has no immediate use in the body of your document and can be ignored unless you feel like cracking open the style file and tinkering. For the graphic to load properly in the title page there must be an image file in the working directory named \texttt{uow\textunderscore{}logo}. It can be used in the body of the document to load an alternative graphic if that is desired, be warned that determining the size in this case is up to you.
     The usage is a bit odd note the nested \command{\textbackslash{}includegraphics} command:
     
     \command{\textbackslash{}graphic}\comoptions{\{\textbackslash{}includegraphics\{yourgraphic\}\}}
@@ -301,9 +304,9 @@ As of 2017, the package also typesets the copyright declaration for your thesis 
 \section{Legal}
 This work may be distributed and/or modified under the conditions of the \LaTeX{} Project Public License version 1.3c.\footnote{\url{http://www.latex-project.org/lppl/lppl-1-3c.txt}} The crest of the University of Wollongong is copyright and the property of the University of Wollongong. As the core identifier of the university its use is governed by the university's brand and visual identity guidelines.\footnote{\url{http://www.uow.edu.au/about/brand/uowlogo/index.html}}
 
-This work is copyright (\textsc{cc by-nc-sa 3.0 au}) 2017 by T. M. Griffiths under the creative commons licence (attribution, non-commercial, share alike).\footnote{\url{http://creativecommons.org/licenses/by-nc-sa/3.0/au/}}
+This work is copyright (\textsc{cc by-sa 4.0}) 2017 by T. M. Griffiths under the creative commons licence (attribution, non-commercial, share alike).\footnote{\url{https://creativecommons.org/licenses/by-sa/4.0/}}
 
-\begin{center}\color{UOWdarkblue}\ccbyncsa\end{center}
+\begin{center}\color{UOWdarkblue}\ccbysa\end{center}
 
 \clearpage
 
@@ -311,13 +314,13 @@ This work is copyright (\textsc{cc by-nc-sa 3.0 au}) 2017 by T. M. Griffiths und
 If you spot any errors or bugs, or alternately you have any requests for an addition let me know.
 
 \subsection*{Version 3.0, 2017-07-18, tmgriffiths}
-This version is a major redesign of the title page to coincide the re-branding of UOW during 2016. It also adds the copyright statement and acknowledgement of the Australian Government Research Training Partnership Scholarships. Be sure to use the new version of the UOW crest (below). A copy is distributed with the uow thesis template on UOW website.
+This version is a major redesign of the title page to coincide the re-branding of \textsc{uow} during 2016. It also adds the copyright statement and acknowledgement of the Australian Government Research Training Partnership Scholarships. Be sure to use the new version of the \textsc{uow} crest (below). A copy is distributed with the uow thesis template on \textsc{uow} website.
 \begin{center}
   \includegraphics[height=20mm]{uow_logo.png}
 \end{center}
 
 \begin{itemize}
-  \item Redesigned title page to be more in line with UOW branding guidelines and discussions with UOW administration.
+  \item Redesigned title page to be more in line with \textsc{uow} branding guidelines and discussions with \textsc{uow} administration.
   \item Added the copyright text on the page immediately following the title page.
   \item Included the acknowledgement of the Australian Government Research Training Partnership Scholarships in the copy right text.
   \item Added \command{\textbackslash{}copyrighttext} command to allow for custom copyright, in case of industry partners or other situations. If you want to release your work under a creative commons licence I suggest you look at the \texttt{ccicons} package for typesetting all the symbols you need.
@@ -326,7 +329,7 @@ This version is a major redesign of the title page to coincide the re-branding o
   \item Changed the \command{\textbackslash{}class} macro to \command{\textbackslash{}subject}.
   \item Spaced out the declaration text and signature line more with a \command{\textbackslash{}vspace}\{\command{\textbackslash{}fill}\}. The signature line and date now sit at the bottom of the page irrespective of paper size.
   \item Fixed up the code in \texttt{uowthesistitlepage.sty}. Indenting and some stray uncommented return line adding errant spaces in the finished title page.
-  \item updated this document to use Times New Roman, \textsf{Monserrat}, and the three UOW branding coluors \textcolor{UOWred}{\textbf{red}}, \textcolor{UOWblue}{\textbf{blue}}, and \textcolor{UOWdarkblue}{\textbf{dark blue}}.
+  \item updated this document to use Times New Roman, \textsf{Monserrat}, and the three \textsc{uow} branding coluors \textcolor{UOWred}{\textbf{red}}, \textcolor{UOWblue}{\textbf{blue}}, and \textcolor{UOWdarkblue}{\textbf{dark blue}}.
   \item Removed most examples from documentation. I felt the options were fairly self explanatory. I've left in the \option{report}, \option{default} and \option{phd} options so that people can see what they look like.
 \end{itemize}
 

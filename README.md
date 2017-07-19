@@ -97,5 +97,5 @@ Created by Thomas M. Griffiths (tmg994[at]uowmail[dot]edu[dot]au) 2017-07-19
 Legal
 -----
 
-Copyright (CC BY-NC-SA 3.0 AU) 2017 by T. M. Griffiths under the creative commons licence(attribution, non-comercial, share alike): http://creativecommons.org/licenses/by-nc-sa/3.0/au/. This work may be distributed and/or modified under the conditions of the LaTeX Project Public License version 1.3c: http://www.latex-project.org/lppl/lppl-1-3c.txt
+Copyright (CC-BY-SA 4.0 AU) 2017 by T. M. Griffiths under the creative commons licence ([attribution, non-comercial, share alike](https://creativecommons.org/licenses/by-sa/4.0/)). This work may be distributed and/or modified under the conditions of the [LaTeX Project Public License version 1.3c](http://www.latex-project.org/lppl/lppl-1-3c.txt)
 

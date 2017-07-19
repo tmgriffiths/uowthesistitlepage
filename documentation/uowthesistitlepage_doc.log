@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.7.4)  19 JUL 2017 12:04
+This is LuaTeX, Version 1.0.4 (TeX Live 2017)  (format=lualatex 2017.7.4)  19 JUL 2017 13:31
  system commands enabled.
  file:line:error style messages enabled.
 **uowthesistitlepage_doc.tex
@@ -36,7 +36,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.139 seconds
+luaotfload | main : initialization completed in 0.146 seconds
 Babel <3.12> and hyphenation patterns for 1 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
@@ -524,95 +524,46 @@ Package xltxtra Warning:
 luaotfload | cache : Lookup cache loaded from /Users/thomasgriffiths/Library/tex
 live/2017/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.(load
  luc: /Users/thomasgriffiths/Library/texlive/2017/texmf-var/luatex-cache/generic
-/fonts/otl/times-new-roman.luc)
+/fonts/otl/timesltstd-roman.luc)
 *************************************************
 * fontspec warning: "no-mapping-ligtex"
 * 
 * Input mapping not (yet?) supported in LuaTeX.
 *  Use "Ligatures=TeX" instead of "Mapping=tex-text".
 *************************************************
-luaotfload | aux : font no 26 (nil) does not define feature onum for script latn
- with language dflt
-luaotfload | aux : no font with id 26
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Lowercase' (onum) not available for font
-* 'TimesNewRoman' with script 'Latin' and language 'Default'.
-*************************************************
-\g__fontspec_family_TimesNewRoman_int=\count185
+\g__fontspec_family_TimesLTStd_int=\count185
 (load luc: /Users/thomasgriffiths/Library/texlive/2017/texmf-var/luatex-cache/ge
-neric/fonts/otl/times-new-roman-bold-italic.luc)(load luc: /Users/thomasgriffith
-s/Library/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/times-new-roman-
-bold.luc)(load luc: /Users/thomasgriffiths/Library/texlive/2017/texmf-var/luatex
--cache/generic/fonts/otl/times-new-roman-italic.luc)
-luaotfload | aux : font no 26 (nil) does not define feature onum for script latn
- with language dflt
-luaotfload | aux : no font with id 26
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Lowercase' (onum) not available for font
-* 'TimesNewRoman' with script 'Latin' and language 'Default'.
-*************************************************
-luaotfload | aux : font no 26 (nil) does not define feature smcp for script latn
- with language dflt
-luaotfload | aux : no font with id 26
-luaotfload | aux : font no 28 (nil) does not define feature onum for script latn
- with language dflt
-luaotfload | aux : no font with id 28
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Lowercase' (onum) not available for font
-* 'TimesNewRoman/B' with script 'Latin' and language 'Default'.
-*************************************************
-luaotfload | aux : font no 28 (nil) does not define feature smcp for script latn
- with language dflt
-luaotfload | aux : no font with id 28
-luaotfload | aux : font no 29 (nil) does not define feature onum for script latn
- with language dflt
-luaotfload | aux : no font with id 29
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Lowercase' (onum) not available for font
-* 'TimesNewRoman/I' with script 'Latin' and language 'Default'.
-*************************************************
+neric/fonts/otl/timesltstd-bolditalic.luc)(load luc: /Users/thomasgriffiths/Libr
+ary/texlive/2017/texmf-var/luatex-cache/generic/fonts/otl/timesltstd-bold.luc)(l
+oad luc: /Users/thomasgriffiths/Library/texlive/2017/texmf-var/luatex-cache/gene
+ric/fonts/otl/timesltstd-italic.luc)
 luaotfload | aux : font no 29 (nil) does not define feature smcp for script latn
  with language dflt
 luaotfload | aux : no font with id 29
-luaotfload | aux : font no 27 (nil) does not define feature onum for script latn
- with language dflt
-luaotfload | aux : no font with id 27
-*************************************************
-* fontspec warning: "icu-feature-not-exist-in-font"
-* 
-* OpenType feature 'Numbers=Lowercase' (onum) not available for font
-* 'TimesNewRoman/BI' with script 'Latin' and language 'Default'.
-*************************************************
 luaotfload | aux : font no 27 (nil) does not define feature smcp for script latn
  with language dflt
 luaotfload | aux : no font with id 27
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'TimesNewRoman(0)' created for font 'Times New Roman' with
-. options [Mapping=tex-text,Ligatures=TeX,Numbers=OldStyle].
+. Font family 'TimesLTStd(0)' created for font 'Times LT Std' with options
+. [Mapping=tex-text,Ligatures=TeX,Numbers=OldStyle].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.:
-. <->"TimesNewRoman:mode=node;script=latn;language=DFLT;+tlig;"
-. - 'small caps'  (m/sc) with NFSS spec.: 
+. <->"TimesLTStd:mode=node;script=latn;language=DFLT;+tlig;+onum;"
+. - 'small caps'  (m/sc) with NFSS spec.:
+. <->"TimesLTStd:mode=node;script=latn;language=DFLT;+tlig;+onum;+smcp;"
 . - 'bold' (bx/n) with NFSS spec.:
-. <->"TimesNewRoman/B:mode=node;script=latn;language=DFLT;+tlig;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
+. <->"TimesLTStd/B:mode=node;script=latn;language=DFLT;+tlig;+onum;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.:
+. <->"TimesLTStd/B:mode=node;script=latn;language=DFLT;+tlig;+onum;+smcp;"
 . - 'italic' (m/it) with NFSS spec.:
-. <->"TimesNewRoman/I:mode=node;script=latn;language=DFLT;+tlig;"
+. <->"TimesLTStd/I:mode=node;script=latn;language=DFLT;+tlig;+onum;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: 
 . - 'bold italic' (bx/it) with NFSS spec.:
-. <->"TimesNewRoman/BI:mode=node;script=latn;language=DFLT;+tlig;"
+. <->"TimesLTStd/BI:mode=node;script=latn;language=DFLT;+tlig;+onum;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 .................................................
 LaTeX Info: Redefining \rmfamily on input line 25.
@@ -621,7 +572,7 @@ neric/fonts/otl/montserrat-regular.luc)
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat scale = 0.8454917156022623.
+. Montserrat scale = 0.8506596991031745.
 .................................................
 
 *************************************************
@@ -639,42 +590,42 @@ ric/fonts/otl/montserrat-italic.luc)
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat scale = 0.8454917156022623.
+. Montserrat scale = 0.8506596991031745.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat scale = 0.8454917156022623.
+. Montserrat scale = 0.8506596991031745.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat/B scale = 0.8267381187420674.
+. Montserrat/B scale = 0.8317914727588963.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat/B scale = 0.8267381187420674.
+. Montserrat/B scale = 0.8317914727588963.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat/I scale = 0.8454917156022623.
+. Montserrat/I scale = 0.8506596991031745.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat/I scale = 0.8454917156022623.
+. Montserrat/I scale = 0.8506596991031745.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat/BI scale = 0.8267381187420674.
+. Montserrat/BI scale = 0.8317914727588963.
 .................................................
 .................................................
 . fontspec info: "set-scale"
 . 
-. Montserrat/BI scale = 0.8267381187420674.
+. Montserrat/BI scale = 0.8317914727588963.
 .................................................
 .................................................
 . fontspec info: "defining-font"
@@ -685,28 +636,28 @@ ric/fonts/otl/montserrat-italic.luc)
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.:
-. <->s*[0.8454917156022623]"Montserrat:mode=node;script=latn;language=DFLT;+tlig
+. <->s*[0.8506596991031745]"Montserrat:mode=node;script=latn;language=DFLT;+tlig
 ;"
 . - 'small caps'  (m/sc) with NFSS spec.:
-. <->s*[0.8454917156022623]"Montserrat:mode=node;script=latn;language=DFLT;+tlig
+. <->s*[0.8506596991031745]"Montserrat:mode=node;script=latn;language=DFLT;+tlig
 ;+smcp;"
 . - 'bold' (bx/n) with NFSS spec.:
-. <->s*[0.8267381187420674]"Montserrat/B:mode=node;script=latn;language=DFLT;+tl
+. <->s*[0.8317914727588963]"Montserrat/B:mode=node;script=latn;language=DFLT;+tl
 ig;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.:
-. <->s*[0.8267381187420674]"Montserrat/B:mode=node;script=latn;language=DFLT;+tl
+. <->s*[0.8317914727588963]"Montserrat/B:mode=node;script=latn;language=DFLT;+tl
 ig;+smcp;"
 . - 'italic' (m/it) with NFSS spec.:
-. <->s*[0.8454917156022623]"Montserrat/I:mode=node;script=latn;language=DFLT;+tl
+. <->s*[0.8506596991031745]"Montserrat/I:mode=node;script=latn;language=DFLT;+tl
 ig;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.:
-. <->s*[0.8454917156022623]"Montserrat/I:mode=node;script=latn;language=DFLT;+tl
+. <->s*[0.8506596991031745]"Montserrat/I:mode=node;script=latn;language=DFLT;+tl
 ig;+smcp;"
 . - 'bold italic' (bx/it) with NFSS spec.:
-. <->s*[0.8267381187420674]"Montserrat/BI:mode=node;script=latn;language=DFLT;+t
+. <->s*[0.8317914727588963]"Montserrat/BI:mode=node;script=latn;language=DFLT;+t
 lig;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.:
-. <->s*[0.8267381187420674]"Montserrat/BI:mode=node;script=latn;language=DFLT;+t
+. <->s*[0.8317914727588963]"Montserrat/BI:mode=node;script=latn;language=DFLT;+t
 lig;+smcp;"
 .................................................
 LaTeX Info: Redefining \sffamily on input line 26.
@@ -722,7 +673,7 @@ luaotfload | aux : no font with id 35
 .................................................
 . fontspec info: "set-scale"
 . 
-. Menlo scale = 0.8178571428571429.
+. Menlo scale = 0.822856212797619.
 .................................................
 
 *************************************************
@@ -740,7 +691,7 @@ luc)
 .................................................
 . fontspec info: "set-scale"
 . 
-. Menlo scale = 0.8178571428571429.
+. Menlo scale = 0.822856212797619.
 .................................................
 luaotfload | aux : font no 35 (nil) does not define feature smcp for script  wit
 h language 
@@ -748,7 +699,7 @@ luaotfload | aux : no font with id 35
 .................................................
 . fontspec info: "set-scale"
 . 
-. Menlo/B scale = 0.8178571428571429.
+. Menlo/B scale = 0.822856212797619.
 .................................................
 luaotfload | aux : font no 37 (nil) does not define feature smcp for script  wit
 h language 
@@ -756,7 +707,7 @@ luaotfload | aux : no font with id 37
 .................................................
 . fontspec info: "set-scale"
 . 
-. Menlo/I scale = 0.8178571428571429.
+. Menlo/I scale = 0.822856212797619.
 .................................................
 luaotfload | aux : font no 38 (nil) does not define feature smcp for script  wit
 h language 
@@ -764,7 +715,7 @@ luaotfload | aux : no font with id 38
 .................................................
 . fontspec info: "set-scale"
 . 
-. Menlo/BI scale = 0.8178571428571429.
+. Menlo/BI scale = 0.822856212797619.
 .................................................
 luaotfload | aux : font no 36 (nil) does not define feature smcp for script  wit
 h language 
@@ -779,28 +730,28 @@ luaotfload | aux : no font with id 36
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.:
-. <->s*[0.8178571428571429]"Menlo:mode=node;+tlig;"
+. <->s*[0.822856212797619]"Menlo:mode=node;+tlig;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . \hyphenchar \font =\c_minus_one 
 . - 'bold' (bx/n) with NFSS spec.:
-. <->s*[0.8178571428571429]"Menlo/B:mode=node;+tlig;"
+. <->s*[0.822856212797619]"Menlo/B:mode=node;+tlig;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . \hyphenchar \font =\c_minus_one 
 . - 'italic' (m/it) with NFSS spec.:
-. <->s*[0.8178571428571429]"Menlo/I:mode=node;+tlig;"
+. <->s*[0.822856212797619]"Menlo/I:mode=node;+tlig;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
 . \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font
 . \hyphenchar \font =\c_minus_one 
 . - 'bold italic' (bx/it) with NFSS spec.:
-. <->s*[0.8178571428571429]"Menlo/BI:mode=node;+tlig;"
+. <->s*[0.822856212797619]"Menlo/BI:mode=node;+tlig;"
 . - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
 . and font adjustment code:
 . \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
@@ -829,6 +780,9 @@ Package microtype Info: Loading configuration file microtype.cfg.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2017/07/07 v2.7 microtype main configuration file (RS)
 ))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/embrac/embrac.sty
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2017/07/15 LaTeX2e option processing using LaTeX3 keys
@@ -1123,22 +1077,22 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (./uowthesistitlepage_doc.aux)
 \openout1 = uowthesistitlepage_doc.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1211,66 +1165,64 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 .................................................
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 84.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 84.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 84.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 84.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 84.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 84.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 84.
-LaTeX Font Info:    Redeclaring math accent \check on input line 84.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 84.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 84.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \colon on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 84.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 84.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 84.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 87.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 87.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 87.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 87.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 87.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 87.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 87.
+LaTeX Font Info:    Redeclaring math accent \check on input line 87.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 87.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 87.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 87.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 87.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 87.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 84.
+(Font)              `operators' in the math version `normal' on input line 87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TimesNewRoman(0)/m/n on input line 84
-.
+(Font)                  OT1/cmr/m/n --> TU/TimesLTStd(0)/m/n on input line 87.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 84.
+(Font)              `operators' in the math version `bold' on input line 87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/m/n on input line 8
-4.
+(Font)                  OT1/cmr/bx/n --> TU/TimesLTStd(0)/m/n on input line 87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/m/n on i
-nput line 84.
+(Font)                  TU/TimesLTStd(0)/m/n --> TU/TimesLTStd(0)/m/n on input l
+ine 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TimesNewRoman(0)/m/it on input line 
-84.
+(Font)                  OT1/cmr/m/it --> TU/TimesLTStd(0)/m/it on input line 87.
+
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TimesNewRoman(0)/bx/n on input line 
-84.
+(Font)                  OT1/cmr/bx/n --> TU/TimesLTStd(0)/bx/n on input line 87.
+
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/Montserrat(0)/m/n on input line 84.
+(Font)                  OT1/cmss/m/n --> TU/Montserrat(0)/m/n on input line 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/Menlo(0)/m/n on input line 84.
+(Font)                  OT1/cmtt/m/n --> TU/Menlo(0)/m/n on input line 87.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TimesNewRoman(0)/m/n --> TU/TimesNewRoman(0)/bx/n on 
-input line 84.
+(Font)                  TU/TimesLTStd(0)/m/n --> TU/TimesLTStd(0)/bx/n on input 
+line 87.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TimesNewRoman(0)/bx/it on input lin
-e 84.
+(Font)                  OT1/cmr/bx/it --> TU/TimesLTStd(0)/bx/it on input line 8
+7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/Montserrat(0)/bx/n on input line 84
+(Font)                  OT1/cmss/bx/n --> TU/Montserrat(0)/bx/n on input line 87
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/Menlo(0)/bx/n on input line 84.
-LaTeX Info: Redefining \microtypecontext on input line 84.
+(Font)                  OT1/cmtt/m/n --> TU/Menlo(0)/bx/n on input line 87.
+LaTeX Info: Redefining \microtypecontext on input line 87.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1282,16 +1234,298 @@ Package microtype Info: Using tracking set `my'.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
 Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `TimesNewRoman' (encoding: TU).
+(microtype)             `TimesLTStd' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u A'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u a'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v C'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v c'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v D'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v d'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v E'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\k e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v e'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u G'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\u g'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.I'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v L'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v l'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v N'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v n'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H O'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H o'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v R'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v r'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c S'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c s'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v T'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\c t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\v t'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r U'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\H u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\r u'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.Z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\'z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `\.z'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `microtype.cfg/375(protrusion)'.
+
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \textsi with sig. 'sm' on line 84.
+. Redefining command \textsi with sig. 'sm' on line 87.
 .................................................
 \AtBeginShipoutBox=\box48
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
@@ -1300,7 +1534,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 84.
+Package hyperref Info: Link coloring OFF on input line 87.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1310,9 +1544,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count284
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
 
 (./uowthesistitlepage_doc.out) (./uowthesistitlepage_doc.out)
 \@outlinefile=\write3
@@ -1322,26 +1556,28 @@ LaTeX Info: Redefining \nameref on input line 84.
 Inserting `luaotfload.letterspace' at position 2 in `pre_linebreak_filter'.
 Inserting `luaotfload.letterspace' at position 2 in `hpack_filter'.
 LaTeX Font Info:    Font shape `TU/Montserrat(0)/m/n' will be
-(Font)              scaled to size 17.53545pt on input line 91.
+(Font)              scaled to size 17.64273pt on input line 94.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Montserrat' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 91.
+(Font)              <14.4> on input line 94.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 91.
+(Font)              <7> on input line 94.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 RS)
 )
 LaTeX Font Info:    Font shape `TU/Montserrat(0)/m/n' will be
-(Font)              scaled to size 14.61005pt on input line 92.
+(Font)              scaled to size 14.69943pt on input line 95.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 95.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 95.
 
 (./uowthesistitlepage_doc.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -1351,409 +1587,393 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 \openout4 = uowthesistitlepage_doc.toc
 LaTeX Font Info:    Font shape `TU/Menlo(0)/m/n' will be
-(Font)              scaled to size 9.81427pt on input line 95.
+(Font)              scaled to size 9.87433pt on input line 98.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Menlo' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (15.1316pt too wide) in paragraph at lines 115--116
+Overfull \hbox (17.67392pt too wide) in paragraph at lines 118--119
 []\TU/Menlo(0)/m/n/12 % to use in Times New Roman instead of the LaTeX default,
  latin modern. 
  []
 
 LaTeX Font Info:    Font shape `TU/Montserrat(0)/m/n' will be
-(Font)              scaled to size 12.17503pt on input line 121.
+(Font)              scaled to size 12.24953pt on input line 124.
 LaTeX Font Info:    Font shape `TU/Menlo(0)/m/n' will be
-(Font)              scaled to size 11.77711pt on input line 121.
+(Font)              scaled to size 11.84918pt on input line 124.
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--123
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
 
-Overfull \hbox (28.92015pt too wide) in paragraph at lines 134--135
-[]\TU/TimesNewRoman(0)/m/n/12 The new fields from the uowthe-sis-ti-tlepage pac
-k-age are[]\TU/Menlo(0)/m/n/12 \degree[]\TU/TimesNewRoman(0)/m/n/12 , []\TU/Men
-lo(0)/m/n/12 \school[] \TU/TimesNewRoman(0)/m/n/12 and []\TU/Menlo(0)/m/n/12 \s
-upervisor[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--141
+Overfull \hbox (28.61406pt too wide) in paragraph at lines 137--138
+[]\TU/TimesLTStd(0)/m/n/12 The new fields from the uowthe-sis-ti-tlepage pack-a
+ge are[]\TU/Menlo(0)/m/n/12 \degree[]\TU/TimesLTStd(0)/m/n/12 , []\TU/Menlo(0)/
+m/n/12 \school[] \TU/TimesLTStd(0)/m/n/12 and []\TU/Menlo(0)/m/n/12 \supervisor
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 142.
+(Font)              <5> on input line 145.
 LaTeX Font Info:    Font shape `TU/Menlo(0)/m/n' will be
-(Font)              scaled to size 8.17856pt on input line 142.
+(Font)              scaled to size 8.2286pt on input line 145.
 [2]
 LaTeX Font Info:    Font shape `TU/Menlo(0)/bx/n' will be
-(Font)              scaled to size 9.81427pt on input line 153.
+(Font)              scaled to size 9.87433pt on input line 156.
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--174
+Underfull \hbox (badness 10000) in paragraph at lines 173--177
 
  []
 
 [4]
-Overfull \hbox (8.59932pt too wide) in paragraph at lines 186--187
-[]\TU/TimesNewRoman(0)/m/n/12 Prints your su-per-vi-sor(s)
+Overfull \hbox (10.47766pt too wide) in paragraph at lines 189--190
+[]\TU/TimesLTStd(0)/m/n/12 Prints your su-per-vi-sor(s)
  []
 
 [5]
-Overfull \hbox (6.04039pt too wide) in paragraph at lines 227--228
-\TU/TimesNewRoman(0)/m/n/12 can be mod-i-fied with the []\TU/Menlo(0)/m/n/12 ho
-rizontal[] \TU/TimesNewRoman(0)/m/n/12 op-tion. If you use the []\TU/Menlo(0)/m
-/n/12 \cosupervisor[][][number
- []
-
-
-Overfull \hbox (0.7156pt too wide) in paragraph at lines 250--251
-[]\TU/TimesNewRoman(0)/m/n/12 When ac-tive it uses a tab-u-lar en-vi-ron-ment t
-o place your su-per-vi-sor and co-supervisor
+Overfull \hbox (6.50279pt too wide) in paragraph at lines 230--231
+\TU/TimesLTStd(0)/m/n/12 can be mod-i-fied with the []\TU/Menlo(0)/m/n/12 horiz
+ontal[] \TU/TimesLTStd(0)/m/n/12 op-tion. If you use the []\TU/Menlo(0)/m/n/12 
+\cosupervisor[][][number
  []
 
 [6]
-Overfull \hbox (17.69862pt too wide) in paragraph at lines 279--280
-\TU/TimesNewRoman(0)/m/n/12 im-ple-mented but not nec-es-sary. Use the op-tiona
-l ar-gu-ment to the []\TU/Menlo(0)/m/n/12 \supervisor[][][number
+Overfull \hbox (18.1528pt too wide) in paragraph at lines 282--283
+\TU/TimesLTStd(0)/m/n/12 im-ple-mented but not nec-es-sary. Use the op-tional a
+r-gu-ment to the []\TU/Menlo(0)/m/n/12 \supervisor[][][number
  []
 
 [7]
-
-LaTeX Font Warning: Font shape `TU/TimesNewRoman(0)/m/sc' undefined
-(Font)              using `TU/TimesNewRoman(0)/m/n' instead on input line 304.
-
 LaTeX Font Info:    Font shape `U/ccicons/m/n' will be
-(Font)              scaled to size 24.0pt on input line 306.
-[8]
+(Font)              scaled to size 24.0pt on input line 309.
+ [8]
 <uow_logo.png, id=119, pagebox=cropbox, 1608.0075pt x 530.98375pt>
 File: uow_logo.png Graphic file (type png)
 <use uow_logo.png>
-Package luatex.def Info: uow_logo.png  used on input line 316. on input line 316
+Package luatex.def Info: uow_logo.png  used on input line 319. on input line 319
 .
 Package luatex.def Info: Requested size: 172.31764pt x 56.9055pt on input line 3
-16.
+19.
 LaTeX Font Info:    Font shape `TU/Montserrat(0)/m/n' will be
-(Font)              scaled to size 10.14587pt on input line 329.
+(Font)              scaled to size 10.20795pt on input line 332.
  [9
 
 <./uow_logo.png>]
-Overfull \hbox (6.7995pt too wide) in paragraph at lines 339--340
-\TU/TimesNewRoman(0)/m/n/12 sound-ing. Also fixed the dec-la-ra-tion for []\TU/
-Menlo(0)/m/n/12 fullsubject[]\TU/TimesNewRoman(0)/m/n/12 , []\TU/Menlo(0)/m/n/1
-2 report[] \TU/TimesNewRoman(0)/m/n/12 and []\TU/Menlo(0)/m/n/12 partialsubject
-[]
+Overfull \hbox (7.11607pt too wide) in paragraph at lines 342--343
+\TU/TimesLTStd(0)/m/n/12 sound-ing. Also fixed the dec-la-ra-tion for []\TU/Men
+lo(0)/m/n/12 fullsubject[]\TU/TimesLTStd(0)/m/n/12 , []\TU/Menlo(0)/m/n/12 repo
+rt[] \TU/TimesLTStd(0)/m/n/12 and []\TU/Menlo(0)/m/n/12 partialsubject[]
  []
 
 [10]
-Overfull \hbox (16.48311pt too wide) in paragraph at lines 374--375
-[]\TU/TimesNewRoman(0)/m/n/12 Im-ple-mented []\TU/Menlo(0)/m/n/12 phd[]\TU/Time
-sNewRoman(0)/m/n/12 , []\TU/Menlo(0)/m/n/12 mastersbyresearch[]\TU/TimesNewRoma
-n(0)/m/n/12 , the var-i-ous []\TU/Menlo(0)/m/n/12 supervisor[] \TU/TimesNewRoma
-n(0)/m/n/12 based, and []\TU/Menlo(0)/m/n/12 noschool[]
+Overfull \hbox (17.57947pt too wide) in paragraph at lines 377--378
+[]\TU/TimesLTStd(0)/m/n/12 Im-ple-mented []\TU/Menlo(0)/m/n/12 phd[]\TU/TimesLT
+Std(0)/m/n/12 , []\TU/Menlo(0)/m/n/12 mastersbyresearch[]\TU/TimesLTStd(0)/m/n/
+12 , the var-i-ous []\TU/Menlo(0)/m/n/12 supervisor[] \TU/TimesLTStd(0)/m/n/12 
+based, and []\TU/Menlo(0)/m/n/12 noschool[]
  []
 
 [11]
 <Examples/report.pdf, id=135, pagebox=cropbox, 597.50829pt x 845.0471pt>
 File: Examples/report.pdf Graphic file (type pdf)
 <use Examples/report.pdf>
-Package luatex.def Info: Examples/report.pdf  used on input line 389. on input l
-ine 389.
+Package luatex.def Info: Examples/report.pdf  used on input line 392. on input l
+ine 392.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 389.
+ 392.
 File: Examples/report.pdf Graphic file (type pdf)
 <use Examples/report.pdf>
-Package luatex.def Info: Examples/report.pdf  used on input line 389. on input l
-ine 389.
+Package luatex.def Info: Examples/report.pdf  used on input line 392. on input l
+ine 392.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 389.
+ 392.
 <Examples/report.pdf, id=138, page=1, pagebox=cropbox, 597.50829pt x 845.0471pt>
 
 File: Examples/report.pdf Graphic file (type pdf)
 <use Examples/report.pdf, page 1>
-Package luatex.def Info: Examples/report.pdf , page1 used on input line 389. on 
-input line 389.
+Package luatex.def Info: Examples/report.pdf , page1 used on input line 392. on 
+input line 392.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 389.
+ 392.
 File: Examples/report.pdf Graphic file (type pdf)
 <use Examples/report.pdf, page 1>
-Package luatex.def Info: Examples/report.pdf , page1 used on input line 389. on 
-input line 389.
+Package luatex.def Info: Examples/report.pdf , page1 used on input line 392. on 
+input line 392.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 389.
+ 392.
  [12]
 File: Examples/report.pdf Graphic file (type pdf)
 <use Examples/report.pdf, page 1>
-Package luatex.def Info: Examples/report.pdf , page1 used on input line 389. on 
-input line 389.
+Package luatex.def Info: Examples/report.pdf , page1 used on input line 392. on 
+input line 392.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 389.
+ 392.
 File: Examples/report.pdf Graphic file (type pdf)
 <use Examples/report.pdf, page 1>
-Package luatex.def Info: Examples/report.pdf , page1 used on input line 389. on 
-input line 389.
+Package luatex.def Info: Examples/report.pdf , page1 used on input line 392. on 
+input line 392.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 389.
+ 392.
 File: Examples/report.pdf Graphic file (type pdf)
 <use Examples/report.pdf, page 1>
-Package luatex.def Info: Examples/report.pdf , page1 used on input line 389. on 
-input line 389.
+Package luatex.def Info: Examples/report.pdf , page1 used on input line 392. on 
+input line 392.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 389.
+ 392.
  [13<./Examples/report.pdf>]
 <Examples/honours.pdf, id=167, pagebox=cropbox, 597.50829pt x 845.0471pt>
 File: Examples/honours.pdf Graphic file (type pdf)
 <use Examples/honours.pdf>
-Package luatex.def Info: Examples/honours.pdf  used on input line 390. on input 
-line 390.
+Package luatex.def Info: Examples/honours.pdf  used on input line 393. on input 
+line 393.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 390.
+ 393.
 File: Examples/honours.pdf Graphic file (type pdf)
 <use Examples/honours.pdf>
-Package luatex.def Info: Examples/honours.pdf  used on input line 390. on input 
-line 390.
+Package luatex.def Info: Examples/honours.pdf  used on input line 393. on input 
+line 393.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 390.
+ 393.
 <Examples/honours.pdf, id=170, page=1, pagebox=cropbox, 597.50829pt x 845.0471pt
 >
 File: Examples/honours.pdf Graphic file (type pdf)
 <use Examples/honours.pdf, page 1>
-Package luatex.def Info: Examples/honours.pdf , page1 used on input line 390. on
- input line 390.
+Package luatex.def Info: Examples/honours.pdf , page1 used on input line 393. on
+ input line 393.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 390.
+ 393.
 File: Examples/honours.pdf Graphic file (type pdf)
 <use Examples/honours.pdf, page 1>
-Package luatex.def Info: Examples/honours.pdf , page1 used on input line 390. on
- input line 390.
+Package luatex.def Info: Examples/honours.pdf , page1 used on input line 393. on
+ input line 393.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 390.
+ 393.
 File: Examples/honours.pdf Graphic file (type pdf)
 <use Examples/honours.pdf, page 1>
-Package luatex.def Info: Examples/honours.pdf , page1 used on input line 390. on
- input line 390.
+Package luatex.def Info: Examples/honours.pdf , page1 used on input line 393. on
+ input line 393.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 390.
+ 393.
 File: Examples/honours.pdf Graphic file (type pdf)
 <use Examples/honours.pdf, page 1>
-Package luatex.def Info: Examples/honours.pdf , page1 used on input line 390. on
- input line 390.
+Package luatex.def Info: Examples/honours.pdf , page1 used on input line 393. on
+ input line 393.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 390.
+ 393.
 File: Examples/honours.pdf Graphic file (type pdf)
 <use Examples/honours.pdf, page 1>
-Package luatex.def Info: Examples/honours.pdf , page1 used on input line 390. on
- input line 390.
+Package luatex.def Info: Examples/honours.pdf , page1 used on input line 393. on
+ input line 393.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 390.
+ 393.
  [14<./Examples/honours.pdf>]
 <Examples/phd.pdf, id=193, pagebox=cropbox, 597.50829pt x 845.0471pt>
 File: Examples/phd.pdf Graphic file (type pdf)
 <use Examples/phd.pdf>
-Package luatex.def Info: Examples/phd.pdf  used on input line 391. on input line
- 391.
+Package luatex.def Info: Examples/phd.pdf  used on input line 394. on input line
+ 394.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 391.
+ 394.
 File: Examples/phd.pdf Graphic file (type pdf)
 <use Examples/phd.pdf>
-Package luatex.def Info: Examples/phd.pdf  used on input line 391. on input line
- 391.
+Package luatex.def Info: Examples/phd.pdf  used on input line 394. on input line
+ 394.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 391.
+ 394.
 <Examples/phd.pdf, id=196, page=1, pagebox=cropbox, 597.50829pt x 845.0471pt>
 File: Examples/phd.pdf Graphic file (type pdf)
 <use Examples/phd.pdf, page 1>
-Package luatex.def Info: Examples/phd.pdf , page1 used on input line 391. on inp
-ut line 391.
+Package luatex.def Info: Examples/phd.pdf , page1 used on input line 394. on inp
+ut line 394.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 391.
+ 394.
 File: Examples/phd.pdf Graphic file (type pdf)
 <use Examples/phd.pdf, page 1>
-Package luatex.def Info: Examples/phd.pdf , page1 used on input line 391. on inp
-ut line 391.
+Package luatex.def Info: Examples/phd.pdf , page1 used on input line 394. on inp
+ut line 394.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 391.
+ 394.
 File: Examples/phd.pdf Graphic file (type pdf)
 <use Examples/phd.pdf, page 1>
-Package luatex.def Info: Examples/phd.pdf , page1 used on input line 391. on inp
-ut line 391.
+Package luatex.def Info: Examples/phd.pdf , page1 used on input line 394. on inp
+ut line 394.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 391.
+ 394.
 File: Examples/phd.pdf Graphic file (type pdf)
 <use Examples/phd.pdf, page 1>
-Package luatex.def Info: Examples/phd.pdf , page1 used on input line 391. on inp
-ut line 391.
+Package luatex.def Info: Examples/phd.pdf , page1 used on input line 394. on inp
+ut line 394.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 391.
+ 394.
 File: Examples/phd.pdf Graphic file (type pdf)
 <use Examples/phd.pdf, page 1>
-Package luatex.def Info: Examples/phd.pdf , page1 used on input line 391. on inp
-ut line 391.
+Package luatex.def Info: Examples/phd.pdf , page1 used on input line 394. on inp
+ut line 394.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 391.
+ 394.
  [15<./Examples/phd.pdf>]
 <Examples/copyrighttext.pdf, id=219, pagebox=cropbox, 597.50829pt x 845.0471pt>
 File: Examples/copyrighttext.pdf Graphic file (type pdf)
 <use Examples/copyrighttext.pdf>
-Package luatex.def Info: Examples/copyrighttext.pdf  used on input line 392. on 
-input line 392.
+Package luatex.def Info: Examples/copyrighttext.pdf  used on input line 395. on 
+input line 395.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 392.
+ 395.
 File: Examples/copyrighttext.pdf Graphic file (type pdf)
 <use Examples/copyrighttext.pdf>
-Package luatex.def Info: Examples/copyrighttext.pdf  used on input line 392. on 
-input line 392.
+Package luatex.def Info: Examples/copyrighttext.pdf  used on input line 395. on 
+input line 395.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 392.
+ 395.
 <Examples/copyrighttext.pdf, id=222, page=1, pagebox=cropbox, 597.50829pt x 845.
 0471pt>
 File: Examples/copyrighttext.pdf Graphic file (type pdf)
 <use Examples/copyrighttext.pdf, page 1>
 Package luatex.def Info: Examples/copyrighttext.pdf , page1 used on input line 3
-92. on input line 392.
+95. on input line 395.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 392.
+ 395.
 File: Examples/copyrighttext.pdf Graphic file (type pdf)
 <use Examples/copyrighttext.pdf, page 1>
 Package luatex.def Info: Examples/copyrighttext.pdf , page1 used on input line 3
-92. on input line 392.
+95. on input line 395.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 392.
+ 395.
 File: Examples/copyrighttext.pdf Graphic file (type pdf)
 <use Examples/copyrighttext.pdf, page 1>
 Package luatex.def Info: Examples/copyrighttext.pdf , page1 used on input line 3
-92. on input line 392.
+95. on input line 395.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 392.
+ 395.
 File: Examples/copyrighttext.pdf Graphic file (type pdf)
 <use Examples/copyrighttext.pdf, page 1>
 Package luatex.def Info: Examples/copyrighttext.pdf , page1 used on input line 3
-92. on input line 392.
+95. on input line 395.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 392.
+ 395.
 File: Examples/copyrighttext.pdf Graphic file (type pdf)
 <use Examples/copyrighttext.pdf, page 1>
 Package luatex.def Info: Examples/copyrighttext.pdf , page1 used on input line 3
-92. on input line 392.
+95. on input line 395.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 392.
+ 395.
  [16<./Examples/copyrighttext.pdf>]
 <Examples/declaration.pdf, id=248, pagebox=cropbox, 597.50829pt x 845.0471pt>
 File: Examples/declaration.pdf Graphic file (type pdf)
 <use Examples/declaration.pdf>
-Package luatex.def Info: Examples/declaration.pdf  used on input line 393. on in
-put line 393.
+Package luatex.def Info: Examples/declaration.pdf  used on input line 396. on in
+put line 396.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 393.
+ 396.
 File: Examples/declaration.pdf Graphic file (type pdf)
 <use Examples/declaration.pdf>
-Package luatex.def Info: Examples/declaration.pdf  used on input line 393. on in
-put line 393.
+Package luatex.def Info: Examples/declaration.pdf  used on input line 396. on in
+put line 396.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 393.
+ 396.
 <Examples/declaration.pdf, id=251, page=1, pagebox=cropbox, 597.50829pt x 845.04
 71pt>
 File: Examples/declaration.pdf Graphic file (type pdf)
 <use Examples/declaration.pdf, page 1>
-Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 393
-. on input line 393.
+Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 396
+. on input line 396.
 Package luatex.def Info: Requested size: 597.50682pt x 845.04504pt on input line
- 393.
+ 396.
 File: Examples/declaration.pdf Graphic file (type pdf)
 <use Examples/declaration.pdf, page 1>
-Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 393
-. on input line 393.
+Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 396
+. on input line 396.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 393.
+ 396.
 File: Examples/declaration.pdf Graphic file (type pdf)
 <use Examples/declaration.pdf, page 1>
-Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 393
-. on input line 393.
+Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 396
+. on input line 396.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 393.
+ 396.
 File: Examples/declaration.pdf Graphic file (type pdf)
 <use Examples/declaration.pdf, page 1>
-Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 393
-. on input line 393.
+Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 396
+. on input line 396.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 393.
+ 396.
 File: Examples/declaration.pdf Graphic file (type pdf)
 <use Examples/declaration.pdf, page 1>
-Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 393
-. on input line 393.
+Package luatex.def Info: Examples/declaration.pdf , page1 used on input line 396
+. on input line 396.
 Package luatex.def Info: Requested size: 597.53416pt x 845.08372pt on input line
- 393.
+ 396.
  [17<./Examples/declaration.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
  (./uowthesistitlepage_doc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 394.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
 Package rerunfilecheck Info: File `uowthesistitlepage_doc.out' has not changed.
 (rerunfilecheck)             Checksum: A83893804153F4FEA45B640532DF222D;286.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
 )
 
 Here is how much of LuaTeX's memory you used:
- 20661 strings out of 494472
+ 20706 strings out of 494472
  100000,662416 words of node,token memory allocated
- 590 words of node memory still in use:
-   3 hlist, 1 vlist, 1 rule, 7 glue, 15 glyph, 15 attribute, 56 glue_spec, 15 at
+ 678 words of node memory still in use:
+   3 hlist, 1 vlist, 1 rule, 7 glue, 23 glyph, 25 attribute, 56 glue_spec, 25 at
 tribute_list, 1 write nodes
-   avail lists: 2:1658,3:121,4:116,5:270,6:2546,7:1687,8:116,9:881,10:16,11:204
- 23780 multiletter control sequences out of 65536+600000
- 87 fonts using 24367191 bytes
- 45i,18n,117p,855b,856s stack positions out of 5000i,500n,10000p,200000b,100000s
-</Library/Fonts/Times New Roman Bold Italic.ttf></Library/Fonts/Times New Roman 
-Bold.ttf></System/Library/Fonts/Menlo.ttc></Library/Fonts/Times New Roman Italic
-.ttf></System/Library/Fonts/Menlo.ttc></Library/Fonts/Times New Roman.ttf></usr/
-local/texlive/2017/texmf-dist/fonts/opentype/public/montserrat/Montserrat-Regula
-r.otf></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb
->
-Output written on uowthesistitlepage_doc.pdf (17 pages, 2309128 bytes).
+   avail lists: 2:1646,3:115,4:109,5:311,6:2556,7:1686,8:116,9:881,10:15,11:204
+ 23807 multiletter control sequences out of 65536+600000
+ 93 fonts using 15314463 bytes
+ 45i,18n,117p,855b,862s stack positions out of 5000i,500n,10000p,200000b,100000s
+</Library/Fonts/TimesLTStd-BoldItalic.otf></Library/Fonts/TimesLTStd-Bold.otf></
+System/Library/Fonts/Menlo.ttc></Library/Fonts/TimesLTStd-Italic.otf></System/Li
+brary/Fonts/Menlo.ttc></Library/Fonts/TimesLTStd-Roman.otf></usr/local/texlive/2
+017/texmf-dist/fonts/opentype/public/montserrat/Montserrat-Regular.otf></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb>
+Output written on uowthesistitlepage_doc.pdf (17 pages, 2235899 bytes).
 
 PDF statistics: 325 PDF objects out of 1000 (max. 8388607)
  240 compressed objects within 3 object streams
