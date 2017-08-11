@@ -95,7 +95,7 @@
 \tableofcontents
 
 \section{About}
-This package redefines the \command{\textbackslash{}maketitle} command to generate a title page compliant with the University of Wollongong (\textsc{uow}) branding guidelines. A copyright declaration is printed on the page immediately following the title page, including the required acknowledgement of the Australian Government Research Training Program Scholarship. This package also defines a command, \command{\textbackslash{}declaration}, which typesets a declaration page, required in the front matter of each PhD thesis. 
+This package redefines the \command{\textbackslash{}maketitle} command to generate a title page compliant with the University of Wollongong (\textsc{uow}) branding guidelines. A copyright declaration is printed on the page immediately following the title page, including the required acknowledgement of an Australian Government Research Training Program Scholarship. This package also defines a command, \command{\textbackslash{}declaration}, which typesets a declaration page, required in the front matter of each PhD thesis. 
 
 The package has a number of options that change the wording of the title page according to whether your thesis is only one part of, or comprises the entire of assessable component for your degree and the number of supervisors you have (if any). The default when the package is loaded is an \option{honours} thesis.
 
@@ -198,7 +198,7 @@ As of 2017, the package also typesets the copyright declaration for your thesis 
   \setlength{\smallgap}{0.024\paperheight}
   % for A4 paper this is approximately 7 mm.
   \newcommand{\RTPacknowledgement}{%
-    This research has been conducted with the support of the Australian %
+    This research has been conducted with the support of an Australian %
     Government Research Training Program Scholarship.%
   }
   \begin{raggedright}
@@ -294,7 +294,7 @@ As of 2017, the package also typesets the copyright declaration for your thesis 
     Typesets a fairly minimal but nice looking title page for lab reports or other in class assessments. No logo is printed and the name of the subject is loaded with the \command{\textbackslash{}subject} macro in the document body. The same as the \option{fullsubject} and \option{partialsubject} options.
     
     \item[\option{international}]
-    This simply turns off the acknowledgement of the Australian Government Research Training Program Scholarship in the copyright text.
+    This simply turns off the acknowledgement of an Australian Government Research Training Program Scholarship in the copyright text.
     
     \item[\option{nocopyright}]
     Removes the copyright text completely.
@@ -314,7 +314,7 @@ This work is copyright (\textsc{cc by-sa 4.0}) 2017 by T. M. Griffiths under the
 If you spot any errors or bugs, or alternately you have any requests for an addition let me know.
 
 \subsection*{Version 3.0, 2017-07-18, tmgriffiths}
-This version is a major redesign of the title page to coincide the re-branding of \textsc{uow} during 2016. It also adds the copyright statement and acknowledgement of the Australian Government Research Training Partnership Scholarships. Be sure to use the new version of the \textsc{uow} crest (below). A copy is distributed with the uow thesis template on \textsc{uow} website.
+This version is a major redesign of the title page to coincide the re-branding of \textsc{uow} during 2016. It also adds the copyright statement and acknowledgement of an Australian Government Research Training Partnership Scholarships. Be sure to use the new version of the \textsc{uow} crest (below). A copy is distributed with the uow thesis template on \textsc{uow} website.
 \begin{center}
   \includegraphics[height=20mm]{uow_logo.png}
 \end{center}
@@ -322,7 +322,7 @@ This version is a major redesign of the title page to coincide the re-branding o
 \begin{itemize}
   \item Redesigned title page to be more in line with \textsc{uow} branding guidelines and discussions with \textsc{uow} administration.
   \item Added the copyright text on the page immediately following the title page.
-  \item Included the acknowledgement of the Australian Government Research Training Partnership Scholarships in the copy right text.
+  \item Included the acknowledgement of an Australian Government Research Training Partnership Scholarships in the copy right text.
   \item Added \command{\textbackslash{}copyrighttext} command to allow for custom copyright, in case of industry partners or other situations. If you want to release your work under a creative commons licence I suggest you look at the \texttt{ccicons} package for typesetting all the symbols you need.
   \item Added the \option{nocopyright} package option to remove the copyright statement completely.
   \item Added the \option{international} package option to print the copyright text, but to omit the acknowledgment of scholarship, which is only required for \emph{domestic} students.
